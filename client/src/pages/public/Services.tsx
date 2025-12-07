@@ -1,8 +1,15 @@
 import { Button } from "@/components/ui/button";
 import PublicNavbar from "@/components/public/PublicNavbar";
 import Footer from "@/components/public/Footer";
-import { Code, Server, Database, Smartphone, ShieldCheck, PenTool } from "lucide-react";
+import { Code, Server, Database, Smartphone, ShieldCheck, PenTool, ChevronDown, ChevronUp } from "lucide-react";
 import { Link } from "wouter";
+import { useState } from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function Services() {
   const services = [
@@ -10,37 +17,37 @@ export default function Services() {
       icon: Code,
       title: "Web Development",
       description: "Custom websites and web applications built with modern frameworks (React, Next.js) for high performance and scalability.",
-      features: ["Custom UI/UX Design", "Responsive Layouts", "SEO Optimization", "CMS Integration"]
+      features: ["Custom UI/UX Design", "Responsive Layouts", "SEO Optimization", "CMS Integration", "E-commerce Solutions", "Progressive Web Apps (PWAs)"]
     },
     {
       icon: Smartphone,
       title: "Mobile App Development",
       description: "Native and cross-platform mobile applications for iOS and Android that deliver seamless user experiences.",
-      features: ["iOS & Android", "React Native / Flutter", "App Store Submission", "Maintenance & Support"]
+      features: ["iOS & Android", "React Native / Flutter", "App Store Submission", "Maintenance & Support", "User Authentication", "Push Notifications"]
     },
     {
       icon: Server,
       title: "Cloud Solutions",
       description: "Scalable cloud infrastructure setup, migration, and management on AWS, Azure, or Google Cloud.",
-      features: ["Cloud Migration", "DevOps Automation", "Serverless Architecture", "Cost Optimization"]
+      features: ["Cloud Migration", "DevOps Automation", "Serverless Architecture", "Cost Optimization", "Disaster Recovery", "24/7 Monitoring"]
     },
     {
       icon: Database,
       title: "Data Analytics",
       description: "Transform your raw data into actionable insights with our comprehensive data analytics and visualization services.",
-      features: ["Business Intelligence", "Data Visualization", "Predictive Analytics", "Big Data Solutions"]
+      features: ["Business Intelligence", "Data Visualization", "Predictive Analytics", "Big Data Solutions", "Data Warehousing", "ETL Processes"]
     },
     {
       icon: ShieldCheck,
       title: "Cybersecurity",
       description: "Protect your business from digital threats with our advanced security assessments and implementation services.",
-      features: ["Security Audits", "Penetration Testing", "Compliance (GDPR/Data Prot)", "Security Training"]
+      features: ["Security Audits", "Penetration Testing", "Compliance (GDPR/Data Prot)", "Security Training", "Incident Response", "Network Security"]
     },
     {
       icon: PenTool,
       title: "UI/UX Design",
       description: "User-centric design services that create intuitive, engaging, and beautiful digital products.",
-      features: ["User Research", "Wireframing & Prototyping", "Visual Design", "Usability Testing"]
+      features: ["User Research", "Wireframing & Prototyping", "Visual Design", "Usability Testing", "Design Systems", "Accessibility Audits"]
     }
   ];
 
@@ -120,6 +127,45 @@ export default function Services() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 md:px-8 max-w-4xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-brand-teal mb-4">Frequently Asked Questions</h2>
+            <p className="text-gray-600">
+              Common questions about our services and process.
+            </p>
+          </div>
+
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="item-1">
+              <AccordionTrigger className="text-lg font-semibold text-gray-900">How long does a typical web development project take?</AccordionTrigger>
+              <AccordionContent className="text-gray-600">
+                Project timelines vary depending on complexity. A standard business website typically takes 4-6 weeks, while a complex web application can take 3-6 months. We provide a detailed timeline during the discovery phase.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger className="text-lg font-semibold text-gray-900">Do you provide ongoing support after launch?</AccordionTrigger>
+              <AccordionContent className="text-gray-600">
+                Yes, we offer various maintenance and support packages to ensure your digital products remain secure, up-to-date, and performant after launch.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger className="text-lg font-semibold text-gray-900">What technologies do you use?</AccordionTrigger>
+              <AccordionContent className="text-gray-600">
+                We specialize in modern technologies including React, Next.js, Node.js, Python, Flutter for mobile, and cloud platforms like AWS and Azure. We choose the best tech stack based on your specific project needs.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-4">
+              <AccordionTrigger className="text-lg font-semibold text-gray-900">Can you help migrate our existing systems to the cloud?</AccordionTrigger>
+              <AccordionContent className="text-gray-600">
+                Absolutely. Our cloud experts can assess your current infrastructure and execute a seamless migration strategy to the cloud, minimizing downtime and optimizing costs.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 
