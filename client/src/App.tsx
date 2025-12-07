@@ -11,6 +11,7 @@ import Dashboard from "@/pages/Dashboard";
 import Integrations from "@/pages/Integrations";
 import Reports from "@/pages/Reports";
 import Settings from "@/pages/Settings";
+import ClientServices from "@/pages/Services";
 
 // Public Pages
 import Home from "@/pages/public/Home";
@@ -37,6 +38,7 @@ function Router() {
           <Layout>
             <Switch>
               <Route path="/dashboard" component={Dashboard} />
+              <Route path="/dashboard/services" component={ClientServices} />
               <Route path="/dashboard/integrations" component={Integrations} />
               <Route path="/dashboard/reports" component={Reports} />
               <Route path="/dashboard/settings" component={Settings} />

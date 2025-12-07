@@ -9,7 +9,8 @@ import {
   LogOut, 
   Bell,
   Globe,
-  Home
+  Home,
+  ShoppingCart
 } from "lucide-react";
 import {
   DropdownMenu,
@@ -26,6 +27,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   const navigation = [
     { name: 'dashboard', href: '/dashboard', icon: LayoutDashboard },
+    { name: 'services', href: '/dashboard/services', icon: ShoppingCart },
     { name: 'integrations', href: '/dashboard/integrations', icon: Blocks },
     { name: 'reports', href: '/dashboard/reports', icon: FileText },
     { name: 'settings', href: '/dashboard/settings', icon: Settings },

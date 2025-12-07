@@ -24,7 +24,8 @@ const resources = {
       "preview": "Preview",
       "send_newsletter": "Send to Newsletter",
       "language": "Language",
-      "profile": "Profile"
+      "profile": "Profile",
+      "services": "Services"
     }
   },
   fr: {
@@ -49,7 +50,8 @@ const resources = {
       "preview": "Aperçu",
       "send_newsletter": "Envoyer à la newsletter",
       "language": "Langue",
-      "profile": "Profil"
+      "profile": "Profil",
+      "services": "Services"
     }
   },
   es: {
@@ -74,7 +76,8 @@ const resources = {
       "preview": "Vista previa",
       "send_newsletter": "Enviar al boletín",
       "language": "Idioma",
-      "profile": "Perfil"
+      "profile": "Perfil",
+      "services": "Servicios"
     }
   }
 };

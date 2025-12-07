@@ -1,9 +1,41 @@
 import { Button } from "@/components/ui/button";
 import PublicNavbar from "@/components/public/PublicNavbar";
 import Footer from "@/components/public/Footer";
-import { CheckCircle, Users, Target, Lightbulb, ArrowRight } from "lucide-react";
+import { CheckCircle, Users, Target, Lightbulb, ArrowRight, Linkedin, Twitter, Github } from "lucide-react";
+import { Link } from "wouter";
 
 export default function About() {
+  const team = [
+    {
+      name: "Sarah Johnson",
+      role: "Chief Executive Officer",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      bio: "Former Tech Lead at Google with 15 years of experience in scaling digital platforms.",
+      socials: { linkedin: "#", twitter: "#" }
+    },
+    {
+      name: "David Okeke",
+      role: "CTO & Co-Founder",
+      image: "https://images.unsplash.com/photo-1531384441138-2736e62e0506?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      bio: "Cloud infrastructure expert and open-source contributor passionate about African tech.",
+      socials: { linkedin: "#", github: "#", twitter: "#" }
+    },
+    {
+      name: "Amara Diallo",
+      role: "Head of Design",
+      image: "https://images.unsplash.com/photo-1589156280159-27698a70f29e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      bio: "Award-winning product designer focused on creating accessible and intuitive user experiences.",
+      socials: { linkedin: "#", twitter: "#" }
+    },
+    {
+      name: "Michael Chen",
+      role: "Lead Developer",
+      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      bio: "Full-stack wizard specializing in React and Node.js enterprise applications.",
+      socials: { linkedin: "#", github: "#" }
+    }
+  ];
+
   return (
     <div className="min-h-screen flex flex-col font-sans bg-gray-50">
       <PublicNavbar />
@@ -88,6 +120,58 @@ export default function About() {
                 Join Our Team <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-teal mb-4">Meet Our Team</h2>
+            <div className="w-24 h-1 bg-brand-orange mx-auto rounded-full"></div>
+            <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+              The brilliant minds behind our innovative solutions.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {team.map((member, i) => (
+              <div key={i} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 group">
+                <div className="h-64 overflow-hidden relative">
+                  <div className="absolute inset-0 bg-brand-teal/20 group-hover:bg-transparent transition-colors z-10"></div>
+                  <img 
+                    src={member.image} 
+                    alt={member.name} 
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
+                  <p className="text-brand-orange font-medium text-sm mb-3">{member.role}</p>
+                  <p className="text-gray-500 text-sm mb-6 leading-relaxed">
+                    {member.bio}
+                  </p>
+                  <div className="flex gap-3 pt-4 border-t border-gray-100">
+                    {member.socials.linkedin && (
+                      <a href={member.socials.linkedin} className="text-gray-400 hover:text-brand-teal transition-colors">
+                        <Linkedin className="w-5 h-5" />
+                      </a>
+                    )}
+                    {member.socials.twitter && (
+                      <a href={member.socials.twitter} className="text-gray-400 hover:text-brand-teal transition-colors">
+                        <Twitter className="w-5 h-5" />
+                      </a>
+                    )}
+                    {member.socials.github && (
+                      <a href={member.socials.github} className="text-gray-400 hover:text-brand-teal transition-colors">
+                        <Github className="w-5 h-5" />
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
