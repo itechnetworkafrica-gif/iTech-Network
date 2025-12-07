@@ -71,24 +71,30 @@ export default function Services() {
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, i) => (
-              <div key={i} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border-l-4 border-brand-orange hover:-translate-y-1 group">
-                <div className="w-14 h-14 bg-orange-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-orange transition-colors">
-                  <service.icon className="w-7 h-7 text-brand-orange group-hover:text-white transition-colors" />
+              <div key={i} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all border-t-4 border-brand-orange hover:-translate-y-2 group relative overflow-hidden">
+                {/* Subtle background pattern */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-teal/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-500"></div>
+                
+                <div className="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-orange transition-colors relative z-10 shadow-inner">
+                  <service.icon className="w-8 h-8 text-brand-orange group-hover:text-white transition-colors" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 relative z-10">{service.title}</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed relative z-10 min-h-[80px]">
                   {service.description}
                 </p>
-                <ul className="space-y-2 mb-8">
+                
+                <div className="space-y-3 mb-8 relative z-10">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-500">
-                      <div className="w-1.5 h-1.5 bg-brand-teal rounded-full mr-2"></div>
+                    <div key={idx} className="flex items-center text-sm text-gray-600">
+                      <div className="w-1.5 h-1.5 bg-brand-teal rounded-full mr-3"></div>
                       {feature}
-                    </li>
+                    </div>
                   ))}
-                </ul>
+                </div>
+                
                 <Link href="/contact">
-                  <Button variant="outline" className="w-full border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white">
+                  <Button className="w-full bg-gray-50 text-brand-teal hover:bg-brand-teal hover:text-white border border-brand-teal/20 font-semibold transition-all relative z-10">
                     Get a Quote
                   </Button>
                 </Link>

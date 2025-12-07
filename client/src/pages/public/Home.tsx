@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Code, Shield, Cloud, Zap, Star, Users, Globe, BookOpen } from "lucide-react";
+import { ArrowRight, CheckCircle, Code, Shield, Cloud, Zap, Star, Users, Globe, BookOpen, Award, Cpu, MonitorSmartphone } from "lucide-react";
 import PublicNavbar from "@/components/public/PublicNavbar";
 import Footer from "@/components/public/Footer";
 import { Link } from "wouter";
@@ -21,18 +21,18 @@ export default function Home() {
 
         <div className="container mx-auto px-4 md:px-8 relative z-10 text-center md:text-left">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center rounded-full border border-orange-200 bg-orange-500/10 px-3 py-1 text-sm font-medium text-orange-50 backdrop-blur-sm mb-6">
+            <div className="inline-flex items-center rounded-full border border-orange-200 bg-orange-500/10 px-3 py-1 text-sm font-medium text-orange-50 backdrop-blur-sm mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
               <span className="flex h-2 w-2 rounded-full bg-brand-teal mr-2"></span>
               Leading Tech Institution in Africa
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 tracking-tight drop-shadow-sm">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 tracking-tight drop-shadow-sm animate-in fade-in slide-in-from-bottom-6 duration-1000">
               Innovating Africa's <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-orange-100">Digital Future</span>
             </h1>
-            <p className="text-lg md:text-xl text-orange-50 mb-8 max-w-2xl leading-relaxed">
+            <p className="text-lg md:text-xl text-orange-50 mb-8 max-w-2xl leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
               We provide cutting-edge technology solutions, comprehensive digital training, and enterprise-grade tools to empower businesses and individuals.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
               <Link href="/services">
                 <Button size="lg" className="bg-brand-teal text-white hover:bg-teal-700 h-14 px-8 text-lg rounded-full shadow-xl transition-transform hover:scale-105">
                   Explore Services
@@ -47,6 +47,20 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Technologies Strip */}
+      <div className="bg-white py-8 border-b">
+        <div className="container mx-auto px-4 md:px-8">
+          <p className="text-center text-sm font-semibold text-gray-400 uppercase tracking-wider mb-6">Trusted Technologies We Use</p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-60 grayscale">
+            <span className="text-xl font-bold text-gray-500 flex items-center gap-2"><Cpu className="w-6 h-6"/> React</span>
+            <span className="text-xl font-bold text-gray-500 flex items-center gap-2"><Cloud className="w-6 h-6"/> AWS</span>
+            <span className="text-xl font-bold text-gray-500 flex items-center gap-2"><MonitorSmartphone className="w-6 h-6"/> Flutter</span>
+            <span className="text-xl font-bold text-gray-500 flex items-center gap-2"><Shield className="w-6 h-6"/> CyberSec</span>
+            <span className="text-xl font-bold text-gray-500 flex items-center gap-2"><Code className="w-6 h-6"/> Python</span>
+          </div>
+        </div>
+      </div>
 
       {/* Stats Section */}
       <section className="bg-brand-teal text-white py-16">
@@ -94,10 +108,25 @@ export default function Home() {
                 icon: Users,
                 title: "Client-Centric Approach",
                 desc: "We prioritize your success, offering 24/7 support and tailored solutions that grow with your business."
+              },
+              {
+                icon: Award,
+                title: "Certified Experts",
+                desc: "Our team holds top industry certifications, ensuring you get world-class technical implementation."
+              },
+              {
+                icon: Zap,
+                title: "Rapid Delivery",
+                desc: "Agile methodologies allow us to deliver high-quality software faster than traditional agencies."
+              },
+              {
+                icon: Shield,
+                title: "Enterprise Security",
+                desc: "Security is built-in, not bolted on. We adhere to international data protection standards."
               }
             ].map((item, i) => (
-              <div key={i} className="text-center p-6">
-                <div className="w-16 h-16 bg-teal-50 rounded-full flex items-center justify-center mx-auto mb-6 text-brand-teal">
+              <div key={i} className="text-center p-8 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100">
+                <div className="w-16 h-16 bg-teal-50 rounded-full flex items-center justify-center mx-auto mb-6 text-brand-teal group-hover:scale-110 transition-transform">
                   <item.icon className="w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>

@@ -128,46 +128,53 @@ export default function About() {
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-teal mb-4">Meet Our Team</h2>
-            <div className="w-24 h-1 bg-brand-orange mx-auto rounded-full"></div>
-            <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-              The brilliant minds behind our innovative solutions.
-            </p>
+            <span className="inline-block py-1 px-3 rounded-full bg-gray-200 text-gray-600 text-sm font-semibold uppercase tracking-wider mb-4">
+              Team Members
+            </span>
+            <h2 className="text-3xl md:text-5xl font-bold text-brand-teal mb-4">Meet Our Skilled and Passionate Team</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
             {team.map((member, i) => (
-              <div key={i} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 group">
-                <div className="h-64 overflow-hidden relative">
-                  <div className="absolute inset-0 bg-brand-teal/20 group-hover:bg-transparent transition-colors z-10"></div>
+              <div key={i} className="group relative">
+                <div className="bg-white rounded-[2rem] overflow-hidden shadow-xl aspect-[4/5] relative">
                   <img 
                     src={member.image} 
                     alt={member.name} 
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
-                  <p className="text-brand-orange font-medium text-sm mb-3">{member.role}</p>
-                  <p className="text-gray-500 text-sm mb-6 leading-relaxed">
-                    {member.bio}
-                  </p>
-                  <div className="flex gap-3 pt-4 border-t border-gray-100">
-                    {member.socials.linkedin && (
-                      <a href={member.socials.linkedin} className="text-gray-400 hover:text-brand-teal transition-colors">
-                        <Linkedin className="w-5 h-5" />
-                      </a>
-                    )}
-                    {member.socials.twitter && (
-                      <a href={member.socials.twitter} className="text-gray-400 hover:text-brand-teal transition-colors">
-                        <Twitter className="w-5 h-5" />
-                      </a>
-                    )}
-                    {member.socials.github && (
-                      <a href={member.socials.github} className="text-gray-400 hover:text-brand-teal transition-colors">
-                        <Github className="w-5 h-5" />
-                      </a>
-                    )}
+                  
+                  {/* Overlay Gradient at bottom */}
+                  <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 to-transparent pointer-events-none"></div>
+
+                  {/* Content */}
+                  <div className="absolute bottom-0 left-0 w-full p-6 text-center z-10">
+                    <h3 className="text-2xl font-bold text-white mb-1">{member.name}</h3>
+                    <p className="text-gray-200 text-sm font-medium tracking-wider uppercase mb-4">{member.role}</p>
+                    
+                    {/* Socials - Hidden by default, shown on group hover or active */}
+                    <div className="flex justify-center gap-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                      {member.socials.linkedin && (
+                        <a href={member.socials.linkedin} className="w-10 h-10 rounded-full bg-white text-brand-teal flex items-center justify-center hover:bg-brand-orange hover:text-white transition-colors">
+                          <Linkedin className="w-5 h-5" />
+                        </a>
+                      )}
+                      {member.socials.twitter && (
+                        <a href={member.socials.twitter} className="w-10 h-10 rounded-full bg-white text-brand-teal flex items-center justify-center hover:bg-brand-orange hover:text-white transition-colors">
+                          <Twitter className="w-5 h-5" />
+                        </a>
+                      )}
+                      {member.socials.github && (
+                        <a href={member.socials.github} className="w-10 h-10 rounded-full bg-white text-brand-teal flex items-center justify-center hover:bg-brand-orange hover:text-white transition-colors">
+                          <Github className="w-5 h-5" />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Plus Button visual cue */}
+                  <div className="absolute bottom-6 right-6 w-10 h-10 bg-white rounded-full flex items-center justify-center text-brand-teal shadow-lg group-hover:scale-0 transition-transform duration-300">
+                    <span className="text-2xl leading-none mb-1">+</span>
                   </div>
                 </div>
               </div>

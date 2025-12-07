@@ -32,21 +32,31 @@ function Router() {
       <Route path="/pricing" component={Pricing} />
       <Route path="/contact" component={Contact} />
 
-      {/* Dashboard Routes - Nested */}
-      <Route path="/dashboard/:path*">
-        {(params) => (
-          <Layout>
-            <Switch>
-              <Route path="/dashboard" component={Dashboard} />
-              <Route path="/dashboard/services" component={ClientServices} />
-              <Route path="/dashboard/integrations" component={Integrations} />
-              <Route path="/dashboard/reports" component={Reports} />
-              <Route path="/dashboard/settings" component={Settings} />
-              {/* Fallback within dashboard */}
-              <Route component={NotFound} />
-            </Switch>
-          </Layout>
-        )}
+      {/* Dashboard Routes - Flattened for reliability */}
+      <Route path="/dashboard">
+        <Layout>
+          <Dashboard />
+        </Layout>
+      </Route>
+      <Route path="/dashboard/services">
+        <Layout>
+          <ClientServices />
+        </Layout>
+      </Route>
+      <Route path="/dashboard/integrations">
+        <Layout>
+          <Integrations />
+        </Layout>
+      </Route>
+      <Route path="/dashboard/reports">
+        <Layout>
+          <Reports />
+        </Layout>
+      </Route>
+      <Route path="/dashboard/settings">
+        <Layout>
+          <Settings />
+        </Layout>
       </Route>
       
       {/* Fallback for main router */}
