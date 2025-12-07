@@ -8,7 +8,8 @@ import {
   Settings, 
   LogOut, 
   Bell,
-  Globe
+  Globe,
+  Home
 } from "lucide-react";
 import {
   DropdownMenu,
@@ -24,10 +25,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const { t, i18n } = useTranslation();
 
   const navigation = [
-    { name: 'dashboard', href: '/', icon: LayoutDashboard },
-    { name: 'integrations', href: '/integrations', icon: Blocks },
-    { name: 'reports', href: '/reports', icon: FileText },
-    { name: 'settings', href: '/settings', icon: Settings },
+    { name: 'dashboard', href: '/dashboard', icon: LayoutDashboard },
+    { name: 'integrations', href: '/dashboard/integrations', icon: Blocks },
+    { name: 'reports', href: '/dashboard/reports', icon: FileText },
+    { name: 'settings', href: '/dashboard/settings', icon: Settings },
   ];
 
   const changeLanguage = (lng: string) => {
@@ -38,13 +39,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen bg-gray-50 flex">
       {/* Sidebar */}
       <div className="w-64 bg-sidebar text-sidebar-foreground border-r border-sidebar-border flex flex-col fixed h-full inset-y-0 z-50">
-        <div className="h-16 flex items-center px-6 border-b border-sidebar-border">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded bg-primary flex items-center justify-center">
-              <FileText className="w-5 h-5 text-primary-foreground" />
+        <div className="h-16 flex items-center px-6 border-b border-sidebar-border cursor-pointer">
+          <Link href="/">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded bg-primary flex items-center justify-center">
+                <span className="text-white font-bold">iT</span>
+              </div>
+              <span className="font-bold text-lg tracking-tight">Client Portal</span>
             </div>
-            <span className="font-bold text-lg tracking-tight">NewsletterFlow</span>
-          </div>
+          </Link>
         </div>
 
         <div className="flex-1 py-6 px-3 space-y-1">
@@ -66,7 +69,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           })}
         </div>
 
-        <div className="p-4 border-t border-sidebar-border">
+        <div className="p-4 border-t border-sidebar-border space-y-2">
+          <Link href="/">
+            <button className="flex items-center gap-3 px-3 py-2.5 w-full text-sidebar-foreground/70 hover:text-white transition-colors text-sm font-medium">
+              <Home className="w-5 h-5" />
+              Back to Website
+            </button>
+          </Link>
           <button className="flex items-center gap-3 px-3 py-2.5 w-full text-sidebar-foreground/70 hover:text-destructive transition-colors text-sm font-medium">
             <LogOut className="w-5 h-5" />
             Log Out
