@@ -1,0 +1,231 @@
+Absolutely — here is your **full website structure + design plan using your exact brand colors**:
+
+🎨 **Primary Colors**
+
+* **Orange:** `#F97306`
+* **Teal:** `#008B8B`
+* **White:** `#FFFFFF`
+* **Dark Gray (text):** `#1E1E1E`
+* **Light Gray (backgrounds):** `#F5F5F5`
+
+Below is your complete site plan **with your colors applied to every section, button, layout, and style choice.**
+
+---
+
+# **🌐 iTech Network Africa — Website Plan (With Brand Colors)**
+
+## **1. HOME PAGE**
+
+### **Hero Section**
+
+**Background:** A bold **orange (#F97306)** gradient with soft glowing highlights
+**Overlay shapes:** subtle **teal (#008B8B)** curves or waves
+**Heading text:** White (large, bold)
+**Subheading:** White or very light gray (#F5F5F5)
+
+**Buttons:**
+
+* **Primary Button:**
+
+  * Background: **Teal (#008B8B)**
+  * Text: White
+  * Hover: Teal darkened + white shadow
+* **Secondary Button:**
+
+  * Background: White
+  * Text: **Teal (#008B8B)**
+  * Border: 2px teal
+
+---
+
+### **Who We Are Section**
+
+**Background:** White
+**Title:** Teal (#008B8B)
+**Content text:** Dark gray (#1E1E1E)
+**Accent line or icon:** Orange (#F97306)
+
+---
+
+### **Key Services Preview Cards**
+
+**Card background:** White
+**Card border:** Light gray (#F0F0F0)
+**Icons:** Orange (#F97306)
+**Titles:** Teal
+**Button:** Teal background, white text
+
+---
+
+### **Impact/Statistics Section**
+
+**Background:** Teal (#008B8B)
+**Text:** White
+**Icons:** Orange (#F97306)
+**Numbers:** Extra-large white text
+**Short description:** White with 80% opacity
+
+---
+
+### **Call-to-Action Band**
+
+**Background:** Deep orange (#F97306)
+**Text:** White
+**Button:** White background + teal text
+
+---
+
+## **2. ABOUT US PAGE**
+
+### **Header Banner**
+
+**Background:** Teal gradient
+**Text:** White (bold and clean)
+**Overlay shapes:** transparent orange waves
+
+---
+
+### **Mission | Vision | Values**
+
+**Card Layout:**
+
+* Background: White
+* Icon: Orange
+* Title: Teal
+* Text: Dark gray
+
+**Hover effect:** subtle orange shadow glow
+
+---
+
+## **3. PROGRAMS & SERVICES PAGE**
+
+This page should feel strong and structured.
+
+### **Section Headers**
+
+* Title: Teal
+* Underline or accent bar: Orange
+* Background of header area: Light gray (#F5F5F5)
+
+### **Service Blocks**
+
+Each service group in its own card:
+
+* **Card background:** White
+* **Title:** Teal
+* **Bullet points:** Dark gray
+* **Left-side accent border:** Orange (#F97306), 5px thick
+* **Icons:** Orange or teal depending on contrast
+
+### **Contact CTA at Bottom**
+
+**Background:** Teal
+**Text:** White
+**Button:** Orange with white text
+
+---
+
+## **4. PORTFOLIO / PROJECTS PAGE**
+
+### **Filter Buttons**
+
+* Active: Teal background, white text
+* Inactive: White background, teal border, teal text
+* Hover: Orange background, white text
+
+### **Project Cards**
+
+* Background: White
+* Border: Light gray
+* Title: Teal
+* Service tags:
+
+  * Orange background, white text OR
+  * Teal outline with teal text
+
+### **Preview Overlay**
+
+Orange tint overlay with white text on hover
+
+---
+
+## **5. BLOG / RESOURCES PAGE**
+
+### **Blog Cards**
+
+* Title: Teal
+* Accent line under title: Orange
+* Background: White
+* Read More button:
+
+  * Teal background, white text
+  * Hover: Orange background
+
+---
+
+## **6. CONTACT PAGE**
+
+### **Form Design**
+
+* Field borders: Light teal outline (#008B8B33)
+* Focus state: Full teal border
+* Submit button:
+
+  * Orange background
+  * White text
+  * Hover: Deep teal background + white text
+
+### **Contact Info Side Section**
+
+* Icons: Orange
+* Headers: Teal
+* Text: Dark gray
+
+---
+
+# **🎨 Typography (with your colors)**
+
+### Headings:
+
+* Font: *Poppins* / *Montserrat*
+* Color: **Teal (#008B8B)**
+* Weight: Bold
+
+### Body:
+
+* Font: *Open Sans* / *Roboto*
+* Color: **Dark Gray (#1E1E1E)**
+
+### Accents:
+
+* Use **Orange (#F97306)** for highlights, lines, icons, and key elements
+* Use **Teal (#008B8B)** for major sections, callouts, and headings
+
+---
+
+# **🧱 7. Website Style Summary (Quick Designer Guide)**
+
+* **Primary colors everywhere:** Orange + Teal
+* **Orange is the “energy” color** for action
+* **Teal is the “trust” color** for structure and sections
+* **White space must be generous** for clean, modern feel
+* **Rounded corners** for modern UI
+* **Soft gradients** of your orange can be used in backgrounds
+* **Buttons MUST use teal or orange only**
+* **Icons should be orange for emphasis**
+
+---
+
+# ✅ If you want next:
+
+I can generate **any of these instantly**:
+
+🔹 Homepage mockup
+🔹 Full content copy for each page
+🔹 Website wireframe
+🔹 Custom image banners in your colors
+🔹 Social media version of your website announcement
+🔹 A full brand style guide PDF
+
+Just tell me what you want next!
