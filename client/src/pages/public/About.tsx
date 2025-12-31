@@ -7,20 +7,21 @@ import { Link } from "wouter";
 export default function About() {
   const team = [
     {
-      name: "Sarah Johnson",
+      name: "Wilmot Kerkulah",
       role: "Chief Executive Officer",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       bio: "Former Tech Lead at Google with 15 years of experience in scaling digital platforms.",
       socials: { linkedin: "#", twitter: "#" }
     },
     {
-      name: "David Okeke",
+      name: "James Kerkulah",
       role: "CTO & Co-Founder",
       image: "https://images.unsplash.com/photo-1531384441138-2736e62e0506?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       bio: "Cloud infrastructure expert and open-source contributor passionate about African tech.",
       socials: { linkedin: "#", github: "#", twitter: "#" }
     },
     {
+      
       name: "Amara Diallo",
       role: "Head of Design",
       image: "https://images.unsplash.com/photo-1589156280159-27698a70f29e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
