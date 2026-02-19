@@ -56,39 +56,56 @@ export default function About() {
 
       {/* Mission Vision Values */}
       <section className="py-24 -mt-10 relative z-20">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-brand-orange hover:-translate-y-2 transition-transform duration-300">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
-                <Target className="w-8 h-8 text-brand-orange" />
-              </div>
-              <h3 className="text-2xl font-bold text-brand-teal mb-4">Our Mission</h3>
-              <p className="text-gray-600 leading-relaxed">
-                To empower individuals and organizations across Africa with world-class technology skills and digital tools that drive sustainable economic growth.
-              </p>
-            </div>
+        {/* ... existing code ... */}
+      </section>
 
-            <div className="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-brand-teal hover:-translate-y-2 transition-transform duration-300">
-              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6">
-                <Lightbulb className="w-8 h-8 text-brand-teal" />
-              </div>
-              <h3 className="text-2xl font-bold text-brand-teal mb-4">Our Vision</h3>
-              <p className="text-gray-600 leading-relaxed">
-                To be the leading catalyst for digital transformation in Africa, creating a future where technology is accessible, inclusive, and impactful.
+      {/* Modern Impact Grid - NEW BLOCK */}
+      <section className="py-24 bg-gray-950 text-white overflow-hidden relative">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-orange/5 via-transparent to-transparent opacity-50"></div>
+        <div className="container mx-auto px-4 md:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <p className="text-brand-orange font-mono text-sm tracking-[0.3em] uppercase">// Our Impact</p>
+              <h2 className="text-4xl md:text-6xl font-black uppercase italic tracking-tighter leading-none">Redefining <br />Tech Standards</h2>
+              <p className="text-gray-400 text-lg leading-relaxed max-w-xl">
+                Since our inception, we've focused on creating measurable change in the African tech landscape. We don't just teach code; we build careers and scale businesses.
               </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-gray-800 hover:-translate-y-2 transition-transform duration-300">
-              <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-6">
-                <Users className="w-8 h-8 text-gray-800" />
+              <div className="grid grid-cols-2 gap-8 pt-4">
+                <div className="space-y-2">
+                  <div className="text-4xl font-black text-brand-orange tracking-tighter">95%</div>
+                  <div className="text-sm font-bold uppercase tracking-widest text-gray-500">Employment Rate</div>
+                </div>
+                <div className="space-y-2">
+                  <div className="text-4xl font-black text-brand-orange tracking-tighter">200+</div>
+                  <div className="text-sm font-bold uppercase tracking-widest text-gray-500">Global Partners</div>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-brand-teal mb-4">Our Values</h3>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-brand-orange" /> Innovation</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-brand-orange" /> Integrity</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-brand-orange" /> Excellence</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-brand-orange" /> Collaboration</li>
-              </ul>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-4 pt-12">
+                <div className="bg-white/5 backdrop-blur-xl p-8 rounded-[2rem] border border-white/10 hover:border-brand-orange/50 transition-all group">
+                  <Rocket className="w-10 h-10 text-brand-orange mb-4 group-hover:scale-110 transition-transform" />
+                  <h4 className="font-bold text-xl mb-2">Fast Growth</h4>
+                  <p className="text-gray-500 text-sm">Rapidly expanding into new markets across West Africa.</p>
+                </div>
+                <div className="bg-white/5 backdrop-blur-xl p-8 rounded-[2rem] border border-white/10 hover:border-brand-orange/50 transition-all group">
+                  <Shield className="w-10 h-10 text-brand-orange mb-4 group-hover:scale-110 transition-transform" />
+                  <h4 className="font-bold text-xl mb-2">Secure Tech</h4>
+                  <p className="text-gray-500 text-sm">Industry-leading security protocols in every project.</p>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <div className="bg-white/5 backdrop-blur-xl p-8 rounded-[2rem] border border-white/10 hover:border-brand-orange/50 transition-all group">
+                  <Cpu className="w-10 h-10 text-brand-orange mb-4 group-hover:scale-110 transition-transform" />
+                  <h4 className="font-bold text-xl mb-2">Edge Computing</h4>
+                  <p className="text-gray-500 text-sm">Optimizing for regional connectivity challenges.</p>
+                </div>
+                <div className="bg-white/5 backdrop-blur-xl p-8 rounded-[2rem] border border-white/10 hover:border-brand-orange/50 transition-all group">
+                  <Users className="w-10 h-10 text-brand-orange mb-4 group-hover:scale-110 transition-transform" />
+                  <h4 className="font-bold text-xl mb-2">Community</h4>
+                  <p className="text-gray-500 text-sm">Building a vibrant network of African technologists.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -138,40 +138,34 @@ export default function Services() {
 
       {/* FAQ Section */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 md:px-8 max-w-4xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-brand-teal mb-4">Frequently Asked Questions</h2>
-            <p className="text-gray-600">
-              Common questions about our services and process.
-            </p>
-          </div>
+        {/* ... existing code ... */}
+      </section>
 
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="item-1">
-              <AccordionTrigger className="text-lg font-semibold text-gray-900">How long does a typical web development project take?</AccordionTrigger>
-              <AccordionContent className="text-gray-600">
-                Project timelines vary depending on complexity. A standard business website typically takes 4-6 weeks, while a complex web application can take 3-6 months. We provide a detailed timeline during the discovery phase.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger className="text-lg font-semibold text-gray-900">Do you provide ongoing support after launch?</AccordionTrigger>
-              <AccordionContent className="text-gray-600">
-                Yes, we offer various maintenance and support packages to ensure your digital products remain secure, up-to-date, and performant after launch.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger className="text-lg font-semibold text-gray-900">What technologies do you use?</AccordionTrigger>
-              <AccordionContent className="text-gray-600">
-                We specialize in modern technologies including React, Next.js, Node.js, Python, Flutter for mobile, and cloud platforms like AWS and Azure. We choose the best tech stack based on your specific project needs.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-4">
-              <AccordionTrigger className="text-lg font-semibold text-gray-900">Can you help migrate our existing systems to the cloud?</AccordionTrigger>
-              <AccordionContent className="text-gray-600">
-                Absolutely. Our cloud experts can assess your current infrastructure and execute a seamless migration strategy to the cloud, minimizing downtime and optimizing costs.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+      {/* Tech Stack CTA - NEW BLOCK */}
+      <section className="py-24 bg-brand-orange relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+        <div className="container mx-auto px-4 md:px-8 relative z-10">
+          <div className="bg-gray-950 rounded-[3rem] p-12 md:p-20 text-center space-y-8 shadow-2xl">
+            <p className="text-brand-orange font-mono text-sm tracking-[0.3em] uppercase">// Ready to Scale?</p>
+            <h2 className="text-4xl md:text-7xl font-black text-white uppercase italic tracking-tighter leading-[0.9]">
+              Let's Engineer Your <br />Digital Future
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              Whether you need a custom enterprise solution or a rapid MVP, our team is ready to deliver excellence.
+            </p>
+            <div className="flex flex-col md:flex-row justify-center gap-6 pt-8">
+              <Link href="/contact">
+                <Button size="lg" className="bg-brand-orange text-white rounded-full px-12 h-16 font-black uppercase italic tracking-widest text-sm hover:scale-105 transition-transform w-full md:w-auto">
+                  Start Project
+                </Button>
+              </Link>
+              <Link href="/pricing">
+                <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 rounded-full px-12 h-16 font-black uppercase italic tracking-widest text-sm w-full md:w-auto">
+                  View Pricing
+                </Button>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 

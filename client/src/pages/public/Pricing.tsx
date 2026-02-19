@@ -141,16 +141,37 @@ export default function Pricing() {
       </div>
 
       {/* FAQ or Trust Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-12">Trusted by Leading Tech Companies</h2>
-          <div className="flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale">
-            {/* Logos would go here - using placeholders */}
-            <div className="text-2xl font-bold font-serif text-gray-400">Acme Corp</div>
-            <div className="text-2xl font-bold font-mono text-gray-400">GlobalTech</div>
-            <div className="text-2xl font-bold font-sans text-gray-400">InnovateX</div>
-            <div className="text-2xl font-bold font-serif text-gray-400">FutureSoft</div>
-            <div className="text-2xl font-bold font-mono text-gray-400">DataFlow</div>
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="bg-gray-50 rounded-[3rem] p-12 md:p-20 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-orange/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <p className="text-brand-teal font-mono text-sm tracking-[0.3em] uppercase mb-4">// Enterprise Ready</p>
+                <h2 className="text-4xl md:text-6xl font-black text-brand-teal uppercase italic tracking-tighter leading-none mb-8">Custom <br />Scale Solutions</h2>
+                <p className="text-gray-600 text-lg leading-relaxed mb-10">
+                  Need something specifically tailored for your organization? We provide white-glove engineering services for large-scale African enterprises.
+                </p>
+                <Link href="/contact">
+                  <Button size="lg" className="bg-brand-teal text-white rounded-full px-12 h-16 font-black uppercase italic tracking-widest text-sm hover:scale-105 transition-transform">
+                    Talk to an Expert
+                  </Button>
+                </Link>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  { title: "24/7 SLA", desc: "Guaranteed uptime and support." },
+                  { title: "On-Premise", desc: "Secure local data hosting." },
+                  { title: "Custom AI", desc: "Trained on your business data." },
+                  { title: "Unlimited", desc: "No caps on users or storage." }
+                ].map((item, i) => (
+                  <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all group">
+                    <h4 className="font-bold text-xl text-brand-teal mb-2 group-hover:text-brand-orange transition-colors">{item.title}</h4>
+                    <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -20,13 +20,16 @@ import Services from "@/pages/public/Services";
 import Pricing from "@/pages/public/Pricing";
 import Contact from "@/pages/public/Contact";
 
+import FloatingActions from "@/components/public/FloatingActions";
 import "./lib/i18n";
 
 function Router() {
   return (
-    <Switch>
-      {/* Public Routes */}
-      <Route path="/" component={Home} />
+    <>
+      <FloatingActions />
+      <Switch>
+        {/* Public Routes */}
+        <Route path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/services" component={Services} />
       <Route path="/pricing" component={Pricing} />
