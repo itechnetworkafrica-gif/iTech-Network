@@ -30,41 +30,42 @@ function Router() {
       <Switch>
         {/* Public Routes */}
         <Route path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/services" component={Services} />
-      <Route path="/pricing" component={Pricing} />
-      <Route path="/contact" component={Contact} />
+        <Route path="/about" component={About} />
+        <Route path="/services" component={Services} />
+        <Route path="/pricing" component={Pricing} />
+        <Route path="/contact" component={Contact} />
 
-      {/* Dashboard Routes - Flattened for reliability */}
-      <Route path="/dashboard">
-        <Layout>
-          <Dashboard />
-        </Layout>
-      </Route>
-      <Route path="/dashboard/services">
-        <Layout>
-          <ClientServices />
-        </Layout>
-      </Route>
-      <Route path="/dashboard/integrations">
-        <Layout>
-          <Integrations />
-        </Layout>
-      </Route>
-      <Route path="/dashboard/reports">
-        <Layout>
-          <Reports />
-        </Layout>
-      </Route>
-      <Route path="/dashboard/settings">
-        <Layout>
-          <Settings />
-        </Layout>
-      </Route>
-      
-      {/* Fallback for main router */}
-      <Route component={NotFound} />
-    </Switch>
+        {/* Dashboard Routes - Flattened for reliability */}
+        <Route path="/dashboard">
+          <Layout>
+            <Dashboard />
+          </Layout>
+        </Route>
+        <Route path="/dashboard/services">
+          <Layout>
+            <ClientServices />
+          </Layout>
+        </Route>
+        <Route path="/dashboard/integrations">
+          <Layout>
+            <Integrations />
+          </Layout>
+        </Route>
+        <Route path="/dashboard/reports">
+          <Layout>
+            <Reports />
+          </Layout>
+        </Route>
+        <Route path="/dashboard/settings">
+          <Layout>
+            <Settings />
+          </Layout>
+        </Route>
+        
+        {/* Fallback for main router */}
+        <Route component={NotFound} />
+      </Switch>
+    </>
   );
 }
 
