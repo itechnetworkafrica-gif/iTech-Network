@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Code, Shield, Cloud, Zap, Star, Users, Globe, BookOpen, Award, Cpu, MonitorSmartphone, MousePointer2, Rocket, Briefcase, BarChart3, MessageSquare } from "lucide-react";
+import { ArrowRight, CheckCircle, Code, Shield, Cloud, Zap, Star, Users, Globe, BookOpen, Award, Cpu, MonitorSmartphone, MousePointer2, Rocket, Briefcase, BarChart3, MessageSquare, Database, Layers, Search, Settings, PieChart } from "lucide-react";
 import PublicNavbar from "@/components/public/PublicNavbar";
 import Footer from "@/components/public/Footer";
+import FloatingActions from "@/components/public/FloatingActions";
 import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col font-sans overflow-x-hidden">
       <PublicNavbar />
+      <FloatingActions />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
@@ -156,56 +158,152 @@ export default function Home() {
 
       {/* Why Choose Us */}
       <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold text-brand-teal mb-6">Why Partner With Us?</h2>
-            <div className="w-24 h-1.5 bg-brand-orange mx-auto rounded-full mb-6"></div>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              We combine local African expertise with global technology standards to deliver exceptional, scalable results.
-            </p>
+        <div className="container mx-auto px-4 md:px-8 text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-brand-teal mb-6">Trusted by Local Leaders</h2>
+          <div className="w-24 h-1.5 bg-brand-orange mx-auto rounded-full mb-12"></div>
+          
+          <div className="max-w-4xl mx-auto mb-20 relative">
+            <div className="absolute -top-10 -left-10 text-[10rem] font-serif text-brand-orange/10 leading-none select-none">"</div>
+            <div className="bg-gray-950 text-white p-12 md:p-20 rounded-[3rem] shadow-2xl relative z-10 overflow-hidden group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-orange/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
+              <p className="text-xl md:text-2xl lg:text-3xl font-medium leading-relaxed mb-10 relative">
+                "iTech Network Africa didn't just build our app; they engineered a new student engagement platform. The Starz Mobile App is flawless, and the support is world-class."
+              </p>
+              <div className="flex flex-col items-center gap-4">
+                <h4 className="text-xl font-bold uppercase tracking-widest text-brand-orange">Mr. Nehbor C. Poquee</h4>
+                <p className="text-gray-400 font-mono text-sm tracking-widest uppercase">Dean of Technology, Starz University</p>
+              </div>
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-10">
+          <p className="text-gray-400 font-mono text-sm tracking-[0.3em] uppercase mb-12">Building the Tech Ecosystem in Africa</p>
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+            <img src="https://cddsrxtfashivrcuirgf.supabase.co/storage/v1/object/public/images/Starz%20Logo.webp" alt="Starz" className="h-16 w-auto" />
+            <img src="https://cddsrxtfashivrcuirgf.supabase.co/storage/v1/object/public/images/dmg%20Logo.jpeg" alt="DMC" className="h-16 w-auto" />
+            <img src="https://cddsrxtfashivrcuirgf.supabase.co/storage/v1/object/public/images/proaffordable-cleaning-logo.png" alt="Pro-Clean" className="h-16 w-auto" />
+            <img src="https://cddsrxtfashivrcuirgf.supabase.co/storage/v1/object/public/images/new%20liberia%20logo.jpeg" alt="New Liberia" className="h-16 w-auto" />
+            <img src="https://cddsrxtfashivrcuirgf.supabase.co/storage/v1/object/public/images/ai%20tech%20logo.webp" alt="A1 Tech" className="h-16 w-auto" />
+          </div>
+        </div>
+      </section>
+
+      {/* Engineering Core (From Innova) */}
+      <section className="py-24 bg-gray-950 text-white overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-orange/10 rounded-full blur-[120px] -mr-48 -mt-48"></div>
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="text-center mb-20">
+            <p className="text-brand-orange font-mono text-sm tracking-[0.3em] uppercase mb-4">// Expert Stack</p>
+            <h2 className="text-4xl md:text-6xl font-black mb-6 uppercase italic tracking-tighter">Our Engineering Core</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto text-lg">The tech stack driving innovation in Africa's digital ecosystem.</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: Globe,
-                title: "Pan-African Reach",
-                desc: "With a presence in 12 countries, we understand the unique challenges and opportunities of the African market."
+                title: "Frontend",
+                icon: Layers,
+                items: ["React", "Next.js", "Vue.js", "TypeScript", "Tailwind CSS", "Flutter"]
               },
               {
-                icon: BookOpen,
-                title: "Educational Excellence",
-                desc: "Our training programs are designed by industry experts to bridge the skills gap and foster innovation."
+                title: "Backend",
+                icon: Database,
+                items: ["Node.js", "Python", "Go", "Laravel", "PostgreSQL", "MongoDB"]
               },
               {
-                icon: Users,
-                title: "Client-Centric Approach",
-                desc: "We prioritize your success, offering 24/7 support and tailored solutions that grow with your business."
-              },
-              {
-                icon: Award,
-                title: "Certified Experts",
-                desc: "Our team holds top industry certifications, ensuring you get world-class technical implementation."
-              },
-              {
-                icon: Zap,
-                title: "Rapid Delivery",
-                desc: "Agile methodologies allow us to deliver high-quality software faster than traditional agencies."
-              },
-              {
-                icon: Shield,
-                title: "Enterprise Security",
-                desc: "Security is built-in, not bolted on. We adhere to international data protection standards."
+                title: "DevOps & Cloud",
+                icon: Cloud,
+                items: ["AWS", "Docker", "Kubernetes", "Firebase", "Supabase", "CI/CD"]
               }
-            ].map((item, i) => (
-              <div key={i} className="group p-10 bg-gray-50 rounded-[2.5rem] hover:bg-brand-teal hover:text-white transition-all duration-500 border border-transparent hover:shadow-2xl hover:shadow-brand-teal/20">
-                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm transition-transform group-hover:rotate-12 group-hover:scale-110">
-                  <item.icon className="w-8 h-8 text-brand-teal" />
+            ].map((col, i) => (
+              <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 p-10 rounded-[2.5rem] hover:border-brand-orange/50 transition-all duration-500 group">
+                <div className="w-16 h-16 bg-brand-orange/20 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                  <col.icon className="w-8 h-8 text-brand-orange" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4 group-hover:text-white">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed group-hover:text-teal-50">{item.desc}</p>
+                <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                  <span className="w-1 h-6 bg-brand-orange"></span> {col.title}
+                </h3>
+                <div className="flex flex-wrap gap-3">
+                  {col.items.map((item, idx) => (
+                    <span key={idx} className="px-4 py-2 bg-white/5 rounded-full text-sm font-medium border border-white/5 hover:bg-white/10 hover:border-white/20 transition-all cursor-default">
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Proven Roadmap (From Innova) */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="text-center mb-20">
+            <p className="text-brand-teal font-mono text-sm tracking-[0.3em] uppercase mb-4">// Development Lifecycle</p>
+            <h2 className="text-4xl md:text-6xl font-black text-brand-teal uppercase italic tracking-tighter">Our Proven Roadmap</h2>
+          </div>
+
+          <div className="grid md:grid-cols-5 gap-6">
+            {[
+              { id: "01", title: "Strategic Discovery", desc: "Detailed interviews and market research." },
+              { id: "02", title: "Visual Blueprint", desc: "Wireframing and high-fidelity mockups." },
+              { id: "03", title: "Agile Build", desc: "Iterative development and CI/CD." },
+              { id: "04", title: "Optimization", desc: "Performance tuning and SEO audits." },
+              { id: "05", title: "Market Launch", desc: "Go-live strategy and final QA." }
+            ].map((step, i) => (
+              <div key={i} className="relative group">
+                <div className="p-8 bg-gray-50 rounded-[2rem] h-full border border-transparent hover:border-brand-teal transition-all duration-500 hover:shadow-2xl hover:shadow-brand-teal/10">
+                  <div className="text-5xl font-black text-brand-teal/10 group-hover:text-brand-teal/20 transition-colors mb-6">{step.id}</div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-4">{step.title}</h4>
+                  <p className="text-sm text-gray-500 leading-relaxed">{step.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Enterprise Digital Assets (From Innova) */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <div className="relative group overflow-hidden rounded-[3rem]">
+              <img 
+                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                alt="Engineering" 
+                className="w-full h-auto transform group-hover:scale-110 transition-transform duration-[2s]"
+              />
+              <div className="absolute inset-0 bg-brand-teal/20 mix-blend-overlay"></div>
+            </div>
+            <div className="space-y-10">
+              <p className="text-brand-orange font-mono text-sm tracking-[0.3em] uppercase">// Scale</p>
+              <h2 className="text-4xl md:text-6xl font-black text-brand-teal leading-[0.9] uppercase italic tracking-tighter">Enterprise <br />Digital Assets</h2>
+              <div className="space-y-8">
+                <div className="flex gap-6 items-start">
+                  <div className="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center shrink-0">
+                    <Globe className="w-6 h-6 text-brand-teal" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-2 uppercase tracking-tight">African Web Scale</h4>
+                    <p className="text-gray-600 leading-relaxed">Developing high-availability systems specifically optimized for regional connectivity fluctuations.</p>
+                  </div>
+                </div>
+                <div className="flex gap-6 items-start">
+                  <div className="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center shrink-0">
+                    <PieChart className="w-6 h-6 text-brand-teal" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-2 uppercase tracking-tight">UX Engineering</h4>
+                    <p className="text-gray-600 leading-relaxed">Designing intuitive interfaces that reduce friction and drive user retention for businesses.</p>
+                  </div>
+                </div>
+              </div>
+              <Link href="/contact">
+                <Button size="lg" className="bg-brand-teal text-white rounded-full px-10 h-16 font-black uppercase italic tracking-widest text-sm hover:scale-105 transition-transform">
+                  Initialize Transformation
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
