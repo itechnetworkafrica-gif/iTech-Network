@@ -45,11 +45,9 @@ export default function PublicNavbar() {
       <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
-          <div className="flex items-center gap-2 cursor-pointer">
-            <div className="w-10 h-10 bg-brand-orange rounded-lg flex items-center justify-center transform rotate-3">
-              <span className="text-white font-bold text-xl">iT</span>
-            </div>
-            <span className={`font-bold text-xl tracking-tight ${scrolled ? "text-foreground" : "text-white"}`}>
+          <div className="flex items-center gap-3 cursor-pointer">
+            <img src="/images/logo-new.png" alt="iTech Network Africa Logo" className="h-10 w-auto" />
+            <span className={`font-bold text-xl tracking-tight hidden sm:block ${scrolled ? "text-foreground" : "text-white"}`}>
               iTech Network
             </span>
           </div>

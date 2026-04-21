@@ -57,7 +57,10 @@ export default function Services() {
       
       {/* Header */}
       <section className="pt-32 pb-20 bg-brand-teal text-center text-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute inset-0 z-0">
+          <img src="/images/flyer_4.jpg" alt="Background" className="w-full h-full object-cover opacity-20 mix-blend-overlay" />
+        </div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 z-0"></div>
         <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
           <p className="text-teal-100 text-lg max-w-2xl mx-auto">

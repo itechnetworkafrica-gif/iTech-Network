@@ -9,14 +9,14 @@ export default function About() {
     {
       name: "Wilmot Kerkulah",
       role: "Chief Executive Officer",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/images/flyer_6.jpg",
       bio: "Former Tech Lead at Google with 15 years of experience in scaling digital platforms.",
       socials: { linkedin: "#", twitter: "#" }
     },
     {
       name: "James Kerkulah",
       role: "CTO & Co-Founder",
-      image: "https://images.unsplash.com/photo-1531384441138-2736e62e0506?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/images/flyer_7.jpg",
       bio: "Cloud infrastructure expert and open-source contributor passionate about African tech.",
       socials: { linkedin: "#", github: "#", twitter: "#" }
     },
@@ -120,9 +120,9 @@ export default function About() {
                  <div className="absolute -top-4 -left-4 w-24 h-24 bg-brand-orange/10 rounded-full z-0"></div>
                  <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-brand-teal/10 rounded-full z-0"></div>
                  <img 
-                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                   src="/images/flyer_2.jpg" 
                    alt="Team collaboration" 
-                   className="rounded-2xl shadow-2xl relative z-10 w-full object-cover h-[400px]"
+                   className="rounded-2xl shadow-2xl relative z-10 w-full object-cover h-[500px]"
                  />
                </div>
             </div>

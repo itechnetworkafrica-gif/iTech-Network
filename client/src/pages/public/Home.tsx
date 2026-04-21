@@ -108,9 +108,9 @@ export default function Home() {
             <div className="relative animate-in slide-in-from-right duration-1000">
               <div className="absolute inset-0 bg-brand-orange/20 rounded-full blur-3xl -z-10 animate-pulse"></div>
               <img 
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                src="/images/cover_page.jpg" 
                 alt="Technology team" 
-                className="rounded-3xl shadow-2xl w-full h-auto object-cover"
+                className="rounded-3xl shadow-2xl w-full h-[600px] object-cover object-top"
               />
               <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 animate-bounce duration-[6s]">
                 <div className="flex items-center gap-4">
@@ -267,9 +267,9 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="relative group overflow-hidden rounded-[3rem]">
               <img 
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                src="/images/flyer_1.jpg" 
                 alt="Engineering" 
-                className="w-full h-auto transform group-hover:scale-110 transition-transform duration-[2s]"
+                className="w-full h-[600px] object-cover transform group-hover:scale-110 transition-transform duration-[2s]"
               />
               <div className="absolute inset-0 bg-brand-teal/20 mix-blend-overlay"></div>
             </div>
@@ -381,19 +381,19 @@ export default function Home() {
                 text: "iTech Network transformed our digital infrastructure. Their team is professional, knowledgeable, and truly cares about our success.",
                 author: "John Doe",
                 role: "CEO, FinTech Solutions",
-                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                image: "/images/flyer_3.jpg"
               },
               {
                 text: "The corporate training program was a game-changer for our engineering team. Productivity has increased by 40% in just six months.",
                 author: "Jane Smith",
                 role: "CTO, AgriTech Corp",
-                image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                image: "/images/flyer_4.jpg"
               },
               {
                 text: "Their cybersecurity audit saved us from a potential breach. I highly recommend their services to any serious business enterprise.",
                 author: "Robert Brown",
                 role: "Director, HealthPlus",
-                image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                image: "/images/flyer_5.jpg"
               }
             ].map((testimonial, i) => (
               <Card key={i} className="border-none shadow-xl bg-gray-50 rounded-[2.5rem] p-4 transition-transform hover:-translate-y-2">
