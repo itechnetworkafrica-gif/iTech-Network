@@ -60,3 +60,75 @@ id = "MSkjwfKzGpkw8r9VRyDr-"
 uri = "file://client/public/images/profile_4.jpg"
 type = "image"
 title = "Professional diverse headshot profile picture"
+
+[[outputs]]
+id = "IccQWWcWyNDstxeUzKW2I"
+uri = "file://client/public/images/avatar_man_1.jpg"
+type = "image"
+title = "3d cartoon avatar of a professional african man smiling"
+
+[[outputs]]
+id = "UwSOAGT0EiWjhq3vFAo_t"
+uri = "file://client/public/images/avatar_man_2.jpg"
+type = "image"
+title = "3d cartoon avatar of a professional african man smiling"
+
+[[outputs]]
+id = "TqiJkknWsWZmJ1TlrhSzi"
+uri = "file://client/public/images/avatar_woman_1.jpg"
+type = "image"
+title = "3d cartoon avatar of a professional african woman smiling"
+
+[[outputs]]
+id = "hUiJzeMio7fNsCMKnwfwF"
+uri = "file://client/public/images/avatar_woman_2.jpg"
+type = "image"
+title = "3d cartoon avatar of a professional african woman smiling"
+
+[[outputs]]
+id = "uk2p9qzROcq8KG5TpwplZ"
+uri = "file://client/public/images/service_cloud.jpg"
+type = "image"
+title = "Cloud infrastructure modern data center technology servers"
+
+[[outputs]]
+id = "7GV1IZR1f087EdEg-oQ9a"
+uri = "file://client/public/images/service_consulting.jpg"
+type = "image"
+title = "Business consultant strategy planning meeting"
+
+[[outputs]]
+id = "EHqlspiQcIzsAYFvakBrc"
+uri = "file://client/public/images/service_security.jpg"
+type = "image"
+title = "Cybersecurity digital lock abstract network"
+
+[[outputs]]
+id = "Kzpl5JOc-3wt-YVK_Zrml"
+uri = "file://client/public/images/service_mobile.jpg"
+type = "image"
+title = "Mobile app development interface smartphone"
+
+[[outputs]]
+id = "9LAdu-baUur3-G4Igr1VD"
+uri = "file://client/public/images/service_ai.jpg"
+type = "image"
+title = "Artificial Intelligence abstract glowing brain technology"
+
+[[outputs]]
+id = "3UflVLJUyHFLUJMPpT1We"
+uri = "file://client/public/images/service_blockchain.jpg"
+type = "image"
+title = "Blockchain abstract connected blocks technology network"
+
+[[outputs]]
+id = "A0Lj3hvuBLoh_aw7N0UnY"
+uri = "file://client/public/images/service_iot.jpg"
+type = "image"
+title = "Internet of things smart city connected devices"
+
+[[outputs]]
+id = "XXYwQh6a1-cOKfon1FbYs"
+uri = "file://client/public/images/service_erp.jpg"
+type = "image"
+title = "Enterprise resource planning business dashboard"

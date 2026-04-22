@@ -9,9 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-brand-green rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">iT</span>
-              </div>
+              <img src="/images/logo-new.png" alt="iTech Network Africa Logo" className="h-10 w-auto" />
               <span className="font-bold text-xl tracking-tight">iTech Network</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
@@ -29,11 +27,11 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-brand-green">Quick Links</h3>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><Link href="/"><a className="hover:text-white transition-colors">Home</a></Link></li>
-              <li><Link href="/about"><a className="hover:text-white transition-colors">About Us</a></Link></li>
-              <li><Link href="/services"><a className="hover:text-white transition-colors">Our Services</a></Link></li>
-              <li><Link href="/pricing"><a className="hover:text-white transition-colors">Pricing Plans</a></Link></li>
-              <li><Link href="/contact"><a className="hover:text-white transition-colors">Contact</a></Link></li>
+              <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
+              <li><Link href="/services" className="hover:text-white transition-colors">Our Services</Link></li>
+              <li><Link href="/pricing" className="hover:text-white transition-colors">Pricing Plans</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
 
@@ -55,15 +53,15 @@ export default function Footer() {
             <ul className="space-y-4 text-sm text-gray-400">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-brand-green shrink-0" />
-                <span>123 Tech Boulevard, Innovation District,<br />Nairobi, Kenya</span>
+                <span>Monrovia, Liberia</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-brand-green shrink-0" />
-                <span>+254 700 123 456</span>
+                <span>+231 555 770 641</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-brand-green shrink-0" />
-                <span>hello@itech.africa</span>
+                <span>hello@itechnetwork.africa</span>
               </li>
             </ul>
           </div>

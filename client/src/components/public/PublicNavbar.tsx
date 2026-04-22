@@ -56,18 +56,18 @@ export default function PublicNavbar() {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <Link key={link.name} href={link.href}>
-              <a
-                className={`text-sm font-medium transition-colors hover:text-brand-green ${
-                  location === link.href
-                    ? "text-brand-green"
-                    : scrolled
-                    ? "text-foreground"
-                    : "text-white/90"
-                }`}
-              >
-                {link.name}
-              </a>
+            <Link 
+              key={link.name} 
+              href={link.href}
+              className={`text-sm font-medium transition-colors hover:text-brand-green ${
+                location === link.href
+                  ? "text-brand-green"
+                  : scrolled
+                  ? "text-foreground"
+                  : "text-white/90"
+              }`}
+            >
+              {link.name}
             </Link>
           ))}
         </div>
@@ -117,13 +117,13 @@ export default function PublicNavbar() {
       {isOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg p-4 flex flex-col gap-4 animate-in slide-in-from-top-5">
           {navLinks.map((link) => (
-            <Link key={link.name} href={link.href}>
-              <a
-                className="text-foreground font-medium py-2 border-b border-gray-100 block"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </a>
+            <Link 
+              key={link.name} 
+              href={link.href}
+              className="text-foreground font-medium py-2 border-b border-gray-100 block"
+              onClick={() => setIsOpen(false)}
+            >
+              {link.name}
             </Link>
           ))}
           <Link href="/dashboard">

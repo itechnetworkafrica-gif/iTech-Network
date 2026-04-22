@@ -33,16 +33,16 @@ export default function Home() {
               We provide cutting-edge technology solutions, comprehensive digital training, and enterprise-grade tools to empower businesses and individuals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
-              <Link href="/services">
-                <Button size="lg" className="bg-brand-green text-white hover:bg-green-700 h-14 px-8 text-lg rounded-full shadow-xl transition-all hover:scale-105 hover:shadow-brand-green/20">
+              <Button size="lg" className="bg-brand-green text-white hover:bg-green-700 h-14 px-8 text-lg rounded-full shadow-xl transition-all hover:scale-105 hover:shadow-brand-green/20" asChild>
+                <Link href="/services">
                   Explore Services
-                </Button>
-              </Link>
-              <Link href="/contact">
-                <Button size="lg" variant="outline" className="bg-white text-brand-green border-2 border-brand-green hover:bg-gray-50 h-14 px-8 text-lg rounded-full shadow-lg transition-all hover:scale-105">
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="bg-white text-brand-green border-2 border-brand-green hover:bg-gray-50 h-14 px-8 text-lg rounded-full shadow-lg transition-all hover:scale-105" asChild>
+                <Link href="/contact">
                   Get Started
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -296,11 +296,11 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <Link href="/contact">
-                <Button size="lg" className="bg-brand-green text-white rounded-full px-10 h-16 font-black uppercase italic tracking-widest text-sm hover:scale-105 transition-transform">
+              <Button size="lg" className="bg-brand-green text-white rounded-full px-10 h-16 font-black uppercase italic tracking-widest text-sm hover:scale-105 transition-transform" asChild>
+                <Link href="/contact">
                   Initialize Transformation
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -356,10 +356,8 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                 <p className="text-green-100 mb-8 leading-relaxed line-clamp-2">{service.desc}</p>
-                <Link href="/services">
-                  <a className="inline-flex items-center text-brand-green font-bold hover:gap-3 transition-all">
-                    Learn more <ArrowRight className="w-5 h-5 ml-2" />
-                  </a>
+                <Link href="/services" className="inline-flex items-center text-brand-green font-bold hover:gap-3 transition-all">
+                  Learn more <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </div>
             ))}
@@ -381,19 +379,19 @@ export default function Home() {
                 text: "iTech Network transformed our digital infrastructure. Their team is professional, knowledgeable, and truly cares about our success.",
                 author: "John Doe",
                 role: "CEO, FinTech Solutions",
-                image: "/images/profile_1.jpg"
+                image: "/images/avatar_man_1.jpg"
               },
               {
                 text: "The corporate training program was a game-changer for our engineering team. Productivity has increased by 40% in just six months.",
                 author: "Jane Smith",
                 role: "CTO, AgriTech Corp",
-                image: "/images/profile_2.jpg"
+                image: "/images/avatar_woman_1.jpg"
               },
               {
                 text: "Their cybersecurity audit saved us from a potential breach. I highly recommend their services to any serious business enterprise.",
                 author: "Robert Brown",
                 role: "Director, HealthPlus",
-                image: "/images/profile_3.jpg"
+                image: "/images/avatar_man_2.jpg"
               }
             ].map((testimonial, i) => (
               <Card key={i} className="border-none shadow-xl bg-gray-50 rounded-[2.5rem] p-4 transition-transform hover:-translate-y-2">

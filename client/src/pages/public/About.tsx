@@ -9,14 +9,14 @@ export default function About() {
     {
       name: "Wilmot Kerkulah",
       role: "Chief Executive Officer",
-      image: "/images/profile_1.jpg",
+      image: "/images/avatar_man_1.jpg",
       bio: "Former Tech Lead at Google with 15 years of experience in scaling digital platforms.",
       socials: { linkedin: "#", twitter: "#" }
     },
     {
       name: "James Kerkulah",
       role: "CTO & Co-Founder",
-      image: "/images/profile_2.jpg",
+      image: "/images/avatar_man_2.jpg",
       bio: "Cloud infrastructure expert and open-source contributor passionate about African tech.",
       socials: { linkedin: "#", github: "#", twitter: "#" }
     },
@@ -24,14 +24,14 @@ export default function About() {
       
       name: "Amara Diallo",
       role: "Head of Design",
-      image: "/images/profile_3.jpg",
+      image: "/images/avatar_woman_1.jpg",
       bio: "Award-winning product designer focused on creating accessible and intuitive user experiences.",
       socials: { linkedin: "#", twitter: "#" }
     },
     {
       name: "Michael Chen",
       role: "Lead Developer",
-      image: "/images/profile_4.jpg",
+      image: "/images/avatar_woman_2.jpg",
       bio: "Full-stack wizard specializing in React and Node.js enterprise applications.",
       socials: { linkedin: "#", github: "#" }
     }
