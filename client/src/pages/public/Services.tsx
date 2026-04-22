@@ -56,14 +56,14 @@ export default function Services() {
       <PublicNavbar />
       
       {/* Header */}
-      <section className="pt-32 pb-20 bg-brand-teal text-center text-white relative overflow-hidden">
+      <section className="pt-32 pb-20 bg-brand-green text-center text-white relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img src="/images/hero_services.jpg" alt="Background" className="w-full h-full object-cover opacity-20 mix-blend-overlay" />
         </div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 z-0"></div>
         <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
-          <p className="text-teal-100 text-lg max-w-2xl mx-auto">
+          <p className="text-green-100 text-lg max-w-2xl mx-auto">
             We deliver end-to-end technology solutions to help your business innovate, scale, and succeed in the digital age.
           </p>
         </div>
@@ -74,12 +74,12 @@ export default function Services() {
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, i) => (
-              <div key={i} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all border-t-4 border-brand-teal hover:-translate-y-2 group relative overflow-hidden">
+              <div key={i} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all border-t-4 border-brand-green hover:-translate-y-2 group relative overflow-hidden">
                 {/* Subtle background pattern */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-teal/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-500"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-green/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-500"></div>
                 
-                <div className="w-16 h-16 bg-teal-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-teal transition-colors relative z-10 shadow-inner">
-                  <service.icon className="w-8 h-8 text-brand-teal group-hover:text-white transition-colors" />
+                <div className="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-green transition-colors relative z-10 shadow-inner">
+                  <service.icon className="w-8 h-8 text-brand-green group-hover:text-white transition-colors" />
                 </div>
                 
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 relative z-10">{service.title}</h3>
@@ -90,14 +90,14 @@ export default function Services() {
                 <div className="space-y-3 mb-8 relative z-10">
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center text-sm text-gray-600">
-                      <div className="w-1.5 h-1.5 bg-brand-teal rounded-full mr-3"></div>
+                      <div className="w-1.5 h-1.5 bg-brand-green rounded-full mr-3"></div>
                       {feature}
                     </div>
                   ))}
                 </div>
                 
                 <Link href="/contact">
-                  <Button className="w-full bg-gray-50 text-brand-teal hover:bg-brand-teal hover:text-white border border-brand-teal/20 font-semibold transition-all relative z-10">
+                  <Button className="w-full bg-gray-50 text-brand-green hover:bg-brand-green hover:text-white border border-brand-green/20 font-semibold transition-all relative z-10">
                     Get a Quote
                   </Button>
                 </Link>
@@ -128,7 +128,7 @@ export default function Services() {
               { step: "04", title: "Delivery", desc: "We launch your project and provide ongoing support." }
             ].map((item, i) => (
               <div key={i} className="relative z-10 text-center">
-                <div className="w-24 h-24 bg-gray-800 rounded-full border-4 border-gray-900 flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-brand-teal shadow-xl">
+                <div className="w-24 h-24 bg-gray-800 rounded-full border-4 border-gray-900 flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-brand-green shadow-xl">
                   {item.step}
                 </div>
                 <h3 className="text-xl font-bold mb-2">{item.title}</h3>
@@ -145,11 +145,11 @@ export default function Services() {
       </section>
 
       {/* Tech Stack CTA - NEW BLOCK */}
-      <section className="py-24 bg-brand-teal relative overflow-hidden">
+      <section className="py-24 bg-brand-green relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
         <div className="container mx-auto px-4 md:px-8 relative z-10">
           <div className="bg-gray-950 rounded-[3rem] p-12 md:p-20 text-center space-y-8 shadow-2xl">
-            <p className="text-brand-teal font-mono text-sm tracking-[0.3em] uppercase">// Ready to Scale?</p>
+            <p className="text-brand-green font-mono text-sm tracking-[0.3em] uppercase">// Ready to Scale?</p>
             <h2 className="text-4xl md:text-7xl font-black text-white uppercase italic tracking-tighter leading-[0.9]">
               Let's Engineer Your <br />Digital Future
             </h2>
@@ -158,7 +158,7 @@ export default function Services() {
             </p>
             <div className="flex flex-col md:flex-row justify-center gap-6 pt-8">
               <Link href="/contact">
-                <Button size="lg" className="bg-brand-teal text-white rounded-full px-12 h-16 font-black uppercase italic tracking-widest text-sm hover:scale-105 transition-transform w-full md:w-auto">
+                <Button size="lg" className="bg-brand-green text-white rounded-full px-12 h-16 font-black uppercase italic tracking-widest text-sm hover:scale-105 transition-transform w-full md:w-auto">
                   Start Project
                 </Button>
               </Link>

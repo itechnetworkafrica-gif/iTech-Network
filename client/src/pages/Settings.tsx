@@ -57,7 +57,7 @@ export default function Settings() {
         </Card>
 
         <div className="flex justify-end">
-          <Button className="bg-brand-teal text-white hover:bg-brand-teal/90">Save Changes</Button>
+          <Button className="bg-brand-green text-white hover:bg-brand-green/90">Save Changes</Button>
         </div>
       </div>
     </div>

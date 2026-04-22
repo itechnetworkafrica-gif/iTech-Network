@@ -63,7 +63,7 @@ export default function Services() {
           <h1 className="text-3xl font-bold tracking-tight text-foreground">Service Catalog</h1>
           <p className="text-muted-foreground mt-2">Browse and order professional services for your business.</p>
         </div>
-        <Button className="bg-brand-teal text-white hover:bg-brand-teal/90">
+        <Button className="bg-brand-green text-white hover:bg-brand-green/90">
           <ShoppingCart className="mr-2 h-4 w-4" />
           Cart (0)
         </Button>
@@ -134,7 +134,7 @@ function ServiceCard({ service }: { service: any }) {
   };
 
   return (
-    <Card className={`flex flex-col h-full hover:shadow-lg transition-shadow border-t-4 ${service.popular ? 'border-brand-teal' : 'border-brand-teal'}`}>
+    <Card className={`flex flex-col h-full hover:shadow-lg transition-shadow border-t-4 ${service.popular ? 'border-brand-green' : 'border-brand-green'}`}>
       <CardHeader>
         <div className="flex justify-between items-start mb-2">
           <Badge variant="secondary" className="bg-muted text-muted-foreground flex gap-1 items-center">
@@ -142,27 +142,27 @@ function ServiceCard({ service }: { service: any }) {
             <span className="capitalize">{service.category}</span>
           </Badge>
           {service.popular && (
-            <Badge className="bg-brand-teal hover:bg-brand-teal text-white">Popular</Badge>
+            <Badge className="bg-brand-green hover:bg-brand-green text-white">Popular</Badge>
           )}
         </div>
         <CardTitle className="text-xl">{service.title}</CardTitle>
         <CardDescription>{service.description}</CardDescription>
       </CardHeader>
       <CardContent className="flex-1">
-        <div className="text-2xl font-bold text-brand-teal mb-6">
+        <div className="text-2xl font-bold text-brand-green mb-6">
           {service.price} <span className="text-sm font-normal text-muted-foreground">/ project</span>
         </div>
         <ul className="space-y-2 text-sm">
           {service.features.map((feature: string, i: number) => (
             <li key={i} className="flex items-center gap-2 text-muted-foreground">
-              <Check className="w-4 h-4 text-brand-teal" />
+              <Check className="w-4 h-4 text-brand-green" />
               {feature}
             </li>
           ))}
         </ul>
       </CardContent>
       <CardFooter>
-        <Button className="w-full bg-brand-teal hover:bg-brand-teal/90 text-white">Order Now</Button>
+        <Button className="w-full bg-brand-green hover:bg-brand-green/90 text-white">Order Now</Button>
       </CardFooter>
     </Card>
   );

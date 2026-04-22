@@ -62,7 +62,7 @@ export default function Integrations() {
                   {t('disconnect')}
                 </Button>
               ) : (
-                <Button className="w-full bg-brand-teal hover:bg-brand-teal/90 text-white">
+                <Button className="w-full bg-brand-green hover:bg-brand-green/90 text-white">
                   {t('connect')} <ExternalLink className="w-4 h-4 ml-2" />
                 </Button>
               )}

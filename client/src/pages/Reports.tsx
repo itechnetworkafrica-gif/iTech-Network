@@ -106,7 +106,7 @@ We will be focusing on finalizing the dashboard widgets and starting the integra
               <Separator className="my-4" />
 
               <Button 
-                className="w-full bg-brand-teal hover:bg-brand-teal/90 text-white text-lg h-12"
+                className="w-full bg-brand-green hover:bg-brand-green/90 text-white text-lg h-12"
                 onClick={handleGenerate}
                 disabled={isGenerating}
               >
@@ -142,7 +142,7 @@ We will be focusing on finalizing the dashboard widgets and starting the integra
                   <Copy className="w-4 h-4 mr-2" />
                   Copy
                 </Button>
-                <Button size="sm" className="bg-brand-teal text-white hover:bg-brand-teal/90" disabled={!generatedContent}>
+                <Button size="sm" className="bg-brand-green text-white hover:bg-brand-green/90" disabled={!generatedContent}>
                   <Send className="w-4 h-4 mr-2" />
                   {t('send_newsletter')}
                 </Button>

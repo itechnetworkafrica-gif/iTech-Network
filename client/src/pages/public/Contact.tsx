@@ -11,10 +11,10 @@ export default function Contact() {
     <div className="min-h-screen flex flex-col font-sans bg-gray-50">
       <PublicNavbar />
       
-      <section className="pt-32 pb-20 bg-brand-teal text-center text-white">
+      <section className="pt-32 pb-20 bg-brand-green text-center text-white">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
-          <p className="text-teal-100 text-lg max-w-2xl mx-auto">
+          <p className="text-green-100 text-lg max-w-2xl mx-auto">
             Have a project in mind or want to learn more about our training programs? We'd love to hear from you.
           </p>
         </div>
@@ -28,11 +28,11 @@ export default function Contact() {
             <Card className="lg:col-span-1 bg-white border-none shadow-xl h-full">
               <CardContent className="p-8 space-y-8">
                 <div>
-                  <h3 className="text-xl font-bold text-brand-teal mb-6">Contact Information</h3>
+                  <h3 className="text-xl font-bold text-brand-green mb-6">Contact Information</h3>
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center shrink-0">
-                        <MapPin className="w-5 h-5 text-brand-teal" />
+                      <div className="w-10 h-10 rounded-lg bg-green-50 flex items-center justify-center shrink-0">
+                        <MapPin className="w-5 h-5 text-brand-green" />
                       </div>
                       <div>
                         <p className="font-semibold text-gray-900">Visit Us</p>
@@ -41,8 +41,8 @@ export default function Contact() {
                     </div>
 
                     <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center shrink-0">
-                        <Mail className="w-5 h-5 text-brand-teal" />
+                      <div className="w-10 h-10 rounded-lg bg-green-50 flex items-center justify-center shrink-0">
+                        <Mail className="w-5 h-5 text-brand-green" />
                       </div>
                       <div>
                         <p className="font-semibold text-gray-900">Email Us</p>
@@ -51,8 +51,8 @@ export default function Contact() {
                     </div>
 
                     <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center shrink-0">
-                        <Phone className="w-5 h-5 text-brand-teal" />
+                      <div className="w-10 h-10 rounded-lg bg-green-50 flex items-center justify-center shrink-0">
+                        <Phone className="w-5 h-5 text-brand-green" />
                       </div>
                       <div>
                         <p className="font-semibold text-gray-900">Call Us</p>
@@ -66,10 +66,10 @@ export default function Contact() {
                   <h4 className="font-semibold text-gray-900 mb-4">Follow Us</h4>
                   <div className="flex gap-4">
                     {/* Social Icons Placeholder */}
-                    <div className="w-8 h-8 bg-gray-100 rounded-full hover:bg-brand-teal hover:text-white transition-colors cursor-pointer flex items-center justify-center text-xs">FB</div>
-                    <div className="w-8 h-8 bg-gray-100 rounded-full hover:bg-brand-teal hover:text-white transition-colors cursor-pointer flex items-center justify-center text-xs">TW</div>
-                    <div className="w-8 h-8 bg-gray-100 rounded-full hover:bg-brand-teal hover:text-white transition-colors cursor-pointer flex items-center justify-center text-xs">IG</div>
-                    <div className="w-8 h-8 bg-gray-100 rounded-full hover:bg-brand-teal hover:text-white transition-colors cursor-pointer flex items-center justify-center text-xs">LI</div>
+                    <div className="w-8 h-8 bg-gray-100 rounded-full hover:bg-brand-green hover:text-white transition-colors cursor-pointer flex items-center justify-center text-xs">FB</div>
+                    <div className="w-8 h-8 bg-gray-100 rounded-full hover:bg-brand-green hover:text-white transition-colors cursor-pointer flex items-center justify-center text-xs">TW</div>
+                    <div className="w-8 h-8 bg-gray-100 rounded-full hover:bg-brand-green hover:text-white transition-colors cursor-pointer flex items-center justify-center text-xs">IG</div>
+                    <div className="w-8 h-8 bg-gray-100 rounded-full hover:bg-brand-green hover:text-white transition-colors cursor-pointer flex items-center justify-center text-xs">LI</div>
                   </div>
                 </div>
               </CardContent>
@@ -85,31 +85,31 @@ export default function Contact() {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label htmlFor="name" className="text-sm font-medium text-gray-700">Full Name</label>
-                      <Input id="name" placeholder="John Doe" className="bg-gray-50 border-gray-200 focus:border-brand-teal focus:ring-brand-teal/20" />
+                      <Input id="name" placeholder="John Doe" className="bg-gray-50 border-gray-200 focus:border-brand-green focus:ring-brand-green/20" />
                     </div>
                     <div className="space-y-2">
                       <label htmlFor="email" className="text-sm font-medium text-gray-700">Email Address</label>
-                      <Input id="email" type="email" placeholder="john@example.com" className="bg-gray-50 border-gray-200 focus:border-brand-teal focus:ring-brand-teal/20" />
+                      <Input id="email" type="email" placeholder="john@example.com" className="bg-gray-50 border-gray-200 focus:border-brand-green focus:ring-brand-green/20" />
                     </div>
                   </div>
                   
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label htmlFor="phone" className="text-sm font-medium text-gray-700">Phone Number</label>
-                      <Input id="phone" placeholder="+254..." className="bg-gray-50 border-gray-200 focus:border-brand-teal focus:ring-brand-teal/20" />
+                      <Input id="phone" placeholder="+254..." className="bg-gray-50 border-gray-200 focus:border-brand-green focus:ring-brand-green/20" />
                     </div>
                     <div className="space-y-2">
                       <label htmlFor="subject" className="text-sm font-medium text-gray-700">Subject</label>
-                      <Input id="subject" placeholder="Project Inquiry" className="bg-gray-50 border-gray-200 focus:border-brand-teal focus:ring-brand-teal/20" />
+                      <Input id="subject" placeholder="Project Inquiry" className="bg-gray-50 border-gray-200 focus:border-brand-green focus:ring-brand-green/20" />
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <label htmlFor="message" className="text-sm font-medium text-gray-700">Message</label>
-                    <Textarea id="message" placeholder="Tell us about your project or inquiry..." className="min-h-[150px] bg-gray-50 border-gray-200 focus:border-brand-teal focus:ring-brand-teal/20" />
+                    <Textarea id="message" placeholder="Tell us about your project or inquiry..." className="min-h-[150px] bg-gray-50 border-gray-200 focus:border-brand-green focus:ring-brand-green/20" />
                   </div>
 
-                  <Button className="w-full md:w-auto bg-brand-teal hover:bg-teal-700 text-white px-8 py-6 text-lg rounded-lg">
+                  <Button className="w-full md:w-auto bg-brand-green hover:bg-green-700 text-white px-8 py-6 text-lg rounded-lg">
                     Send Message <Send className="w-5 h-5 ml-2" />
                   </Button>
                 </form>

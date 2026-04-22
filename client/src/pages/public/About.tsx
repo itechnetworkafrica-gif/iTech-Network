@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import PublicNavbar from "@/components/public/PublicNavbar";
 import Footer from "@/components/public/Footer";
-import { CheckCircle, Users, Target, Lightbulb, ArrowRight, Linkedin, Twitter, Github } from "lucide-react";
+import { CheckCircle, Users, Target, Lightbulb, ArrowRight, Linkedin, Twitter, Github, Rocket, Shield, Cpu } from "lucide-react";
 import { Link } from "wouter";
 
 export default function About() {
@@ -42,13 +42,13 @@ export default function About() {
       <PublicNavbar />
       
       {/* Header Banner */}
-      <section className="pt-32 pb-20 bg-brand-teal relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-teal-900 to-brand-teal opacity-90"></div>
+      <section className="pt-32 pb-20 bg-brand-green relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-900 to-brand-green opacity-90"></div>
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
         
         <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">About iTech Network</h1>
-          <p className="text-xl text-teal-50 max-w-2xl mx-auto">
+          <p className="text-xl text-green-50 max-w-2xl mx-auto">
             We are a premier technology institution dedicated to bridging the digital divide through education, innovation, and enterprise solutions.
           </p>
         </div>
@@ -61,47 +61,47 @@ export default function About() {
 
       {/* Modern Impact Grid - NEW BLOCK */}
       <section className="py-24 bg-gray-950 text-white overflow-hidden relative">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-teal/5 via-transparent to-transparent opacity-50"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-green/5 via-transparent to-transparent opacity-50"></div>
         <div className="container mx-auto px-4 md:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <p className="text-brand-teal font-mono text-sm tracking-[0.3em] uppercase">// Our Impact</p>
+              <p className="text-brand-green font-mono text-sm tracking-[0.3em] uppercase">// Our Impact</p>
               <h2 className="text-4xl md:text-6xl font-black uppercase italic tracking-tighter leading-none">Redefining <br />Tech Standards</h2>
               <p className="text-gray-400 text-lg leading-relaxed max-w-xl">
                 Since our inception, we've focused on creating measurable change in the African tech landscape. We don't just teach code; we build careers and scale businesses.
               </p>
               <div className="grid grid-cols-2 gap-8 pt-4">
                 <div className="space-y-2">
-                  <div className="text-4xl font-black text-brand-teal tracking-tighter">95%</div>
+                  <div className="text-4xl font-black text-brand-green tracking-tighter">95%</div>
                   <div className="text-sm font-bold uppercase tracking-widest text-gray-500">Employment Rate</div>
                 </div>
                 <div className="space-y-2">
-                  <div className="text-4xl font-black text-brand-teal tracking-tighter">200+</div>
+                  <div className="text-4xl font-black text-brand-green tracking-tighter">200+</div>
                   <div className="text-sm font-bold uppercase tracking-widest text-gray-500">Global Partners</div>
                 </div>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4 pt-12">
-                <div className="bg-white/5 backdrop-blur-xl p-8 rounded-[2rem] border border-white/10 hover:border-brand-teal/50 transition-all group">
-                  <Rocket className="w-10 h-10 text-brand-teal mb-4 group-hover:scale-110 transition-transform" />
+                <div className="bg-white/5 backdrop-blur-xl p-8 rounded-[2rem] border border-white/10 hover:border-brand-green/50 transition-all group">
+                  <Rocket className="w-10 h-10 text-brand-green mb-4 group-hover:scale-110 transition-transform" />
                   <h4 className="font-bold text-xl mb-2">Fast Growth</h4>
                   <p className="text-gray-500 text-sm">Rapidly expanding into new markets across West Africa.</p>
                 </div>
-                <div className="bg-white/5 backdrop-blur-xl p-8 rounded-[2rem] border border-white/10 hover:border-brand-teal/50 transition-all group">
-                  <Shield className="w-10 h-10 text-brand-teal mb-4 group-hover:scale-110 transition-transform" />
+                <div className="bg-white/5 backdrop-blur-xl p-8 rounded-[2rem] border border-white/10 hover:border-brand-green/50 transition-all group">
+                  <Shield className="w-10 h-10 text-brand-green mb-4 group-hover:scale-110 transition-transform" />
                   <h4 className="font-bold text-xl mb-2">Secure Tech</h4>
                   <p className="text-gray-500 text-sm">Industry-leading security protocols in every project.</p>
                 </div>
               </div>
               <div className="space-y-4">
-                <div className="bg-white/5 backdrop-blur-xl p-8 rounded-[2rem] border border-white/10 hover:border-brand-teal/50 transition-all group">
-                  <Cpu className="w-10 h-10 text-brand-teal mb-4 group-hover:scale-110 transition-transform" />
+                <div className="bg-white/5 backdrop-blur-xl p-8 rounded-[2rem] border border-white/10 hover:border-brand-green/50 transition-all group">
+                  <Cpu className="w-10 h-10 text-brand-green mb-4 group-hover:scale-110 transition-transform" />
                   <h4 className="font-bold text-xl mb-2">Edge Computing</h4>
                   <p className="text-gray-500 text-sm">Optimizing for regional connectivity challenges.</p>
                 </div>
-                <div className="bg-white/5 backdrop-blur-xl p-8 rounded-[2rem] border border-white/10 hover:border-brand-teal/50 transition-all group">
-                  <Users className="w-10 h-10 text-brand-teal mb-4 group-hover:scale-110 transition-transform" />
+                <div className="bg-white/5 backdrop-blur-xl p-8 rounded-[2rem] border border-white/10 hover:border-brand-green/50 transition-all group">
+                  <Users className="w-10 h-10 text-brand-green mb-4 group-hover:scale-110 transition-transform" />
                   <h4 className="font-bold text-xl mb-2">Community</h4>
                   <p className="text-gray-500 text-sm">Building a vibrant network of African technologists.</p>
                 </div>
@@ -117,8 +117,8 @@ export default function About() {
           <div className="flex flex-col md:flex-row items-center gap-16">
             <div className="md:w-1/2">
                <div className="relative">
-                 <div className="absolute -top-4 -left-4 w-24 h-24 bg-brand-teal/10 rounded-full z-0"></div>
-                 <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-brand-teal/10 rounded-full z-0"></div>
+                 <div className="absolute -top-4 -left-4 w-24 h-24 bg-brand-green/10 rounded-full z-0"></div>
+                 <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-brand-green/10 rounded-full z-0"></div>
                  <img 
                    src="/images/hero_about.jpg" 
                    alt="Team collaboration" 
@@ -127,14 +127,14 @@ export default function About() {
                </div>
             </div>
             <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold text-brand-teal mb-6">Driving Innovation Since 2020</h2>
+              <h2 className="text-3xl font-bold text-brand-green mb-6">Driving Innovation Since 2020</h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Founded by a group of passionate technologists, iTech Network Africa began with a simple goal: to provide high-quality coding education. Today, we have evolved into a full-service technology institution offering enterprise software development, consultancy, and advanced training programs.
               </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
                 We believe that the future belongs to those who build it. That's why we partner with businesses to build robust digital infrastructure and with individuals to build career-defining skills.
               </p>
-              <Button className="bg-brand-teal text-white hover:bg-teal-700 rounded-full px-8">
+              <Button className="bg-brand-green text-white hover:bg-green-700 rounded-full px-8">
                 Join Our Team <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </div>
@@ -149,7 +149,7 @@ export default function About() {
             <span className="inline-block py-1 px-3 rounded-full bg-gray-200 text-gray-600 text-sm font-semibold uppercase tracking-wider mb-4">
               Team Members
             </span>
-            <h2 className="text-3xl md:text-5xl font-bold text-brand-teal mb-4">Meet Our Skilled and Passionate Team</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-brand-green mb-4">Meet Our Skilled and Passionate Team</h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
@@ -173,17 +173,17 @@ export default function About() {
                     {/* Socials - Hidden by default, shown on group hover or active */}
                     <div className="flex justify-center gap-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
                       {member.socials.linkedin && (
-                        <a href={member.socials.linkedin} className="w-10 h-10 rounded-full bg-white text-brand-teal flex items-center justify-center hover:bg-brand-teal hover:text-white transition-colors">
+                        <a href={member.socials.linkedin} className="w-10 h-10 rounded-full bg-white text-brand-green flex items-center justify-center hover:bg-brand-green hover:text-white transition-colors">
                           <Linkedin className="w-5 h-5" />
                         </a>
                       )}
                       {member.socials.twitter && (
-                        <a href={member.socials.twitter} className="w-10 h-10 rounded-full bg-white text-brand-teal flex items-center justify-center hover:bg-brand-teal hover:text-white transition-colors">
+                        <a href={member.socials.twitter} className="w-10 h-10 rounded-full bg-white text-brand-green flex items-center justify-center hover:bg-brand-green hover:text-white transition-colors">
                           <Twitter className="w-5 h-5" />
                         </a>
                       )}
                       {member.socials.github && (
-                        <a href={member.socials.github} className="w-10 h-10 rounded-full bg-white text-brand-teal flex items-center justify-center hover:bg-brand-teal hover:text-white transition-colors">
+                        <a href={member.socials.github} className="w-10 h-10 rounded-full bg-white text-brand-green flex items-center justify-center hover:bg-brand-green hover:text-white transition-colors">
                           <Github className="w-5 h-5" />
                         </a>
                       )}
@@ -191,7 +191,7 @@ export default function About() {
                   </div>
 
                   {/* Plus Button visual cue */}
-                  <div className="absolute bottom-6 right-6 w-10 h-10 bg-white rounded-full flex items-center justify-center text-brand-teal shadow-lg group-hover:scale-0 transition-transform duration-300">
+                  <div className="absolute bottom-6 right-6 w-10 h-10 bg-white rounded-full flex items-center justify-center text-brand-green shadow-lg group-hover:scale-0 transition-transform duration-300">
                     <span className="text-2xl leading-none mb-1">+</span>
                   </div>
                 </div>

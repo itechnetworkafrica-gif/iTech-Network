@@ -58,9 +58,9 @@ export default function PublicNavbar() {
           {navLinks.map((link) => (
             <Link key={link.name} href={link.href}>
               <a
-                className={`text-sm font-medium transition-colors hover:text-brand-teal ${
+                className={`text-sm font-medium transition-colors hover:text-brand-green ${
                   location === link.href
-                    ? "text-brand-teal"
+                    ? "text-brand-green"
                     : scrolled
                     ? "text-foreground"
                     : "text-white/90"
@@ -95,8 +95,8 @@ export default function PublicNavbar() {
             <Button
               className={`font-semibold ${
                 scrolled
-                  ? "bg-brand-teal text-white hover:bg-brand-teal/90"
-                  : "bg-white text-brand-teal hover:bg-gray-100"
+                  ? "bg-brand-green text-white hover:bg-brand-green/90"
+                  : "bg-white text-brand-green hover:bg-gray-100"
               }`}
             >
               Client Portal
@@ -127,7 +127,7 @@ export default function PublicNavbar() {
             </Link>
           ))}
           <Link href="/dashboard">
-            <Button className="w-full bg-brand-teal text-white mt-2">Client Portal</Button>
+            <Button className="w-full bg-brand-green text-white mt-2">Client Portal</Button>
           </Link>
         </div>
       )}

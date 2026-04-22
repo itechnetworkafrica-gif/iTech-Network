@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-brand-teal rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-brand-green rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold">iT</span>
               </div>
               <span className="font-bold text-xl tracking-tight">iTech Network</span>
@@ -18,16 +18,16 @@ export default function Footer() {
               Empowering businesses through innovative technology solutions and world-class digital education.
             </p>
             <div className="flex gap-4 pt-2">
-              <a href="#" className="text-gray-400 hover:text-brand-teal transition-colors"><Twitter className="w-5 h-5" /></a>
-              <a href="#" className="text-gray-400 hover:text-brand-teal transition-colors"><Facebook className="w-5 h-5" /></a>
-              <a href="#" className="text-gray-400 hover:text-brand-teal transition-colors"><Instagram className="w-5 h-5" /></a>
-              <a href="#" className="text-gray-400 hover:text-brand-teal transition-colors"><Linkedin className="w-5 h-5" /></a>
+              <a href="#" className="text-gray-400 hover:text-brand-green transition-colors"><Twitter className="w-5 h-5" /></a>
+              <a href="#" className="text-gray-400 hover:text-brand-green transition-colors"><Facebook className="w-5 h-5" /></a>
+              <a href="#" className="text-gray-400 hover:text-brand-green transition-colors"><Instagram className="w-5 h-5" /></a>
+              <a href="#" className="text-gray-400 hover:text-brand-green transition-colors"><Linkedin className="w-5 h-5" /></a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-brand-teal">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4 text-brand-green">Quick Links</h3>
             <ul className="space-y-2 text-sm text-gray-400">
               <li><Link href="/"><a className="hover:text-white transition-colors">Home</a></Link></li>
               <li><Link href="/about"><a className="hover:text-white transition-colors">About Us</a></Link></li>
@@ -39,7 +39,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-brand-teal">Services</h3>
+            <h3 className="text-lg font-semibold mb-4 text-brand-green">Services</h3>
             <ul className="space-y-2 text-sm text-gray-400">
               <li><a href="#" className="hover:text-white transition-colors">Web Development</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Cloud Solutions</a></li>
@@ -51,18 +51,18 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-brand-teal">Contact Us</h3>
+            <h3 className="text-lg font-semibold mb-4 text-brand-green">Contact Us</h3>
             <ul className="space-y-4 text-sm text-gray-400">
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-brand-teal shrink-0" />
+                <MapPin className="w-5 h-5 text-brand-green shrink-0" />
                 <span>123 Tech Boulevard, Innovation District,<br />Nairobi, Kenya</span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-brand-teal shrink-0" />
+                <Phone className="w-5 h-5 text-brand-green shrink-0" />
                 <span>+254 700 123 456</span>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-brand-teal shrink-0" />
+                <Mail className="w-5 h-5 text-brand-green shrink-0" />
                 <span>hello@itech.africa</span>
               </li>
             </ul>

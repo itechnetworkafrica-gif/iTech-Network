@@ -13,33 +13,33 @@ export default function Home() {
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-teal via-teal-500 to-teal-600 -z-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-green via-green-500 to-green-600 -z-20"></div>
         <div className="absolute inset-0 opacity-20 -z-10">
-           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-teal rounded-full blur-3xl transform translate-x-1/3 -translate-y-1/4 animate-pulse duration-[10s]"></div>
-           <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-teal rounded-full blur-3xl transform -translate-x-1/3 translate-y-1/4 animate-pulse duration-[8s]"></div>
+           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-green rounded-full blur-3xl transform translate-x-1/3 -translate-y-1/4 animate-pulse duration-[10s]"></div>
+           <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-green rounded-full blur-3xl transform -translate-x-1/3 translate-y-1/4 animate-pulse duration-[8s]"></div>
         </div>
 
         <div className="container mx-auto px-4 md:px-8 relative z-10 text-center md:text-left">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center rounded-full border border-teal-200 bg-teal-500/10 px-3 py-1 text-sm font-medium text-teal-50 backdrop-blur-sm mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
-              <span className="flex h-2 w-2 rounded-full bg-brand-teal mr-2"></span>
+            <div className="inline-flex items-center rounded-full border border-green-200 bg-green-500/10 px-3 py-1 text-sm font-medium text-green-50 backdrop-blur-sm mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
+              <span className="flex h-2 w-2 rounded-full bg-brand-green mr-2"></span>
               Leading Tech Institution in Africa
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 tracking-tight drop-shadow-sm animate-in fade-in slide-in-from-bottom-6 duration-1000">
               Innovating Africa's <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-teal-100">Digital Future</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-green-100">Digital Future</span>
             </h1>
-            <p className="text-lg md:text-xl text-teal-50 mb-8 max-w-2xl leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
+            <p className="text-lg md:text-xl text-green-50 mb-8 max-w-2xl leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
               We provide cutting-edge technology solutions, comprehensive digital training, and enterprise-grade tools to empower businesses and individuals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
               <Link href="/services">
-                <Button size="lg" className="bg-brand-teal text-white hover:bg-teal-700 h-14 px-8 text-lg rounded-full shadow-xl transition-all hover:scale-105 hover:shadow-brand-teal/20">
+                <Button size="lg" className="bg-brand-green text-white hover:bg-green-700 h-14 px-8 text-lg rounded-full shadow-xl transition-all hover:scale-105 hover:shadow-brand-green/20">
                   Explore Services
                 </Button>
               </Link>
               <Link href="/contact">
-                <Button size="lg" variant="outline" className="bg-white text-brand-teal border-2 border-brand-teal hover:bg-gray-50 h-14 px-8 text-lg rounded-full shadow-lg transition-all hover:scale-105">
+                <Button size="lg" variant="outline" className="bg-white text-brand-green border-2 border-brand-green hover:bg-gray-50 h-14 px-8 text-lg rounded-full shadow-lg transition-all hover:scale-105">
                   Get Started
                 </Button>
               </Link>
@@ -52,10 +52,10 @@ export default function Home() {
           <div className="absolute top-0 right-0 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-2xl animate-bounce duration-[4s]">
             <Code className="w-12 h-12 text-white" />
           </div>
-          <div className="absolute bottom-0 left-0 bg-brand-teal/20 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-2xl animate-bounce duration-[5s] delay-700">
+          <div className="absolute bottom-0 left-0 bg-brand-green/20 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-2xl animate-bounce duration-[5s] delay-700">
             <Rocket className="w-12 h-12 text-white" />
           </div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-teal/20 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-2xl animate-pulse duration-[3s]">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-green/20 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-2xl animate-pulse duration-[3s]">
             <Cpu className="w-16 h-16 text-white" />
           </div>
         </div>
@@ -80,8 +80,8 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8 animate-in slide-in-from-left duration-1000">
-              <h2 className="text-4xl md:text-5xl font-extrabold text-brand-teal leading-tight">
-                Empowering Businesses with <span className="text-brand-teal">Next-Gen</span> Tech
+              <h2 className="text-4xl md:text-5xl font-extrabold text-brand-green leading-tight">
+                Empowering Businesses with <span className="text-brand-green">Next-Gen</span> Tech
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
                 We don't just build software; we build the future. Our approach combines rapid development with enterprise-grade security to ensure your business stays ahead of the curve.
@@ -94,8 +94,8 @@ export default function Home() {
                   { icon: BarChart3, title: "Data Insights", desc: "Business intelligence" }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4 p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <div className="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center shrink-0">
-                      <item.icon className="w-6 h-6 text-brand-teal" />
+                    <div className="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center shrink-0">
+                      <item.icon className="w-6 h-6 text-brand-green" />
                     </div>
                     <div>
                       <h4 className="font-bold text-gray-900">{item.title}</h4>
@@ -106,7 +106,7 @@ export default function Home() {
               </div>
             </div>
             <div className="relative animate-in slide-in-from-right duration-1000">
-              <div className="absolute inset-0 bg-brand-teal/20 rounded-full blur-3xl -z-10 animate-pulse"></div>
+              <div className="absolute inset-0 bg-brand-green/20 rounded-full blur-3xl -z-10 animate-pulse"></div>
               <img 
                 src="/images/hero_home.jpg" 
                 alt="Technology team" 
@@ -114,7 +114,7 @@ export default function Home() {
               />
               <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 animate-bounce duration-[6s]">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-teal-500 rounded-full flex items-center justify-center text-white">
+                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white">
                     <Zap className="w-6 h-6" />
                   </div>
                   <div>
@@ -129,7 +129,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-brand-teal text-white py-20 relative overflow-hidden">
+      <section className="bg-brand-green text-white py-20 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
           <div className="absolute top-10 left-10 w-20 h-20 bg-white rounded-full blur-xl"></div>
           <div className="absolute bottom-10 right-10 w-32 h-32 bg-white rounded-full blur-2xl"></div>
@@ -144,10 +144,10 @@ export default function Home() {
             ].map((stat, i) => (
               <div key={i} className="space-y-4 group">
                 <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto transition-transform group-hover:scale-110 group-hover:bg-white/20">
-                  <stat.icon className="w-8 h-8 text-brand-teal" />
+                  <stat.icon className="w-8 h-8 text-brand-green" />
                 </div>
                 <div className="text-4xl md:text-5xl font-black text-white">{stat.value}</div>
-                <div className="text-teal-100 font-bold uppercase tracking-widest text-xs">{stat.label}</div>
+                <div className="text-green-100 font-bold uppercase tracking-widest text-xs">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -157,18 +157,18 @@ export default function Home() {
       {/* Why Choose Us */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-8 text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-brand-teal mb-6">Trusted by Local Leaders</h2>
-          <div className="w-24 h-1.5 bg-brand-teal mx-auto rounded-full mb-12"></div>
+          <h2 className="text-3xl md:text-5xl font-bold text-brand-green mb-6">Trusted by Local Leaders</h2>
+          <div className="w-24 h-1.5 bg-brand-green mx-auto rounded-full mb-12"></div>
           
           <div className="max-w-4xl mx-auto mb-20 relative">
-            <div className="absolute -top-10 -left-10 text-[10rem] font-serif text-brand-teal/10 leading-none select-none">"</div>
+            <div className="absolute -top-10 -left-10 text-[10rem] font-serif text-brand-green/10 leading-none select-none">"</div>
             <div className="bg-gray-950 text-white p-12 md:p-20 rounded-[3rem] shadow-2xl relative z-10 overflow-hidden group">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-teal/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-green/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
               <p className="text-xl md:text-2xl lg:text-3xl font-medium leading-relaxed mb-10 relative">
                 "iTech Network Africa didn't just build our app; they engineered a new student engagement platform. The Starz Mobile App is flawless, and the support is world-class."
               </p>
               <div className="flex flex-col items-center gap-4">
-                <h4 className="text-xl font-bold uppercase tracking-widest text-brand-teal">Mr. Nehbor C. Poquee</h4>
+                <h4 className="text-xl font-bold uppercase tracking-widest text-brand-green">Mr. Nehbor C. Poquee</h4>
                 <p className="text-gray-400 font-mono text-sm tracking-widest uppercase">Dean of Technology, Starz University</p>
               </div>
             </div>
@@ -187,10 +187,10 @@ export default function Home() {
 
       {/* Engineering Core (From Innova) */}
       <section className="py-24 bg-gray-950 text-white overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-teal/10 rounded-full blur-[120px] -mr-48 -mt-48"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-green/10 rounded-full blur-[120px] -mr-48 -mt-48"></div>
         <div className="container mx-auto px-4 md:px-8">
           <div className="text-center mb-20">
-            <p className="text-brand-teal font-mono text-sm tracking-[0.3em] uppercase mb-4">// Expert Stack</p>
+            <p className="text-brand-green font-mono text-sm tracking-[0.3em] uppercase mb-4">// Expert Stack</p>
             <h2 className="text-4xl md:text-6xl font-black mb-6 uppercase italic tracking-tighter">Our Engineering Core</h2>
             <p className="text-gray-400 max-w-2xl mx-auto text-lg">The tech stack driving innovation in Africa's digital ecosystem.</p>
           </div>
@@ -213,12 +213,12 @@ export default function Home() {
                 items: ["AWS", "Docker", "Kubernetes", "Firebase", "Supabase", "CI/CD"]
               }
             ].map((col, i) => (
-              <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 p-10 rounded-[2.5rem] hover:border-brand-teal/50 transition-all duration-500 group">
-                <div className="w-16 h-16 bg-brand-teal/20 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-                  <col.icon className="w-8 h-8 text-brand-teal" />
+              <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 p-10 rounded-[2.5rem] hover:border-brand-green/50 transition-all duration-500 group">
+                <div className="w-16 h-16 bg-brand-green/20 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                  <col.icon className="w-8 h-8 text-brand-green" />
                 </div>
                 <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
-                  <span className="w-1 h-6 bg-brand-teal"></span> {col.title}
+                  <span className="w-1 h-6 bg-brand-green"></span> {col.title}
                 </h3>
                 <div className="flex flex-wrap gap-3">
                   {col.items.map((item, idx) => (
@@ -237,8 +237,8 @@ export default function Home() {
       <section className="py-24 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 md:px-8">
           <div className="text-center mb-20">
-            <p className="text-brand-teal font-mono text-sm tracking-[0.3em] uppercase mb-4">// Development Lifecycle</p>
-            <h2 className="text-4xl md:text-6xl font-black text-brand-teal uppercase italic tracking-tighter">Our Proven Roadmap</h2>
+            <p className="text-brand-green font-mono text-sm tracking-[0.3em] uppercase mb-4">// Development Lifecycle</p>
+            <h2 className="text-4xl md:text-6xl font-black text-brand-green uppercase italic tracking-tighter">Our Proven Roadmap</h2>
           </div>
 
           <div className="grid md:grid-cols-5 gap-6">
@@ -250,8 +250,8 @@ export default function Home() {
               { id: "05", title: "Market Launch", desc: "Go-live strategy and final QA." }
             ].map((step, i) => (
               <div key={i} className="relative group">
-                <div className="p-8 bg-gray-50 rounded-[2rem] h-full border border-transparent hover:border-brand-teal transition-all duration-500 hover:shadow-2xl hover:shadow-brand-teal/10">
-                  <div className="text-5xl font-black text-brand-teal/10 group-hover:text-brand-teal/20 transition-colors mb-6">{step.id}</div>
+                <div className="p-8 bg-gray-50 rounded-[2rem] h-full border border-transparent hover:border-brand-green transition-all duration-500 hover:shadow-2xl hover:shadow-brand-green/10">
+                  <div className="text-5xl font-black text-brand-green/10 group-hover:text-brand-green/20 transition-colors mb-6">{step.id}</div>
                   <h4 className="text-xl font-bold text-gray-900 mb-4">{step.title}</h4>
                   <p className="text-sm text-gray-500 leading-relaxed">{step.desc}</p>
                 </div>
@@ -271,15 +271,15 @@ export default function Home() {
                 alt="Engineering" 
                 className="w-full h-[600px] object-cover transform group-hover:scale-110 transition-transform duration-[2s]"
               />
-              <div className="absolute inset-0 bg-brand-teal/20 mix-blend-overlay"></div>
+              <div className="absolute inset-0 bg-brand-green/20 mix-blend-overlay"></div>
             </div>
             <div className="space-y-10">
-              <p className="text-brand-teal font-mono text-sm tracking-[0.3em] uppercase">// Scale</p>
-              <h2 className="text-4xl md:text-6xl font-black text-brand-teal leading-[0.9] uppercase italic tracking-tighter">Enterprise <br />Digital Assets</h2>
+              <p className="text-brand-green font-mono text-sm tracking-[0.3em] uppercase">// Scale</p>
+              <h2 className="text-4xl md:text-6xl font-black text-brand-green leading-[0.9] uppercase italic tracking-tighter">Enterprise <br />Digital Assets</h2>
               <div className="space-y-8">
                 <div className="flex gap-6 items-start">
                   <div className="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center shrink-0">
-                    <Globe className="w-6 h-6 text-brand-teal" />
+                    <Globe className="w-6 h-6 text-brand-green" />
                   </div>
                   <div>
                     <h4 className="text-xl font-bold text-gray-900 mb-2 uppercase tracking-tight">African Web Scale</h4>
@@ -288,7 +288,7 @@ export default function Home() {
                 </div>
                 <div className="flex gap-6 items-start">
                   <div className="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center shrink-0">
-                    <PieChart className="w-6 h-6 text-brand-teal" />
+                    <PieChart className="w-6 h-6 text-brand-green" />
                   </div>
                   <div>
                     <h4 className="text-xl font-bold text-gray-900 mb-2 uppercase tracking-tight">UX Engineering</h4>
@@ -297,7 +297,7 @@ export default function Home() {
                 </div>
               </div>
               <Link href="/contact">
-                <Button size="lg" className="bg-brand-teal text-white rounded-full px-10 h-16 font-black uppercase italic tracking-widest text-sm hover:scale-105 transition-transform">
+                <Button size="lg" className="bg-brand-green text-white rounded-full px-10 h-16 font-black uppercase italic tracking-widest text-sm hover:scale-105 transition-transform">
                   Initialize Transformation
                 </Button>
               </Link>
@@ -307,12 +307,12 @@ export default function Home() {
       </section>
 
       {/* Services Preview */}
-      <section className="py-24 bg-brand-teal text-white overflow-hidden">
+      <section className="py-24 bg-brand-green text-white overflow-hidden">
         <div className="container mx-auto px-4 md:px-8">
           <div className="text-center mb-20">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Our Core Services</h2>
-            <div className="w-24 h-1.5 bg-brand-teal mx-auto rounded-full mb-6"></div>
-            <p className="text-lg text-teal-50 max-w-2xl mx-auto leading-relaxed">
+            <div className="w-24 h-1.5 bg-brand-green mx-auto rounded-full mb-6"></div>
+            <p className="text-lg text-green-50 max-w-2xl mx-auto leading-relaxed">
               Comprehensive technology solutions tailored to drive growth and efficiency for your business.
             </p>
           </div>
@@ -351,13 +351,13 @@ export default function Home() {
               }
             ].map((service, i) => (
               <div key={i} className="bg-white/5 backdrop-blur-sm p-10 rounded-[2rem] border border-white/10 hover:bg-white/10 transition-all group cursor-pointer">
-                <div className="w-14 h-14 bg-brand-teal rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 bg-brand-green rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
                   <service.icon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                <p className="text-teal-100 mb-8 leading-relaxed line-clamp-2">{service.desc}</p>
+                <p className="text-green-100 mb-8 leading-relaxed line-clamp-2">{service.desc}</p>
                 <Link href="/services">
-                  <a className="inline-flex items-center text-brand-teal font-bold hover:gap-3 transition-all">
+                  <a className="inline-flex items-center text-brand-green font-bold hover:gap-3 transition-all">
                     Learn more <ArrowRight className="w-5 h-5 ml-2" />
                   </a>
                 </Link>
@@ -371,8 +371,8 @@ export default function Home() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold text-brand-teal mb-6">Success Stories</h2>
-            <div className="w-24 h-1.5 bg-brand-teal mx-auto rounded-full"></div>
+            <h2 className="text-3xl md:text-5xl font-bold text-brand-green mb-6">Success Stories</h2>
+            <div className="w-24 h-1.5 bg-brand-green mx-auto rounded-full"></div>
           </div>
           
           <div className="grid md:grid-cols-3 gap-10">
@@ -398,18 +398,18 @@ export default function Home() {
             ].map((testimonial, i) => (
               <Card key={i} className="border-none shadow-xl bg-gray-50 rounded-[2.5rem] p-4 transition-transform hover:-translate-y-2">
                 <CardContent className="p-8">
-                  <div className="flex gap-1 text-brand-teal mb-6">
+                  <div className="flex gap-1 text-brand-green mb-6">
                     {[1, 2, 3, 4, 5].map((s) => <Star key={s} className="w-5 h-5 fill-current" />)}
                   </div>
                   <p className="text-gray-600 mb-8 italic text-lg leading-relaxed">"{testimonial.text}"</p>
                   <div className="flex items-center gap-4">
                     <Avatar className="w-14 h-14 border-2 border-white shadow-sm">
                       <AvatarImage src={testimonial.image} />
-                      <AvatarFallback className="bg-brand-teal text-white">{testimonial.author[0]}</AvatarFallback>
+                      <AvatarFallback className="bg-brand-green text-white">{testimonial.author[0]}</AvatarFallback>
                     </Avatar>
                     <div>
                       <p className="font-black text-gray-900">{testimonial.author}</p>
-                      <p className="text-sm text-brand-teal font-bold">{testimonial.role}</p>
+                      <p className="text-sm text-brand-green font-bold">{testimonial.role}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -424,8 +424,8 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-8">
           <div className="max-w-4xl mx-auto space-y-16">
             <div className="text-center">
-              <h2 className="text-3xl md:text-5xl font-bold text-brand-teal mb-6">Direct Answers</h2>
-              <div className="w-24 h-1.5 bg-brand-teal mx-auto rounded-full"></div>
+              <h2 className="text-3xl md:text-5xl font-bold text-brand-green mb-6">Direct Answers</h2>
+              <div className="w-24 h-1.5 bg-brand-green mx-auto rounded-full"></div>
             </div>
             
             <div className="grid md:grid-cols-2 gap-8">
@@ -437,7 +437,7 @@ export default function Home() {
               ].map((faq, i) => (
                 <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
                   <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                    <MessageSquare className="w-6 h-6 text-brand-teal" />
+                    <MessageSquare className="w-6 h-6 text-brand-green" />
                     {faq.q}
                   </h4>
                   <p className="text-gray-600 leading-relaxed">{faq.a}</p>
@@ -453,11 +453,11 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-8">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <div>
-              <h2 className="text-3xl md:text-5xl font-bold text-brand-teal mb-6">Latest Insights</h2>
-              <div className="w-24 h-1.5 bg-brand-teal rounded-full"></div>
+              <h2 className="text-3xl md:text-5xl font-bold text-brand-green mb-6">Latest Insights</h2>
+              <div className="w-24 h-1.5 bg-brand-green rounded-full"></div>
             </div>
             <Link href="#">
-              <Button variant="outline" className="rounded-full px-8 py-6 text-brand-teal border-brand-teal hover:bg-brand-teal hover:text-white transition-all font-bold">
+              <Button variant="outline" className="rounded-full px-8 py-6 text-brand-green border-brand-green hover:bg-brand-green hover:text-white transition-all font-bold">
                 View All Articles
               </Button>
             </Link>
@@ -487,12 +487,12 @@ export default function Home() {
                <div key={i} className="group cursor-pointer">
                  <div className="rounded-[2.5rem] overflow-hidden mb-6 relative h-64 shadow-lg group-hover:shadow-2xl transition-all duration-500">
                    <img src={post.image} alt={post.title} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
-                   <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full text-xs font-black text-brand-teal uppercase tracking-widest shadow-xl">
+                   <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full text-xs font-black text-brand-green uppercase tracking-widest shadow-xl">
                      {post.category}
                    </div>
                  </div>
                  <p className="text-sm font-bold text-gray-400 mb-3">{post.date}</p>
-                 <h3 className="text-2xl font-black text-gray-900 group-hover:text-brand-teal transition-colors leading-tight">{post.title}</h3>
+                 <h3 className="text-2xl font-black text-gray-900 group-hover:text-brand-green transition-colors leading-tight">{post.title}</h3>
                </div>
              ))}
           </div>
@@ -500,19 +500,19 @@ export default function Home() {
       </section>
 
       {/* CTA Band */}
-      <section className="py-24 bg-brand-teal relative overflow-hidden">
+      <section className="py-24 bg-brand-green relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -mr-48 -mt-48"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-teal/20 rounded-full blur-3xl -ml-48 -mb-48"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-green/20 rounded-full blur-3xl -ml-48 -mb-48"></div>
         
         <div className="container mx-auto px-4 md:px-8 text-center relative z-10">
           <h2 className="text-4xl md:text-6xl font-black text-white mb-8">Ready to Transform?</h2>
-          <p className="text-teal-50 text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-green-50 text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
             Join hundreds of satisfied clients who have elevated their operations with iTech Network Africa. Let's build your future together.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link href="/contact">
-              <Button size="lg" className="bg-white text-brand-teal hover:bg-gray-100 font-black px-12 h-16 rounded-full text-xl shadow-2xl transition-transform hover:scale-110">
+              <Button size="lg" className="bg-white text-brand-green hover:bg-gray-100 font-black px-12 h-16 rounded-full text-xl shadow-2xl transition-transform hover:scale-110">
                 Contact Us Today
               </Button>
             </Link>
