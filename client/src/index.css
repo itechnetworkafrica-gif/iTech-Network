@@ -16,7 +16,7 @@
   /* Let's use a slightly more vibrant version for UI: 180 75% 35% */
   
   --color-brand-teal: hsl(180 100% 27%);
-  --color-brand-orange: hsl(27 96% 50%);
+  --color-brand-teal: hsl(27 96% 50%);
 
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));

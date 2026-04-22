@@ -1,0 +1,62 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "bzrZJhSfcBAnmlHJDSrQl"
+uri = "file://client/public/images/hero_home.jpg"
+type = "image"
+title = "African technology professionals modern office"
+
+[[outputs]]
+id = "hq4CDlPsmKsLDXUYfLR4b"
+uri = "file://client/public/images/hero_about.jpg"
+type = "image"
+title = "Diverse business team collaborating"
+
+[[outputs]]
+id = "g1kPoC9LQcpbJ6ZsKuQMy"
+uri = "file://client/public/images/hero_services.jpg"
+type = "image"
+title = "Modern technology abstract code servers"
+
+[[outputs]]
+id = "SRHOnpzWkIVEoKRfraavc"
+uri = "file://client/public/images/hero_contact.jpg"
+type = "image"
+title = "Business handshake modern office"
+
+[[outputs]]
+id = "tWqr0lcqCsrhrRFYv6Ir3"
+uri = "file://client/public/images/feature_1.jpg"
+type = "image"
+title = "Technology team working on laptop"
+
+[[outputs]]
+id = "BwtriKnTeR7UmzTmonD2x"
+uri = "file://client/public/images/feature_2.jpg"
+type = "image"
+title = "Enterprise digital technology servers abstract"
+
+[[outputs]]
+id = "7FgDHrpitco8_Pjq2HetF"
+uri = "file://client/public/images/profile_1.jpg"
+type = "image"
+title = "Professional diverse headshot profile picture"
+
+[[outputs]]
+id = "ZfkItOoplylvjY_tnaz0y"
+uri = "file://client/public/images/profile_2.jpg"
+type = "image"
+title = "Professional diverse headshot profile picture"
+
+[[outputs]]
+id = "qE75qq7FuTE_mi3zKQP_A"
+uri = "file://client/public/images/profile_3.jpg"
+type = "image"
+title = "Professional diverse headshot profile picture"
+
+[[outputs]]
+id = "MSkjwfKzGpkw8r9VRyDr-"
+uri = "file://client/public/images/profile_4.jpg"
+type = "image"
+title = "Professional diverse headshot profile picture"

@@ -109,7 +109,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
             <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-foreground relative">
               <Bell className="w-5 h-5" />
-              <span className="absolute top-2 right-2 w-2 h-2 bg-brand-orange rounded-full border-2 border-background"></span>
+              <span className="absolute top-2 right-2 w-2 h-2 bg-brand-teal rounded-full border-2 border-background"></span>
             </Button>
 
             <div className="h-8 w-px bg-border mx-2"></div>

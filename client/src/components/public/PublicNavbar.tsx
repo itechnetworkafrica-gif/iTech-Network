@@ -58,9 +58,9 @@ export default function PublicNavbar() {
           {navLinks.map((link) => (
             <Link key={link.name} href={link.href}>
               <a
-                className={`text-sm font-medium transition-colors hover:text-brand-orange ${
+                className={`text-sm font-medium transition-colors hover:text-brand-teal ${
                   location === link.href
-                    ? "text-brand-orange"
+                    ? "text-brand-teal"
                     : scrolled
                     ? "text-foreground"
                     : "text-white/90"

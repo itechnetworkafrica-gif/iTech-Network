@@ -45,7 +45,7 @@ export default function FloatingActions() {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="flex items-center justify-center w-12 h-12 bg-brand-teal text-white rounded-full shadow-xl hover:bg-brand-orange transition-all duration-300 animate-in fade-in slide-in-from-bottom-4 ml-2"
+          className="flex items-center justify-center w-12 h-12 bg-brand-teal text-white rounded-full shadow-xl hover:bg-brand-teal transition-all duration-300 animate-in fade-in slide-in-from-bottom-4 ml-2"
           aria-label="Scroll to top"
         >
           <ArrowUp className="w-6 h-6" />

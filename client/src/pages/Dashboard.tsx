@@ -33,7 +33,7 @@ export default function Dashboard() {
             </Button>
           </Link>
           <Link href="/dashboard/services">
-            <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white">
+            <Button className="bg-brand-teal hover:bg-brand-teal/90 text-white">
               <Plus className="mr-2 h-4 w-4" />
               New Order
             </Button>
@@ -58,12 +58,12 @@ export default function Dashboard() {
           </CardContent>
         </Card>
 
-        <Card className="border-l-4 border-l-brand-orange shadow-sm hover:shadow-md transition-shadow">
+        <Card className="border-l-4 border-l-brand-teal shadow-sm hover:shadow-md transition-shadow">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-muted-foreground">
               {t('reports_generated')}
             </CardTitle>
-            <FileCheck className="h-4 w-4 text-brand-orange" />
+            <FileCheck className="h-4 w-4 text-brand-teal" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-foreground">145</div>
@@ -94,7 +94,7 @@ export default function Dashboard() {
             <CardTitle className="text-sm font-medium text-muted-foreground">
               Pending Orders
             </CardTitle>
-            <TrendingUp className="h-4 w-4 text-brand-orange" />
+            <TrendingUp className="h-4 w-4 text-brand-teal" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-foreground">3</div>
@@ -153,7 +153,7 @@ export default function Dashboard() {
               ].map((item, i) => (
                 <div key={i} className="flex items-start">
                   <div className={`h-9 w-9 rounded-full flex items-center justify-center border shrink-0 ${
-                    item.type === 'order' ? 'bg-orange-50 border-orange-100 text-brand-orange' : 
+                    item.type === 'order' ? 'bg-teal-50 border-teal-100 text-brand-teal' : 
                     item.type === 'integration' ? 'bg-blue-50 border-blue-100 text-blue-500' : 
                     'bg-muted border-border text-muted-foreground'
                   }`}>
@@ -168,7 +168,7 @@ export default function Dashboard() {
                     </p>
                   </div>
                   <div className={`ml-auto font-medium text-xs ${
-                    item.status === 'Processing' ? 'text-brand-orange' : 
+                    item.status === 'Processing' ? 'text-brand-teal' : 
                     item.status === 'Active' ? 'text-green-600' :
                     'text-brand-teal'
                   }`}>

@@ -63,7 +63,7 @@ export default function Services() {
           <h1 className="text-3xl font-bold tracking-tight text-foreground">Service Catalog</h1>
           <p className="text-muted-foreground mt-2">Browse and order professional services for your business.</p>
         </div>
-        <Button className="bg-brand-orange text-white hover:bg-brand-orange/90">
+        <Button className="bg-brand-teal text-white hover:bg-brand-teal/90">
           <ShoppingCart className="mr-2 h-4 w-4" />
           Cart (0)
         </Button>
@@ -134,7 +134,7 @@ function ServiceCard({ service }: { service: any }) {
   };
 
   return (
-    <Card className={`flex flex-col h-full hover:shadow-lg transition-shadow border-t-4 ${service.popular ? 'border-brand-orange' : 'border-brand-teal'}`}>
+    <Card className={`flex flex-col h-full hover:shadow-lg transition-shadow border-t-4 ${service.popular ? 'border-brand-teal' : 'border-brand-teal'}`}>
       <CardHeader>
         <div className="flex justify-between items-start mb-2">
           <Badge variant="secondary" className="bg-muted text-muted-foreground flex gap-1 items-center">
@@ -142,7 +142,7 @@ function ServiceCard({ service }: { service: any }) {
             <span className="capitalize">{service.category}</span>
           </Badge>
           {service.popular && (
-            <Badge className="bg-brand-orange hover:bg-brand-orange text-white">Popular</Badge>
+            <Badge className="bg-brand-teal hover:bg-brand-teal text-white">Popular</Badge>
           )}
         </div>
         <CardTitle className="text-xl">{service.title}</CardTitle>

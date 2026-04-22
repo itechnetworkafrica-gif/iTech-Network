@@ -54,7 +54,7 @@ export default function Pricing() {
       ],
       cta: "Upgrade to Pro +",
       popular: true,
-      color: "border-brand-orange"
+      color: "border-brand-teal"
     },
     {
       name: "Advance Pro +",
@@ -96,10 +96,10 @@ export default function Pricing() {
           {plans.map((plan, i) => (
             <div 
               key={i} 
-              className={`bg-white rounded-2xl shadow-xl overflow-hidden border-t-8 flex flex-col ${plan.color} ${plan.popular ? 'transform md:-translate-y-4 ring-4 ring-brand-orange/20' : ''}`}
+              className={`bg-white rounded-2xl shadow-xl overflow-hidden border-t-8 flex flex-col ${plan.color} ${plan.popular ? 'transform md:-translate-y-4 ring-4 ring-brand-teal/20' : ''}`}
             >
               {plan.popular && (
-                <div className="bg-brand-orange text-white text-center text-sm font-bold py-1.5 uppercase tracking-wider">
+                <div className="bg-brand-teal text-white text-center text-sm font-bold py-1.5 uppercase tracking-wider">
                   Most Popular
                 </div>
               )}
@@ -116,7 +116,7 @@ export default function Pricing() {
                 <Button 
                   className={`w-full h-12 rounded-xl text-base font-semibold mb-8 ${
                     plan.popular 
-                      ? "bg-brand-orange hover:bg-orange-600 text-white shadow-lg shadow-orange-200" 
+                      ? "bg-brand-teal hover:bg-teal-700 text-white shadow-lg shadow-teal-200" 
                       : "bg-gray-50 text-gray-900 hover:bg-gray-100 border border-gray-200"
                   }`}
                 >
@@ -127,7 +127,7 @@ export default function Pricing() {
                   <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Features</p>
                   {plan.features.map((feature, idx) => (
                     <div key={idx} className="flex items-start gap-3">
-                      <div className={`mt-0.5 rounded-full p-0.5 ${plan.popular ? 'bg-orange-100 text-brand-orange' : 'bg-teal-50 text-brand-teal'}`}>
+                      <div className={`mt-0.5 rounded-full p-0.5 ${plan.popular ? 'bg-teal-100 text-brand-teal' : 'bg-teal-50 text-brand-teal'}`}>
                         <Check className="w-3 h-3" />
                       </div>
                       <span className="text-sm text-gray-600">{feature}</span>
@@ -144,7 +144,7 @@ export default function Pricing() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-8">
           <div className="bg-gray-50 rounded-[3rem] p-12 md:p-20 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-orange/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
+            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-teal/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
                 <p className="text-brand-teal font-mono text-sm tracking-[0.3em] uppercase mb-4">// Enterprise Ready</p>
@@ -166,7 +166,7 @@ export default function Pricing() {
                   { title: "Unlimited", desc: "No caps on users or storage." }
                 ].map((item, i) => (
                   <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all group">
-                    <h4 className="font-bold text-xl text-brand-teal mb-2 group-hover:text-brand-orange transition-colors">{item.title}</h4>
+                    <h4 className="font-bold text-xl text-brand-teal mb-2 group-hover:text-brand-teal transition-colors">{item.title}</h4>
                     <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
                   </div>
                 ))}

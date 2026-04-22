@@ -31,8 +31,8 @@ export default function Contact() {
                   <h3 className="text-xl font-bold text-brand-teal mb-6">Contact Information</h3>
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-lg bg-orange-50 flex items-center justify-center shrink-0">
-                        <MapPin className="w-5 h-5 text-brand-orange" />
+                      <div className="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center shrink-0">
+                        <MapPin className="w-5 h-5 text-brand-teal" />
                       </div>
                       <div>
                         <p className="font-semibold text-gray-900">Visit Us</p>
@@ -41,8 +41,8 @@ export default function Contact() {
                     </div>
 
                     <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-lg bg-orange-50 flex items-center justify-center shrink-0">
-                        <Mail className="w-5 h-5 text-brand-orange" />
+                      <div className="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center shrink-0">
+                        <Mail className="w-5 h-5 text-brand-teal" />
                       </div>
                       <div>
                         <p className="font-semibold text-gray-900">Email Us</p>
@@ -51,8 +51,8 @@ export default function Contact() {
                     </div>
 
                     <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-lg bg-orange-50 flex items-center justify-center shrink-0">
-                        <Phone className="w-5 h-5 text-brand-orange" />
+                      <div className="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center shrink-0">
+                        <Phone className="w-5 h-5 text-brand-teal" />
                       </div>
                       <div>
                         <p className="font-semibold text-gray-900">Call Us</p>
@@ -109,7 +109,7 @@ export default function Contact() {
                     <Textarea id="message" placeholder="Tell us about your project or inquiry..." className="min-h-[150px] bg-gray-50 border-gray-200 focus:border-brand-teal focus:ring-brand-teal/20" />
                   </div>
 
-                  <Button className="w-full md:w-auto bg-brand-orange hover:bg-orange-600 text-white px-8 py-6 text-lg rounded-lg">
+                  <Button className="w-full md:w-auto bg-brand-teal hover:bg-teal-700 text-white px-8 py-6 text-lg rounded-lg">
                     Send Message <Send className="w-5 h-5 ml-2" />
                   </Button>
                 </form>

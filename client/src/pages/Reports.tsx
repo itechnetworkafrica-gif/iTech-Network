@@ -106,7 +106,7 @@ We will be focusing on finalizing the dashboard widgets and starting the integra
               <Separator className="my-4" />
 
               <Button 
-                className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white text-lg h-12"
+                className="w-full bg-brand-teal hover:bg-brand-teal/90 text-white text-lg h-12"
                 onClick={handleGenerate}
                 disabled={isGenerating}
               >
