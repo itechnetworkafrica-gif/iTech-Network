@@ -132,3 +132,27 @@ id = "XXYwQh6a1-cOKfon1FbYs"
 uri = "file://client/public/images/service_erp.jpg"
 type = "image"
 title = "Enterprise resource planning business dashboard"
+
+[[outputs]]
+id = "HOZUyuTI3FYKhiLbusJEN"
+uri = "file://client/public/images/team_ceo.jpg"
+type = "image"
+title = "Professional portrait of an African male tech executive in a suit"
+
+[[outputs]]
+id = "EYBy54ql57OVEvo-IQ2Kw"
+uri = "file://client/public/images/team_cto.jpg"
+type = "image"
+title = "Professional portrait of an African female technology director smiling"
+
+[[outputs]]
+id = "6SEH2M5rEdCpoyR05xmTM"
+uri = "file://client/public/images/team_lead.jpg"
+type = "image"
+title = "Professional portrait of an African male senior software engineer"
+
+[[outputs]]
+id = "6w4S1bziblH3XISkfZ9fn"
+uri = "file://client/public/images/team_dev.jpg"
+type = "image"
+title = "Professional portrait of an African male lead software engineer looking at camera"

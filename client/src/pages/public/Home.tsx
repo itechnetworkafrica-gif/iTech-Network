@@ -76,29 +76,30 @@ export default function Home() {
       </div>
 
       {/* Interactive Feature Blocks */}
-      <section className="py-24 bg-gray-50 overflow-hidden">
+      <section className="py-24 bg-gray-50 overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-green/5 blur-[100px] pointer-events-none"></div>
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8 animate-in slide-in-from-left duration-1000">
               <h2 className="text-4xl md:text-5xl font-extrabold text-brand-green leading-tight">
-                Empowering Businesses with <span className="text-brand-green">Next-Gen</span> Tech
+                Empowering Businesses with <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-green-400">Next-Gen</span> Tech
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
                 We don't just build software; we build the future. Our approach combines rapid development with enterprise-grade security to ensure your business stays ahead of the curve.
               </p>
-              <div className="grid sm:grid-cols-2 gap-6">
+              <div className="grid sm:grid-cols-2 gap-6 pt-4">
                 {[
                   { icon: MousePointer2, title: "Intuitive Design", desc: "User-first experiences" },
                   { icon: Rocket, title: "Fast Scaling", desc: "Growth-ready systems" },
                   { icon: Shield, title: "Top Security", desc: "Hardened infrastructure" },
                   { icon: BarChart3, title: "Data Insights", desc: "Business intelligence" }
                 ].map((item, i) => (
-                  <div key={i} className="flex gap-4 p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <div className="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center shrink-0">
-                      <item.icon className="w-6 h-6 text-brand-green" />
+                  <div key={i} className="group flex gap-4 p-5 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 hover:border-brand-green/30 transition-all duration-300">
+                    <div className="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-brand-green transition-colors duration-300">
+                      <item.icon className="w-6 h-6 text-brand-green group-hover:text-white transition-colors duration-300" />
                     </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900">{item.title}</h4>
+                    <div className="flex flex-col justify-center">
+                      <h4 className="font-bold text-gray-900 group-hover:text-brand-green transition-colors">{item.title}</h4>
                       <p className="text-sm text-gray-500">{item.desc}</p>
                     </div>
                   </div>
@@ -350,13 +351,13 @@ export default function Home() {
                 desc: "Expert advice to help you navigate complex technology decisions and strategies."
               }
             ].map((service, i) => (
-              <div key={i} className="bg-white/5 backdrop-blur-sm p-10 rounded-[2rem] border border-white/10 hover:bg-white/10 transition-all group cursor-pointer">
-                <div className="w-14 h-14 bg-brand-green rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+              <div key={i} className="bg-white/5 backdrop-blur-sm p-10 rounded-[2rem] border border-white/10 hover:bg-white/10 hover:-translate-y-2 transition-all duration-500 group cursor-pointer animate-in fade-in slide-in-from-bottom-10" style={{ animationDelay: `${i * 100}ms` }}>
+                <div className="w-14 h-14 bg-brand-green rounded-xl flex items-center justify-center mb-8 group-hover:scale-125 group-hover:rotate-6 transition-transform duration-500">
                   <service.icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                <h3 className="text-2xl font-bold mb-4 group-hover:text-green-400 transition-colors">{service.title}</h3>
                 <p className="text-green-100 mb-8 leading-relaxed line-clamp-2">{service.desc}</p>
-                <Link href="/services" className="inline-flex items-center text-brand-green font-bold hover:gap-3 transition-all">
+                <Link href="/services" className="inline-flex items-center text-brand-green font-bold hover:gap-4 transition-all group-hover:text-white">
                   Learn more <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </div>
@@ -394,20 +395,21 @@ export default function Home() {
                 image: "/images/avatar_man_2.jpg"
               }
             ].map((testimonial, i) => (
-              <Card key={i} className="border-none shadow-xl bg-gray-50 rounded-[2.5rem] p-4 transition-transform hover:-translate-y-2">
-                <CardContent className="p-8">
+              <Card key={i} className="border border-gray-100 shadow-lg hover:shadow-2xl hover:-translate-y-3 bg-white rounded-[2.5rem] p-4 transition-all duration-500 group animate-in fade-in slide-in-from-bottom-12" style={{ animationDelay: `${i * 150}ms` }}>
+                <CardContent className="p-8 relative">
+                  <div className="absolute top-8 right-8 text-brand-green/10 text-6xl font-serif group-hover:text-brand-green/20 transition-colors">"</div>
                   <div className="flex gap-1 text-brand-green mb-6">
-                    {[1, 2, 3, 4, 5].map((s) => <Star key={s} className="w-5 h-5 fill-current" />)}
+                    {[1, 2, 3, 4, 5].map((s) => <Star key={s} className="w-5 h-5 fill-current group-hover:scale-110 transition-transform" style={{ transitionDelay: `${s * 50}ms` }} />)}
                   </div>
-                  <p className="text-gray-600 mb-8 italic text-lg leading-relaxed">"{testimonial.text}"</p>
+                  <p className="text-gray-600 mb-8 italic text-lg leading-relaxed relative z-10">"{testimonial.text}"</p>
                   <div className="flex items-center gap-4">
-                    <Avatar className="w-14 h-14 border-2 border-white shadow-sm">
-                      <AvatarImage src={testimonial.image} />
-                      <AvatarFallback className="bg-brand-green text-white">{testimonial.author[0]}</AvatarFallback>
+                    <Avatar className="w-14 h-14 border-2 border-brand-green/20 group-hover:border-brand-green transition-colors">
+                      <AvatarImage src={testimonial.image} className="object-cover" />
+                      <AvatarFallback className="bg-brand-green text-white font-bold">{testimonial.author[0]}</AvatarFallback>
                     </Avatar>
                     <div>
-                      <p className="font-black text-gray-900">{testimonial.author}</p>
-                      <p className="text-sm text-brand-green font-bold">{testimonial.role}</p>
+                      <h4 className="font-bold text-gray-900 group-hover:text-brand-green transition-colors">{testimonial.author}</h4>
+                      <p className="text-sm text-gray-500">{testimonial.role}</p>
                     </div>
                   </div>
                 </CardContent>

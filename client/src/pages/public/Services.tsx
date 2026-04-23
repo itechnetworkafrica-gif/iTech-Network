@@ -118,39 +118,41 @@ export default function Services() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, i) => (
-              <div key={i} className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all border-t-4 border-brand-green hover:-translate-y-2 group relative overflow-hidden flex flex-col">
-                <div className="h-48 w-full relative overflow-hidden">
+              <div key={i} className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 group relative overflow-hidden flex flex-col border border-gray-100 animate-in fade-in slide-in-from-bottom-12" style={{ animationDelay: `${i * 100}ms` }}>
+                <div className="h-56 w-full relative overflow-hidden">
                   <img src={service.image} alt={service.title} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 w-12 h-12 bg-brand-green rounded-xl flex items-center justify-center shadow-lg">
-                    <service.icon className="w-6 h-6 text-white" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 w-full p-6 flex items-center gap-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <div className="w-12 h-12 bg-brand-green rounded-xl flex items-center justify-center shadow-lg shrink-0 group-hover:rotate-12 transition-transform duration-500">
+                      <service.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white leading-tight group-hover:text-green-300 transition-colors">{service.title}</h3>
                   </div>
                 </div>
                 
-                <div className="p-6 flex-grow flex flex-col">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                <div className="p-6 flex-grow flex flex-col bg-white">
                   <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">
                     {service.description}
                   </p>
                   
-                  <div className="space-y-2 mb-6">
+                  <div className="space-y-3 mb-8">
                     {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-xs text-gray-600">
-                        <div className="w-1 h-1 bg-brand-green rounded-full mr-2 shrink-0"></div>
+                      <div key={idx} className="flex items-center text-xs text-gray-700 font-medium bg-gray-50 rounded-lg p-2 group-hover:bg-green-50/50 transition-colors">
+                        <div className="w-1.5 h-1.5 bg-brand-green rounded-full mr-3 shrink-0"></div>
                         <span>{feature}</span>
                       </div>
                     ))}
                   </div>
                   
-                  <Link href="/contact">
-                    <Button className="w-full bg-gray-50 text-brand-green hover:bg-brand-green hover:text-white border border-brand-green/20 font-semibold transition-all">
+                  <Button className="w-full bg-transparent text-brand-green hover:bg-brand-green hover:text-white border-2 border-brand-green/20 hover:border-brand-green font-bold transition-all rounded-xl h-12 shadow-none hover:shadow-lg hover:shadow-brand-green/20" asChild>
+                    <Link href="/contact">
                       Learn More
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
                 </div>
               </div>
             ))}
@@ -159,18 +161,21 @@ export default function Services() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-gray-900 text-white">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">How We Work</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+      <section className="py-24 bg-gray-950 text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-green/10 rounded-full blur-[100px] -mr-48 -mt-48"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-green/10 rounded-full blur-[100px] -ml-48 -mb-48"></div>
+        <div className="container mx-auto px-4 md:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-black mb-6 uppercase italic tracking-tighter">How We Work</h2>
+            <div className="w-24 h-1.5 bg-brand-green mx-auto rounded-full mb-6"></div>
+            <p className="text-gray-400 max-w-2xl mx-auto text-lg">
               Our agile development process ensures transparency, quality, and timely delivery of your projects.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8 relative">
+          <div className="grid md:grid-cols-4 gap-12 relative">
             {/* Connecting Line (Desktop) */}
-            <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gray-800 z-0"></div>
+            <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-brand-green/50 to-transparent z-0"></div>
 
             {[
               { step: "01", title: "Discovery", desc: "We analyze your requirements and business goals." },
@@ -178,12 +183,12 @@ export default function Services() {
               { step: "03", title: "Development", desc: "We build your solution using the latest technologies." },
               { step: "04", title: "Delivery", desc: "We launch your project and provide ongoing support." }
             ].map((item, i) => (
-              <div key={i} className="relative z-10 text-center">
-                <div className="w-24 h-24 bg-gray-800 rounded-full border-4 border-gray-900 flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-brand-green shadow-xl">
-                  {item.step}
+              <div key={i} className="relative z-10 text-center group">
+                <div className="w-24 h-24 bg-gray-900 rounded-2xl border border-white/10 group-hover:border-brand-green/50 flex items-center justify-center mx-auto mb-8 text-3xl font-black text-brand-green shadow-xl group-hover:-translate-y-2 transition-all duration-500 rotate-45 group-hover:rotate-0">
+                  <span className="-rotate-45 group-hover:rotate-0 transition-transform duration-500">{item.step}</span>
                 </div>
-                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                <p className="text-gray-400 text-sm px-4">{item.desc}</p>
+                <h3 className="text-2xl font-bold mb-4 group-hover:text-brand-green transition-colors">{item.title}</h3>
+                <p className="text-gray-400 text-base leading-relaxed px-4 group-hover:text-gray-300 transition-colors">{item.desc}</p>
               </div>
             ))}
           </div>
