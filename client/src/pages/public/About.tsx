@@ -42,14 +42,21 @@ export default function About() {
       <PublicNavbar />
       
       {/* Header Banner */}
-      <section className="pt-32 pb-20 bg-brand-green relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-900 to-brand-green opacity-90"></div>
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+      <section className="pt-32 pb-20 bg-gray-950 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5 mix-blend-overlay"></div>
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-brand-green/20 rounded-full blur-[100px] pointer-events-none"></div>
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none"></div>
         
         <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">About iTech Network</h1>
-          <p className="text-xl text-green-50 max-w-2xl mx-auto">
-            We are a premier technology institution dedicated to bridging the digital divide through education, innovation, and enterprise solutions.
+          <div className="inline-flex items-center rounded-full border border-brand-green/30 bg-brand-green/10 px-4 py-2 text-sm font-semibold text-brand-green backdrop-blur-md mb-8 shadow-[0_0_20px_rgba(55,182,38,0.2)]">
+            <span className="flex h-2.5 w-2.5 rounded-full bg-brand-green mr-3"></span>
+            Discover Our Story
+          </div>
+          <h1 className="text-5xl md:text-7xl font-black text-white mb-8 tracking-tight drop-shadow-2xl">
+            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-emerald-400">iTech Network</span>
+          </h1>
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-light">
+            We are a premier technology institution dedicated to bridging the digital divide through world-class engineering, innovation, and enterprise solutions.
           </p>
         </div>
       </section>

@@ -13,32 +13,40 @@ export default function Home() {
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-green via-green-500 to-green-600 -z-20"></div>
-        <div className="absolute inset-0 opacity-20 -z-10">
-           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-green rounded-full blur-3xl transform translate-x-1/3 -translate-y-1/4 animate-pulse duration-[10s]"></div>
-           <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-green rounded-full blur-3xl transform -translate-x-1/3 translate-y-1/4 animate-pulse duration-[8s]"></div>
-        </div>
+        <div className="absolute inset-0 bg-gray-950 -z-20"></div>
+        {/* Animated Background Mesh */}
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5 -z-10 mix-blend-overlay"></div>
+        
+        {/* Glowing Orbs */}
+        <div className="absolute top-1/4 left-1/4 w-[40rem] h-[40rem] bg-brand-green/20 rounded-full blur-[128px] animate-pulse duration-[8s] -z-10 mix-blend-screen"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-emerald-500/20 rounded-full blur-[100px] animate-pulse duration-[10s] -z-10 mix-blend-screen"></div>
 
         <div className="container mx-auto px-4 md:px-8 relative z-10 text-center md:text-left">
-          <div className="max-w-4xl">
-            <div className="inline-flex items-center rounded-full border border-green-200 bg-green-500/10 px-3 py-1 text-sm font-medium text-green-50 backdrop-blur-sm mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
-              <span className="flex h-2 w-2 rounded-full bg-brand-green mr-2"></span>
+          <div className="max-w-5xl mx-auto md:mx-0">
+            <div className="inline-flex items-center rounded-full border border-brand-green/30 bg-brand-green/10 px-4 py-2 text-sm font-semibold text-brand-green backdrop-blur-md mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 shadow-[0_0_20px_rgba(55,182,38,0.2)]">
+              <span className="flex h-2.5 w-2.5 rounded-full bg-brand-green mr-3 animate-ping"></span>
               Leading Tech Institution in Africa
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 tracking-tight drop-shadow-sm animate-in fade-in slide-in-from-bottom-6 duration-1000">
+            
+            <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-extrabold text-white leading-[1.1] mb-8 tracking-tight drop-shadow-2xl animate-in fade-in slide-in-from-bottom-6 duration-1000">
               Innovating Africa's <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-green-100">Digital Future</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green via-green-400 to-emerald-300 relative inline-block">
+                Digital Future
+                <div className="absolute -bottom-2 left-0 w-full h-3 bg-brand-green/30 blur-md"></div>
+              </span>
             </h1>
-            <p className="text-lg md:text-xl text-green-50 mb-8 max-w-2xl leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
-              We provide cutting-edge technology solutions, comprehensive digital training, and enterprise-grade tools to empower businesses and individuals.
+            
+            <p className="text-lg md:text-2xl text-gray-400 mb-10 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 font-light">
+              We provide cutting-edge technology solutions, comprehensive digital training, and enterprise-grade tools to empower businesses and individuals globally.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
-              <Button size="lg" className="bg-brand-green text-white hover:bg-green-700 h-14 px-8 text-lg rounded-full shadow-xl transition-all hover:scale-105 hover:shadow-brand-green/20" asChild>
+            
+            <div className="flex flex-col sm:flex-row gap-5 justify-center md:justify-start animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
+              <Button size="lg" className="bg-brand-green text-white hover:bg-green-600 h-16 px-10 text-lg rounded-full shadow-[0_10px_40px_rgba(55,182,38,0.3)] transition-all hover:scale-105 hover:shadow-[0_15px_50px_rgba(55,182,38,0.5)] font-bold group" asChild>
                 <Link href="/services">
-                  Explore Services
+                  Explore Services <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="bg-white text-brand-green border-2 border-brand-green hover:bg-gray-50 h-14 px-8 text-lg rounded-full shadow-lg transition-all hover:scale-105" asChild>
+              <Button size="lg" variant="outline" className="bg-white/5 backdrop-blur-md text-white border-white/20 hover:bg-white/10 hover:border-white/40 h-16 px-10 text-lg rounded-full shadow-lg transition-all hover:scale-105 font-bold" asChild>
                 <Link href="/contact">
                   Get Started
                 </Link>
@@ -47,15 +55,16 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Floating Elements Animation */}
-        <div className="hidden lg:block absolute right-20 top-1/2 -translate-y-1/2 w-96 h-96 z-10 pointer-events-none">
-          <div className="absolute top-0 right-0 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-2xl animate-bounce duration-[4s]">
-            <Code className="w-12 h-12 text-white" />
+        {/* Professional Tech Hologram Decoration */}
+        <div className="hidden lg:block absolute right-10 top-1/2 -translate-y-1/2 w-[500px] h-[500px] z-10 pointer-events-none">
+          <div className="absolute inset-0 bg-gradient-to-tr from-brand-green/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-1/4 right-1/4 bg-white/5 backdrop-blur-xl p-5 rounded-2xl border border-white/10 shadow-2xl animate-[bounce_6s_ease-in-out_infinite]">
+            <Code className="w-10 h-10 text-brand-green" />
           </div>
-          <div className="absolute bottom-0 left-0 bg-brand-green/20 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-2xl animate-bounce duration-[5s] delay-700">
-            <Rocket className="w-12 h-12 text-white" />
+          <div className="absolute bottom-1/4 left-1/4 bg-brand-green/10 backdrop-blur-xl p-6 rounded-2xl border border-brand-green/20 shadow-2xl animate-[bounce_5s_ease-in-out_infinite_reverse] delay-700">
+            <Layers className="w-12 h-12 text-brand-green" />
           </div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-green/20 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-2xl animate-pulse duration-[3s]">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/5 backdrop-blur-2xl p-8 rounded-3xl border border-white/10 shadow-[0_0_50px_rgba(55,182,38,0.2)]">
             <Cpu className="w-16 h-16 text-white" />
           </div>
         </div>
