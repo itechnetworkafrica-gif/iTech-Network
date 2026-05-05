@@ -74,6 +74,19 @@ export default function PublicNavbar() {
 
         {/* Actions */}
         <div className="hidden md:flex items-center gap-4">
+          <Link href="/contact">
+            <Button
+              variant="outline"
+              className={`font-semibold rounded-full border-2 ${
+                scrolled
+                  ? "border-brand-green text-brand-green hover:bg-brand-green hover:text-white"
+                  : "border-white text-white hover:bg-white hover:text-brand-green bg-transparent"
+              }`}
+            >
+              Speak with Expert
+            </Button>
+          </Link>
+          
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button
@@ -113,24 +126,53 @@ export default function PublicNavbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg p-4 flex flex-col gap-4 animate-in slide-in-from-top-5">
+      {/* Mobile Menu - Right Slide */}
+      <div 
+        className={`md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-opacity duration-300 ${
+          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setIsOpen(false)}
+      />
+      <div 
+        className={`md:hidden fixed top-0 right-0 h-full w-[80%] max-w-[320px] bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out flex flex-col ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="p-6 flex justify-between items-center border-b border-gray-100">
+          <span className="font-bold text-xl tracking-tight text-brand-green">Menu</span>
+          <button onClick={() => setIsOpen(false)} className="text-gray-500 hover:text-brand-green bg-gray-100 p-2 rounded-full">
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+        
+        <div className="flex-1 overflow-y-auto py-6 px-4 flex flex-col gap-2">
           {navLinks.map((link) => (
-            <Link 
-              key={link.name} 
-              href={link.href}
-              className="text-foreground font-medium py-2 border-b border-gray-100 block"
-              onClick={() => setIsOpen(false)}
-            >
-              {link.name}
-            </Link>
+            <div key={link.name} className="border-b border-gray-50 last:border-0">
+              <Link 
+                href={link.href}
+                className="flex items-center justify-between text-foreground font-semibold py-4 px-2 hover:text-brand-green transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                <span>{link.name}</span>
+                <span className="text-brand-green text-xl font-light">+</span>
+              </Link>
+            </div>
           ))}
+        </div>
+        
+        <div className="p-6 border-t border-gray-100 space-y-4 bg-gray-50">
+          <Link href="/contact">
+            <Button variant="outline" className="w-full border-2 border-brand-green text-brand-green hover:bg-brand-green hover:text-white rounded-full font-bold">
+              Speak with Expert
+            </Button>
+          </Link>
           <Link href="/dashboard">
-            <Button className="w-full bg-brand-green text-white mt-2">Client Portal</Button>
+            <Button className="w-full bg-brand-green text-white rounded-full font-bold shadow-lg shadow-brand-green/20">
+              Client Portal
+            </Button>
           </Link>
         </div>
-      )}
+      </div>
     </nav>
   );
 }

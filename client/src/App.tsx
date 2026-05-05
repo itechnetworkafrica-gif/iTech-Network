@@ -21,12 +21,14 @@ import Pricing from "@/pages/public/Pricing";
 import Contact from "@/pages/public/Contact";
 
 import FloatingActions from "@/components/public/FloatingActions";
+import Chatbot from "@/components/public/Chatbot";
 import "./lib/i18n";
 
 function Router() {
   return (
     <>
       <FloatingActions />
+      <Chatbot />
       <Switch>
         {/* Public Routes */}
         <Route path="/" component={Home} />

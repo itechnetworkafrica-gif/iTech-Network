@@ -143,56 +143,73 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="py-24 bg-gray-50">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="text-center mb-16">
-            <span className="inline-block py-1 px-3 rounded-full bg-gray-200 text-gray-600 text-sm font-semibold uppercase tracking-wider mb-4">
-              Team Members
-            </span>
-            <h2 className="text-3xl md:text-5xl font-bold text-brand-green mb-4">Meet Our Skilled and Passionate Team</h2>
+      <section className="py-24 bg-gray-50 relative overflow-hidden">
+        {/* Abstract Background Shapes */}
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-green/5 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-green-400/5 rounded-full blur-[100px] pointer-events-none"></div>
+        
+        <div className="container mx-auto px-4 md:px-8 relative z-10">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+            <div className="max-w-2xl">
+              <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-white border border-gray-200 text-brand-green text-sm font-bold uppercase tracking-widest mb-6 shadow-sm">
+                <span className="w-2 h-2 rounded-full bg-brand-green"></span>
+                Leadership & Experts
+              </span>
+              <h2 className="text-4xl md:text-6xl font-black text-gray-900 tracking-tight leading-[1.1]">
+                The Minds Behind <br />Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-green-500 italic pr-2">Innovations</span>
+              </h2>
+            </div>
+            <div className="max-w-md text-gray-600 text-lg leading-relaxed">
+              Our team consists of industry veterans and brilliant minds dedicated to pushing the boundaries of what's possible in African tech.
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
             {team.map((member, i) => (
-              <div key={i} className="group relative">
-                <div className="bg-white rounded-[2rem] overflow-hidden shadow-xl aspect-[4/5] relative">
+              <div key={i} className="group relative animate-in fade-in slide-in-from-bottom-10" style={{ animationDelay: `${i * 150}ms` }}>
+                <div className="bg-white rounded-[2.5rem] overflow-hidden shadow-xl shadow-gray-200/50 aspect-[3/4] relative border border-white/50 group-hover:shadow-2xl group-hover:shadow-brand-green/20 transition-all duration-700">
                   <img 
                     src={member.image} 
                     alt={member.name} 
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000 ease-out"
                   />
                   
-                  {/* Overlay Gradient at bottom */}
-                  <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 to-transparent pointer-events-none"></div>
+                  {/* Elegant Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
 
-                  {/* Content */}
-                  <div className="absolute bottom-0 left-0 w-full p-6 text-center z-10">
-                    <h3 className="text-2xl font-bold text-white mb-1">{member.name}</h3>
-                    <p className="text-gray-200 text-sm font-medium tracking-wider uppercase mb-4">{member.role}</p>
-                    
-                    {/* Socials - Hidden by default, shown on group hover or active */}
-                    <div className="flex justify-center gap-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                      {member.socials.linkedin && (
-                        <a href={member.socials.linkedin} className="w-10 h-10 rounded-full bg-white text-brand-green flex items-center justify-center hover:bg-brand-green hover:text-white transition-colors">
-                          <Linkedin className="w-5 h-5" />
-                        </a>
-                      )}
-                      {member.socials.twitter && (
-                        <a href={member.socials.twitter} className="w-10 h-10 rounded-full bg-white text-brand-green flex items-center justify-center hover:bg-brand-green hover:text-white transition-colors">
-                          <Twitter className="w-5 h-5" />
-                        </a>
-                      )}
-                      {member.socials.github && (
-                        <a href={member.socials.github} className="w-10 h-10 rounded-full bg-white text-brand-green flex items-center justify-center hover:bg-brand-green hover:text-white transition-colors">
-                          <Github className="w-5 h-5" />
-                        </a>
-                      )}
+                  {/* Content Container */}
+                  <div className="absolute inset-0 flex flex-col justify-end p-8 text-left z-10">
+                    <div className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                      <p className="text-brand-green font-mono text-xs font-bold tracking-[0.2em] uppercase mb-2 drop-shadow-md">{member.role}</p>
+                      <h3 className="text-2xl font-bold text-white mb-4 drop-shadow-lg leading-tight">{member.name}</h3>
+                      
+                      {/* Bio - Appears on hover */}
+                      <p className="text-gray-300 text-sm leading-relaxed mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 h-0 group-hover:h-auto overflow-hidden">
+                        {member.bio}
+                      </p>
+                      
+                      {/* Socials & Interactive Line */}
+                      <div className="flex items-center justify-between opacity-0 group-hover:opacity-100 transition-all duration-500 delay-200 pt-4 border-t border-white/20">
+                        <div className="flex gap-3">
+                          {member.socials.linkedin && (
+                            <a href={member.socials.linkedin} className="text-white hover:text-brand-green transition-colors">
+                              <Linkedin className="w-5 h-5" />
+                            </a>
+                          )}
+                          {member.socials.twitter && (
+                            <a href={member.socials.twitter} className="text-white hover:text-brand-green transition-colors">
+                              <Twitter className="w-5 h-5" />
+                            </a>
+                          )}
+                          {member.socials.github && (
+                            <a href={member.socials.github} className="text-white hover:text-brand-green transition-colors">
+                              <Github className="w-5 h-5" />
+                            </a>
+                          )}
+                        </div>
+                        <ArrowRight className="w-5 h-5 text-brand-green transform -translate-x-4 group-hover:translate-x-0 transition-transform duration-500 delay-300" />
+                      </div>
                     </div>
-                  </div>
-
-                  {/* Plus Button visual cue */}
-                  <div className="absolute bottom-6 right-6 w-10 h-10 bg-white rounded-full flex items-center justify-center text-brand-green shadow-lg group-hover:scale-0 transition-transform duration-300">
-                    <span className="text-2xl leading-none mb-1">+</span>
                   </div>
                 </div>
               </div>

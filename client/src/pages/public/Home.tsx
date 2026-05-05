@@ -176,12 +176,12 @@ export default function Home() {
           </div>
 
           <p className="text-gray-400 font-mono text-sm tracking-[0.3em] uppercase mb-12">Building the Tech Ecosystem in Africa</p>
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
-            <img src="https://cddsrxtfashivrcuirgf.supabase.co/storage/v1/object/public/images/Starz%20Logo.webp" alt="Starz" className="h-16 w-auto" />
-            <img src="https://cddsrxtfashivrcuirgf.supabase.co/storage/v1/object/public/images/dmg%20Logo.jpeg" alt="DMC" className="h-16 w-auto" />
-            <img src="https://cddsrxtfashivrcuirgf.supabase.co/storage/v1/object/public/images/proaffordable-cleaning-logo.png" alt="Pro-Clean" className="h-16 w-auto" />
-            <img src="https://cddsrxtfashivrcuirgf.supabase.co/storage/v1/object/public/images/new%20liberia%20logo.jpeg" alt="New Liberia" className="h-16 w-auto" />
-            <img src="https://cddsrxtfashivrcuirgf.supabase.co/storage/v1/object/public/images/ai%20tech%20logo.webp" alt="A1 Tech" className="h-16 w-auto" />
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20">
+            <img src="https://cddsrxtfashivrcuirgf.supabase.co/storage/v1/object/public/images/Starz%20Logo.webp" alt="Starz" className="h-16 w-auto opacity-40 grayscale hover:grayscale-0 active:grayscale-0 hover:opacity-100 active:opacity-100 transition-all duration-500 cursor-pointer touch-manipulation" />
+            <img src="https://cddsrxtfashivrcuirgf.supabase.co/storage/v1/object/public/images/dmg%20Logo.jpeg" alt="DMC" className="h-16 w-auto opacity-40 grayscale hover:grayscale-0 active:grayscale-0 hover:opacity-100 active:opacity-100 transition-all duration-500 cursor-pointer touch-manipulation" />
+            <img src="https://cddsrxtfashivrcuirgf.supabase.co/storage/v1/object/public/images/proaffordable-cleaning-logo.png" alt="Pro-Clean" className="h-16 w-auto opacity-40 grayscale hover:grayscale-0 active:grayscale-0 hover:opacity-100 active:opacity-100 transition-all duration-500 cursor-pointer touch-manipulation" />
+            <img src="https://cddsrxtfashivrcuirgf.supabase.co/storage/v1/object/public/images/new%20liberia%20logo.jpeg" alt="New Liberia" className="h-16 w-auto opacity-40 grayscale hover:grayscale-0 active:grayscale-0 hover:opacity-100 active:opacity-100 transition-all duration-500 cursor-pointer touch-manipulation" />
+            <img src="https://cddsrxtfashivrcuirgf.supabase.co/storage/v1/object/public/images/ai%20tech%20logo.webp" alt="A1 Tech" className="h-16 w-auto opacity-40 grayscale hover:grayscale-0 active:grayscale-0 hover:opacity-100 active:opacity-100 transition-all duration-500 cursor-pointer touch-manipulation" />
           </div>
         </div>
       </section>
@@ -468,20 +468,91 @@ export default function Home() {
                {
                  title: "The Future of AI in African Business",
                  date: "Dec 5, 2025",
-                 category: "Technology",
-                 image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                 image: "/images/service_ai.jpg"
                },
                {
-                 title: "Securing Your Cloud Infrastructure",
+                 title: "Securing Digital Assets in 2026",
                  date: "Nov 28, 2025",
-                 category: "Cybersecurity",
-                 image: "https://images.unsplash.com/photo-1558494949-ef2bb6db879c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                 image: "/images/service_security.jpg"
                },
                {
-                 title: "Digital Transformation Strategies for 2026",
+                 title: "Scaling Cloud Infrastructure Effectively",
                  date: "Nov 15, 2025",
-                 category: "Strategy",
-                 image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                 image: "/images/service_cloud.jpg"
+               }
+             ].map((post, i) => (
+               <div key={i} className="group cursor-pointer">
+                 <div className="rounded-2xl overflow-hidden mb-6 aspect-video">
+                   <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                 </div>
+                 <p className="text-brand-green font-bold text-sm mb-3">{post.date}</p>
+                 <h3 className="text-2xl font-bold text-gray-900 group-hover:text-brand-green transition-colors mb-4">{post.title}</h3>
+                 <span className="inline-flex items-center text-gray-500 font-medium group-hover:text-gray-900 transition-colors">
+                   Read Article <ArrowRight className="w-4 h-4 ml-2" />
+                 </span>
+               </div>
+             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter CTA */}
+      <section className="py-24 bg-gray-950 relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-green/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="container mx-auto px-4 md:px-8 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-6">Stay Ahead of the Curve</h2>
+            <p className="text-gray-400 text-lg mb-10">
+              Join 5,000+ tech leaders in Africa receiving our weekly insights on software engineering, cloud architecture, and digital transformation.
+            </p>
+            <form className="flex flex-col sm:flex-row gap-4 justify-center max-w-xl mx-auto" onSubmit={(e) => e.preventDefault()}>
+              <input 
+                type="email" 
+                placeholder="Enter your email address" 
+                className="flex-1 bg-white/5 border border-white/10 rounded-full px-6 h-14 text-white focus:outline-none focus:border-brand-green/50 focus:ring-1 focus:ring-brand-green/50 transition-all placeholder:text-gray-500"
+              />
+              <Button type="submit" size="lg" className="bg-brand-green hover:bg-green-600 text-white rounded-full h-14 px-8 font-bold whitespace-nowrap shadow-lg shadow-brand-green/20">
+                Subscribe Now
+              </Button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Insights / Blog Preview */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div>
+              <h2 className="text-3xl md:text-5xl font-bold text-brand-green mb-6">Latest Insights</h2>
+              <div className="w-24 h-1.5 bg-brand-green rounded-full"></div>
+            </div>
+            <Button variant="outline" className="rounded-full px-8 py-6 text-brand-green border-brand-green hover:bg-brand-green hover:text-white transition-all font-bold" asChild>
+              <Link href="#">
+                View All Articles
+              </Link>
+            </Button>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-10">
+             {[
+               {
+                 title: "The Future of AI in African Business",
+                 date: "Dec 5, 2025",
+                 category: "Technology",
+                 image: "/images/service_ai.jpg"
+               },
+               {
+                 title: "Securing Digital Assets in 2026",
+                 date: "Nov 28, 2025",
+                 category: "Security",
+                 image: "/images/service_security.jpg"
+               },
+               {
+                 title: "Scaling Cloud Infrastructure Effectively",
+                 date: "Nov 15, 2025",
+                 category: "Cloud",
+                 image: "/images/service_cloud.jpg"
                }
              ].map((post, i) => (
                <div key={i} className="group cursor-pointer">
@@ -492,35 +563,12 @@ export default function Home() {
                    </div>
                  </div>
                  <p className="text-sm font-bold text-gray-400 mb-3">{post.date}</p>
-                 <h3 className="text-2xl font-black text-gray-900 group-hover:text-brand-green transition-colors leading-tight">{post.title}</h3>
+                 <h3 className="text-2xl font-black text-gray-900 group-hover:text-brand-green transition-colors leading-tight mb-4">{post.title}</h3>
+                 <span className="inline-flex items-center text-gray-500 font-medium group-hover:text-gray-900 transition-colors">
+                   Read Article <ArrowRight className="w-4 h-4 ml-2" />
+                 </span>
                </div>
              ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Band */}
-      <section className="py-24 bg-brand-green relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -mr-48 -mt-48"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-green/20 rounded-full blur-3xl -ml-48 -mb-48"></div>
-        
-        <div className="container mx-auto px-4 md:px-8 text-center relative z-10">
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-8">Ready to Transform?</h2>
-          <p className="text-green-50 text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
-            Join hundreds of satisfied clients who have elevated their operations with iTech Network Africa. Let's build your future together.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link href="/contact">
-              <Button size="lg" className="bg-white text-brand-green hover:bg-gray-100 font-black px-12 h-16 rounded-full text-xl shadow-2xl transition-transform hover:scale-110">
-                Contact Us Today
-              </Button>
-            </Link>
-            <Link href="/pricing">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-black px-12 h-16 rounded-full text-xl shadow-xl transition-transform hover:scale-110">
-                View Pricing
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
