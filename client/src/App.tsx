@@ -19,6 +19,7 @@ import About from "@/pages/public/About";
 import Services from "@/pages/public/Services";
 import Pricing from "@/pages/public/Pricing";
 import Contact from "@/pages/public/Contact";
+import VerifyCertificate from "@/pages/public/VerifyCertificate";
 
 import FloatingActions from "@/components/public/FloatingActions";
 import Chatbot from "@/components/public/Chatbot";
@@ -36,6 +37,7 @@ function Router() {
         <Route path="/services" component={Services} />
         <Route path="/pricing" component={Pricing} />
         <Route path="/contact" component={Contact} />
+        <Route path="/verify-certificate" component={VerifyCertificate} />
 
         {/* Dashboard Routes - Flattened for reliability */}
         <Route path="/dashboard">

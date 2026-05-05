@@ -189,7 +189,7 @@ export default function About() {
                       </p>
                       
                       {/* Socials & Interactive Line */}
-                      <div className="flex items-center justify-between opacity-0 group-hover:opacity-100 transition-all duration-500 delay-200 pt-4 border-t border-white/20">
+                      <div className="flex items-center justify-between opacity-100 pt-4 border-t border-white/20">
                         <div className="flex gap-3">
                           {member.socials.linkedin && (
                             <a href={member.socials.linkedin} className="text-white hover:text-brand-green transition-colors">
@@ -207,7 +207,7 @@ export default function About() {
                             </a>
                           )}
                         </div>
-                        <ArrowRight className="w-5 h-5 text-brand-green transform -translate-x-4 group-hover:translate-x-0 transition-transform duration-500 delay-300" />
+                        <ArrowRight className="w-5 h-5 text-brand-green transform -translate-x-4 group-hover:translate-x-0 transition-transform duration-500 delay-300 opacity-0 group-hover:opacity-100" />
                       </div>
                     </div>
                   </div>

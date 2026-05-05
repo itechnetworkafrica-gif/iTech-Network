@@ -75,6 +75,26 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Infinite Tech Marquee */}
+      <div className="bg-brand-green py-8 overflow-hidden relative border-y border-green-400/30">
+        <div className="flex space-x-12 animate-[marquee_20s_linear_infinite] whitespace-nowrap opacity-80">
+          {[...Array(2)].map((_, idx) => (
+            <div key={idx} className="flex space-x-12 items-center">
+              <span className="text-2xl font-bold text-white flex items-center gap-2"><Cpu className="w-8 h-8"/> AI & Machine Learning</span>
+              <span className="text-white/50">•</span>
+              <span className="text-2xl font-bold text-white flex items-center gap-2"><Cloud className="w-8 h-8"/> Cloud Architecture</span>
+              <span className="text-white/50">•</span>
+              <span className="text-2xl font-bold text-white flex items-center gap-2"><Shield className="w-8 h-8"/> Enterprise Security</span>
+              <span className="text-white/50">•</span>
+              <span className="text-2xl font-bold text-white flex items-center gap-2"><Code className="w-8 h-8"/> Custom Software</span>
+              <span className="text-white/50">•</span>
+              <span className="text-2xl font-bold text-white flex items-center gap-2"><Zap className="w-8 h-8"/> Digital Transformation</span>
+              <span className="text-white/50">•</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Interactive Feature Blocks */}
       <section className="py-24 bg-gray-50 overflow-hidden relative">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-green/5 blur-[100px] pointer-events-none"></div>
@@ -123,6 +143,43 @@ export default function Home() {
                     <p className="text-sm text-gray-500">Uptime Guarantee</p>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Animated Image Gallery Block */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black text-brand-green mb-4">Inside iTech Network</h2>
+            <p className="text-gray-500 text-lg">Glimpses of our vibrant community and state-of-the-art facilities.</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:h-[500px]">
+            <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-3xl">
+              <img src="/images/hero_home.jpg" alt="Team working" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-green/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                <h3 className="text-white text-2xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Collaborative Workspaces</h3>
+              </div>
+            </div>
+            <div className="relative group overflow-hidden rounded-3xl md:h-full h-64">
+              <img src="/images/hero_about.jpg" alt="Meeting" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-brand-green/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                <Search className="w-10 h-10 text-white" />
+              </div>
+            </div>
+            <div className="relative group overflow-hidden rounded-3xl md:h-full h-64">
+              <img src="/images/service_cloud.jpg" alt="Server room" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-brand-green/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                <Search className="w-10 h-10 text-white" />
+              </div>
+            </div>
+            <div className="md:col-span-2 relative group overflow-hidden rounded-3xl md:h-full h-64">
+              <img src="/images/service_ai.jpg" alt="AI development" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-green/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                <h3 className="text-white text-2xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Advanced AI Research</h3>
               </div>
             </div>
           </div>
@@ -448,55 +505,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Latest Insights / Blog Preview */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-            <div>
-              <h2 className="text-3xl md:text-5xl font-bold text-brand-green mb-6">Latest Insights</h2>
-              <div className="w-24 h-1.5 bg-brand-green rounded-full"></div>
-            </div>
-            <Link href="#">
-              <Button variant="outline" className="rounded-full px-8 py-6 text-brand-green border-brand-green hover:bg-brand-green hover:text-white transition-all font-bold">
-                View All Articles
-              </Button>
-            </Link>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-10">
-             {[
-               {
-                 title: "The Future of AI in African Business",
-                 date: "Dec 5, 2025",
-                 image: "/images/service_ai.jpg"
-               },
-               {
-                 title: "Securing Digital Assets in 2026",
-                 date: "Nov 28, 2025",
-                 image: "/images/service_security.jpg"
-               },
-               {
-                 title: "Scaling Cloud Infrastructure Effectively",
-                 date: "Nov 15, 2025",
-                 image: "/images/service_cloud.jpg"
-               }
-             ].map((post, i) => (
-               <div key={i} className="group cursor-pointer">
-                 <div className="rounded-2xl overflow-hidden mb-6 aspect-video">
-                   <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                 </div>
-                 <p className="text-brand-green font-bold text-sm mb-3">{post.date}</p>
-                 <h3 className="text-2xl font-bold text-gray-900 group-hover:text-brand-green transition-colors mb-4">{post.title}</h3>
-                 <span className="inline-flex items-center text-gray-500 font-medium group-hover:text-gray-900 transition-colors">
-                   Read Article <ArrowRight className="w-4 h-4 ml-2" />
-                 </span>
-               </div>
-             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Newsletter CTA */}
       <section className="py-24 bg-gray-950 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-green/10 rounded-full blur-[120px] pointer-events-none"></div>
         <div className="container mx-auto px-4 md:px-8 relative z-10">

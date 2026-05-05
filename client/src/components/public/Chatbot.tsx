@@ -48,14 +48,14 @@ export default function Chatbot() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end">
       {/* Chat Window */}
       <div 
         className={`mb-4 transition-all duration-300 origin-bottom-right ${
           isOpen ? "scale-100 opacity-100" : "scale-0 opacity-0 pointer-events-none absolute"
         }`}
       >
-        <Card className="w-[350px] shadow-2xl border border-gray-100 overflow-hidden flex flex-col h-[500px] max-h-[80vh]">
+        <Card className="w-[calc(100vw-2rem)] sm:w-[380px] shadow-2xl border border-gray-100 overflow-hidden flex flex-col h-[500px] max-h-[calc(100vh-8rem)]">
           <CardHeader className="bg-brand-green text-white p-4 flex flex-row items-center justify-between space-y-0 rounded-t-lg">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
