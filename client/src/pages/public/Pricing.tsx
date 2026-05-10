@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Check, Star } from "lucide-react";
+import { Check, Star, Plus } from "lucide-react";
 import PublicNavbar from "@/components/public/PublicNavbar";
 import Footer from "@/components/public/Footer";
 import { Badge } from "@/components/ui/badge";
@@ -8,67 +8,96 @@ import { Link } from "wouter";
 export default function Pricing() {
   const plans = [
     {
-      name: "Free",
-      price: "$0",
-      description: "Essential tools for small projects and individuals.",
+      name: "NGO Digital Package",
+      price: "Flexible",
+      description: "Complete digital transformation for NGOs to improve visibility and impact.",
       features: [
-        "Access to basic dashboard",
-        "1 Active Project",
-        "Weekly automated report (Lite)",
-        "Community Support",
-        "1 GB Storage"
+        "Professional NGO Website",
+        "Official Email Setup",
+        "NGO Branding & Identity",
+        "Social Media Management",
+        "Online Donation Forms",
+        "Project & Event Flyers",
+        "Digital Data Systems",
+        "Basic ICT Training"
+      ],
+      addons: [
+        "Mobile App Development",
+        "Cloud Management Systems",
+        "POS & Financial Tracking",
+        "AI Reporting Tools"
       ],
       cta: "Get Started",
       popular: false,
       color: "border-gray-200"
     },
     {
-      name: "Pro",
-      price: "$29",
-      period: "/month",
-      description: "Perfect for freelancers and growing startups.",
+      name: "Business Digital Package",
+      price: "Flexible",
+      description: "Solutions designed to help businesses grow, operate efficiently, and increase sales.",
       features: [
-        "Everything in Free",
-        "5 Active Projects",
-        "Full detailed reports",
-        "Email & Chat Support",
-        "Integrations (Jira, Trello)",
-        "10 GB Storage"
+        "Professional Business Website",
+        "Business Email & Branding",
+        "E-commerce / Online Store",
+        "Digital POS System",
+        "Customer Management System",
+        "Marketing & Flyer Designs",
+        "Social Media Setup",
+        "Basic ICT Training"
       ],
-      cta: "Get Started",
-      popular: false,
-      color: "border-brand-green"
-    },
-    {
-      name: "Pro +",
-      price: "$79",
-      period: "/month",
-      description: "Advanced features for scaling teams and agencies.",
-      features: [
-        "Everything in Pro",
-        "Unlimited Projects",
-        "White-label Reports",
-        "Priority 24/7 Support",
-        "Advanced Analytics",
-        "Custom Integrations",
-        "100 GB Storage"
+      addons: [
+        "Business Mobile App",
+        "Advanced POS Reporting",
+        "Cloud Management System",
+        "Online Payment Integration"
       ],
       cta: "Get Started",
       popular: true,
       color: "border-brand-green"
     },
     {
-      name: "Advance Pro +",
-      price: "Custom",
-      description: "Enterprise-grade solutions for large organizations.",
+      name: "High School Digital Package",
+      price: "Flexible",
+      description: "Improve administration, learning systems, communication, and overall school management.",
       features: [
-        "Everything in Pro +",
-        "Dedicated Account Manager",
-        "On-premise Deployment",
-        "SLA Guarantees",
-        "Custom AI Model Training",
-        "Audit Logs & Compliance",
-        "Unlimited Storage"
+        "School Website Development",
+        "Student Registration System",
+        "Online Result Management",
+        "School Portal (Student/Staff/Parent)",
+        "Digital Attendance System",
+        "Exam & Grade Management",
+        "School Branding & Social Media",
+        "ICT Training for Teachers"
+      ],
+      addons: [
+        "School Communication App",
+        "E-learning Platform",
+        "SMS Notification System",
+        "Advanced Database System"
+      ],
+      cta: "Get Started",
+      popular: false,
+      color: "border-emerald-500"
+    },
+    {
+      name: "University Digital Package",
+      price: "Flexible",
+      description: "Advanced solutions for academic management, student services, and institutional efficiency.",
+      features: [
+        "University Website Development",
+        "Admission & Application System",
+        "Student & Staff Portals",
+        "Course Registration & LMS",
+        "Digital Exam & Result System",
+        "Admin Data Dashboard",
+        "Notices & Events Management",
+        "ICT Training for Staff"
+      ],
+      addons: [
+        "Campus Mobile App",
+        "Tuition Payment Integration",
+        "SMS/Email Notification System",
+        "Virtual Classroom Setup"
       ],
       cta: "Get Started",
       popular: false,
@@ -134,7 +163,7 @@ export default function Pricing() {
                     </Button>
                   </Link>
 
-                  <div className="space-y-5 border-t border-gray-100 pt-8">
+                  <div className="space-y-4 border-t border-gray-100 pt-8">
                     <p className="text-xs font-bold text-gray-400 uppercase tracking-[0.15em]">Core Features</p>
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-start gap-4">
@@ -144,6 +173,20 @@ export default function Pricing() {
                         <span className="text-sm font-medium text-gray-600">{feature}</span>
                       </div>
                     ))}
+                    
+                    {plan.addons && plan.addons.length > 0 && (
+                      <>
+                        <p className="text-xs font-bold text-gray-400 uppercase tracking-[0.15em] pt-4">Optional Add-ons</p>
+                        {plan.addons.map((addon, idx) => (
+                          <div key={idx} className="flex items-start gap-4">
+                            <div className="mt-0.5 rounded-full p-1 shrink-0 bg-blue-50 text-blue-500">
+                              <Plus className="w-3 h-3" strokeWidth={3} />
+                            </div>
+                            <span className="text-sm font-medium text-gray-600">{addon}</span>
+                          </div>
+                        ))}
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
