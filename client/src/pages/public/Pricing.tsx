@@ -102,6 +102,78 @@ export default function Pricing() {
       cta: "Get Started",
       popular: false,
       color: "border-gray-900"
+    },
+    {
+      name: "Digital Marketing",
+      price: "Flexible",
+      description: "Increase visibility, attract more customers, and grow your online presence.",
+      features: [
+        "Social Media Management",
+        "Content Creation & Branding",
+        "Paid Ads Setup (FB/IG)",
+        "Business Promotion Campaigns",
+        "Graphic Design for Marketing",
+        "Video Ads Creation",
+        "Page Optimization",
+        "Performance Reports"
+      ],
+      addons: [
+        "Influencer Marketing",
+        "Traffic Boosting Campaigns",
+        "Full Rebranding Package",
+        "Email Marketing Setup"
+      ],
+      cta: "Get Started",
+      popular: false,
+      color: "border-brand-green"
+    },
+    {
+      name: "Graphic Design",
+      price: "Flexible",
+      description: "Create strong, attractive, and consistent visual branding for your business.",
+      features: [
+        "Logo & Brand Identity",
+        "Flyers, Posters & Banners",
+        "Social Media Designs",
+        "Business Cards & Letterheads",
+        "Event & Program Designs",
+        "Product Packaging Design",
+        "Billboard & Large Formats",
+        "Brand Kit (Colors/Fonts)"
+      ],
+      addons: [
+        "Full Brand Identity",
+        "Monthly Social Media Designs",
+        "Video Motion Graphics",
+        "Rebranding Services"
+      ],
+      cta: "Get Started",
+      popular: false,
+      color: "border-gray-200"
+    },
+    {
+      name: "IT Consultancy",
+      price: "Flexible",
+      description: "Make the right technology decisions and build efficient digital infrastructure.",
+      features: [
+        "ICT System Assessment",
+        "Digital Transformation Plan",
+        "Software/Hardware Advisory",
+        "Network & Infrastructure Setup",
+        "Cybersecurity Strategies",
+        "Data Management Solutions",
+        "IT Support Strategy",
+        "Project Planning"
+      ],
+      addons: [
+        "Full System Implementation",
+        "Staff ICT Training",
+        "Monthly IT Advisory",
+        "Custom Software Guidance"
+      ],
+      cta: "Get Started",
+      popular: false,
+      color: "border-emerald-500"
     }
   ];
 
@@ -127,11 +199,11 @@ export default function Pricing() {
 
       {/* Pricing Grid */}
       <div className="container mx-auto px-4 md:px-8 py-16 -mt-16 relative z-20">
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 justify-center">
           {plans.map((plan, i) => (
             <div 
               key={i} 
-              className={`bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] overflow-hidden border-t-[6px] flex flex-col ${plan.color} ${plan.popular ? 'transform md:-translate-y-8 ring-4 ring-brand-green/30 relative z-10' : 'transform hover:-translate-y-2 transition-transform duration-500'}`}
+              className={`bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] overflow-hidden border-t-[6px] flex flex-col ${plan.color} ${plan.popular ? 'transform md:-translate-y-8 ring-4 ring-brand-green/30 relative z-10' : 'transform hover:-translate-y-2 transition-transform duration-500'} ${i === plans.length - 1 && plans.length % 3 !== 0 ? "xl:col-start-2 xl:col-span-1" : ""}`}
             >
               {plan.popular && (
                 <div className="bg-brand-green text-white text-center text-xs font-black py-2 uppercase tracking-[0.2em] shadow-md">
