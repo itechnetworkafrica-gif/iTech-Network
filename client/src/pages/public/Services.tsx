@@ -49,17 +49,24 @@ export default function Services() {
       image: "/images/service_security.jpg"
     },
     {
+      icon: Search,
+      title: "Digital Marketing",
+      description: "Increase visibility, attract more customers, and grow your online presence with powerful marketing strategies.",
+      features: ["Social Media Management", "Content Creation", "Paid Ads Setup (FB/IG)", "Video Ads Creation", "Brand Awareness Strategy", "Performance Reports"],
+      image: "/images/feature_2.jpg"
+    },
+    {
       icon: PenTool,
-      title: "UI/UX Design",
-      description: "User-centric design services that create intuitive, engaging, and beautiful digital products.",
-      features: ["User Research", "Wireframing & Prototyping", "Visual Design", "Usability Testing", "Design Systems", "Accessibility Audits"],
+      title: "Graphic Design",
+      description: "Create strong, attractive, and consistent visual branding for businesses, NGOs, and individuals.",
+      features: ["Logo & Brand Identity", "Business Flyers & Posters", "Social Media Designs", "Product Packaging", "Brochures & Catalogs", "Consistent Brand Kit"],
       image: "/images/feature_1.jpg"
     },
     {
       icon: Users,
       title: "IT Consultancy",
-      description: "Strategic technology consulting to align your IT infrastructure with your business objectives.",
-      features: ["Technology Strategy", "Digital Transformation", "IT Infrastructure Audit", "Vendor Selection", "Process Automation", "Risk Management"],
+      description: "Make the right technology decisions, improve systems, and build efficient digital infrastructure.",
+      features: ["System Assessment", "Digital Transformation", "Network Setup", "Cybersecurity Awareness", "Data Management", "Tech Project Planning"],
       image: "/images/service_consulting.jpg"
     },
     {
