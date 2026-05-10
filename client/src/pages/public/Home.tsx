@@ -71,15 +71,16 @@ export default function Home() {
       </section>
 
       {/* Technologies Strip */}
-      <div className="bg-white py-12 border-b relative overflow-hidden">
+      <div className="bg-white py-16 border-b relative overflow-hidden">
         <div className="container mx-auto px-4 md:px-8">
-          <p className="text-center text-sm font-semibold text-gray-400 uppercase tracking-wider mb-8">Trusted Technologies We Use</p>
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-            <span className="text-xl font-bold text-gray-500 flex items-center gap-2 transition-transform hover:scale-110"><Cpu className="w-6 h-6"/> React</span>
-            <span className="text-xl font-bold text-gray-500 flex items-center gap-2 transition-transform hover:scale-110"><Cloud className="w-6 h-6"/> AWS</span>
-            <span className="text-xl font-bold text-gray-500 flex items-center gap-2 transition-transform hover:scale-110"><MonitorSmartphone className="w-6 h-6"/> Flutter</span>
-            <span className="text-xl font-bold text-gray-500 flex items-center gap-2 transition-transform hover:scale-110"><Shield className="w-6 h-6"/> CyberSec</span>
-            <span className="text-xl font-bold text-gray-500 flex items-center gap-2 transition-transform hover:scale-110"><Code className="w-6 h-6"/> Python</span>
+          <p className="text-center text-sm font-bold text-brand-green uppercase tracking-widest mb-10">Powered by Industry-Leading Technologies</p>
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+            <span className="text-2xl font-black text-gray-800 flex items-center gap-3 transition-all hover:scale-125 hover:text-[#61DAFB]"><Cpu className="w-8 h-8"/> React</span>
+            <span className="text-2xl font-black text-gray-800 flex items-center gap-3 transition-all hover:scale-125 hover:text-[#FF9900]"><Cloud className="w-8 h-8"/> AWS</span>
+            <span className="text-2xl font-black text-gray-800 flex items-center gap-3 transition-all hover:scale-125 hover:text-[#02569B]"><MonitorSmartphone className="w-8 h-8"/> Flutter</span>
+            <span className="text-2xl font-black text-gray-800 flex items-center gap-3 transition-all hover:scale-125 hover:text-[#4285F4]"><Database className="w-8 h-8"/> Google Cloud</span>
+            <span className="text-2xl font-black text-gray-800 flex items-center gap-3 transition-all hover:scale-125 hover:text-[#3776AB]"><Code className="w-8 h-8"/> Python</span>
+            <span className="text-2xl font-black text-gray-800 flex items-center gap-3 transition-all hover:scale-125 hover:text-[#000000]"><Layers className="w-8 h-8"/> Next.js</span>
           </div>
         </div>
       </div>
@@ -196,27 +197,78 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-brand-green text-white py-20 relative overflow-hidden">
+      <section className="bg-brand-green text-white py-24 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-          <div className="absolute top-10 left-10 w-20 h-20 bg-white rounded-full blur-xl"></div>
-          <div className="absolute bottom-10 right-10 w-32 h-32 bg-white rounded-full blur-2xl"></div>
+          <div className="absolute top-10 left-10 w-20 h-20 bg-white rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute bottom-10 right-10 w-32 h-32 bg-white rounded-full blur-2xl animate-pulse delay-700"></div>
         </div>
         <div className="container mx-auto px-4 md:px-8 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
             {[
               { label: "Clients Served", value: "500+", icon: Users },
               { label: "Projects Delivered", value: "1.2k", icon: Briefcase },
-              { label: "Team Members", value: "50+", icon: Award },
-              { label: "Countries", value: "12", icon: Globe },
+              { label: "Tech Experts", value: "50+", icon: Award },
+              { label: "Global Reach", value: "12+", icon: Globe },
             ].map((stat, i) => (
-              <div key={i} className="space-y-4 group">
-                <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto transition-transform group-hover:scale-110 group-hover:bg-white/20">
-                  <stat.icon className="w-8 h-8 text-brand-green" />
+              <div key={i} className="space-y-4 group animate-in zoom-in duration-700" style={{ animationDelay: `${i * 150}ms` }}>
+                <div className="w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-white/20 group-hover:rotate-6 shadow-xl">
+                  <stat.icon className="w-10 h-10 text-white" />
                 </div>
-                <div className="text-4xl md:text-5xl font-black text-white">{stat.value}</div>
-                <div className="text-green-100 font-bold uppercase tracking-widest text-xs">{stat.label}</div>
+                <div className="text-5xl md:text-6xl font-black text-white drop-shadow-lg">{stat.value}</div>
+                <div className="text-green-100 font-bold uppercase tracking-widest text-sm">{stat.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* NEW: Innovation Lab Section */}
+      <section className="py-24 bg-gray-950 text-white relative overflow-hidden border-t border-white/5">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-green/5 blur-[120px] pointer-events-none"></div>
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="order-2 lg:order-1 relative group animate-in slide-in-from-left duration-1000">
+              <div className="absolute inset-0 bg-brand-green/20 rounded-[3rem] blur-3xl -z-10 group-hover:bg-brand-green/30 transition-colors duration-700"></div>
+              <img 
+                src="/images/service_ai.jpg" 
+                alt="Innovation Lab" 
+                className="rounded-[3rem] shadow-2xl w-full h-[500px] object-cover border border-white/10 group-hover:border-brand-green/50 transition-colors duration-700"
+              />
+              <div className="absolute -bottom-8 -right-8 bg-brand-green p-8 rounded-3xl shadow-2xl border border-white/20 animate-bounce duration-[7s]">
+                <Rocket className="w-12 h-12 text-white mb-4" />
+                <p className="text-3xl font-black text-white">R&D</p>
+                <p className="text-green-100 font-medium">Division</p>
+              </div>
+            </div>
+            
+            <div className="order-1 lg:order-2 space-y-8 animate-in slide-in-from-right duration-1000">
+              <p className="text-brand-green font-mono text-sm tracking-[0.3em] uppercase">// Future Ready</p>
+              <h2 className="text-4xl md:text-6xl font-black text-white leading-tight uppercase italic tracking-tighter">
+                iTech Innovation <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-emerald-400">Laboratory</span>
+              </h2>
+              <p className="text-lg text-gray-400 leading-relaxed">
+                We invest heavily in Research and Development to bring the latest technological advancements to Africa. From AI prototypes to Blockchain frameworks, our innovation lab is constantly exploring the frontier of what's possible.
+              </p>
+              <ul className="space-y-4 pt-4">
+                {[
+                  "Artificial Intelligence & Machine Learning Models",
+                  "Internet of Things (IoT) Prototyping",
+                  "Web3 and Smart Contract Development",
+                  "Advanced Data Analytics Visualization"
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-center gap-4 text-gray-300">
+                    <CheckCircle className="w-6 h-6 text-brand-green shrink-0" />
+                    <span className="text-lg">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="pt-6">
+                <Button className="bg-transparent border-2 border-brand-green text-brand-green hover:bg-brand-green hover:text-white rounded-full px-10 h-14 font-bold transition-all shadow-[0_0_15px_rgba(55,182,38,0.2)] hover:shadow-[0_0_25px_rgba(55,182,38,0.4)]">
+                  Explore Innovations
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import PublicNavbar from "@/components/public/PublicNavbar";
 import Footer from "@/components/public/Footer";
-import { Code, Server, Database, Smartphone, ShieldCheck, PenTool, ChevronDown, ChevronUp } from "lucide-react";
+import { Code, Server, Database, Smartphone, ShieldCheck, PenTool, ChevronDown, ChevronUp, Search, Users, Zap } from "lucide-react";
 import { Link } from "wouter";
 import { useState } from "react";
 import {
