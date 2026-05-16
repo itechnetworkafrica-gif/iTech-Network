@@ -8,149 +8,92 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col font-sans overflow-x-hidden">
+    <div className="min-h-screen flex flex-col font-sans overflow-x-hidden bg-white">
       <PublicNavbar />
       
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gray-950 -z-20"></div>
-        {/* Animated Background Mesh */}
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5 -z-10 mix-blend-overlay"></div>
-        
-        {/* Glowing Orbs */}
-        <div className="absolute top-1/4 left-1/4 w-[40rem] h-[40rem] bg-brand-green/20 rounded-full blur-[128px] animate-pulse duration-[8s] -z-10 mix-blend-screen"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-emerald-500/20 rounded-full blur-[100px] animate-pulse duration-[10s] -z-10 mix-blend-screen"></div>
+      {/* Modern Minimal Hero Section */}
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-white">
+        {/* Soft Modern Gradients */}
+        <div className="absolute top-[-10%] right-[-5%] w-[40rem] h-[40rem] bg-brand-green/10 rounded-full blur-[100px] -z-10 animate-pulse duration-[8s]"></div>
+        <div className="absolute bottom-[-10%] left-[-10%] w-[30rem] h-[30rem] bg-emerald-500/10 rounded-full blur-[80px] -z-10"></div>
 
-        <div className="container mx-auto px-4 md:px-8 relative z-10 text-center md:text-left">
-          <div className="max-w-5xl mx-auto md:mx-0">
-            <div className="inline-flex items-center rounded-full border border-brand-green/30 bg-brand-green/10 px-4 py-2 text-sm font-semibold text-brand-green backdrop-blur-md mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 shadow-[0_0_20px_rgba(55,182,38,0.2)]">
-              <span className="flex h-2.5 w-2.5 rounded-full bg-brand-green mr-3 animate-ping"></span>
-              Leading Tech Institution in Africa
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-extrabold text-white leading-[1.1] mb-8 tracking-tight drop-shadow-2xl animate-in fade-in slide-in-from-bottom-6 duration-1000">
-              Innovating Africa's <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green via-green-400 to-emerald-300 relative inline-block">
-                Digital Future
-                <div className="absolute -bottom-2 left-0 w-full h-3 bg-brand-green/30 blur-md"></div>
-              </span>
-            </h1>
-            
-            <p className="text-lg md:text-2xl text-gray-400 mb-10 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 font-light">
-              We provide cutting-edge technology solutions, comprehensive digital training, and enterprise-grade tools to empower businesses and individuals globally.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-5 justify-center md:justify-start animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
-              <Button size="lg" className="bg-brand-green text-white hover:bg-green-600 h-16 px-10 text-lg rounded-full shadow-[0_10px_40px_rgba(55,182,38,0.3)] transition-all hover:scale-105 hover:shadow-[0_15px_50px_rgba(55,182,38,0.5)] font-bold group" asChild>
-                <Link href="/services">
-                  Explore Services <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" className="bg-white/5 backdrop-blur-md text-white border-white/20 hover:bg-white/10 hover:border-white/40 h-16 px-10 text-lg rounded-full shadow-lg transition-all hover:scale-105 font-bold" asChild>
-                <Link href="/contact">
-                  Get Started
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-
-        {/* Professional Tech Hologram Decoration */}
-        <div className="hidden lg:block absolute right-10 top-1/2 -translate-y-1/2 w-[500px] h-[500px] z-10 pointer-events-none">
-          <div className="absolute inset-0 bg-gradient-to-tr from-brand-green/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-1/4 right-1/4 bg-white/5 backdrop-blur-xl p-5 rounded-2xl border border-white/10 shadow-2xl animate-[bounce_6s_ease-in-out_infinite]">
-            <Code className="w-10 h-10 text-brand-green" />
-          </div>
-          <div className="absolute bottom-1/4 left-1/4 bg-brand-green/10 backdrop-blur-xl p-6 rounded-2xl border border-brand-green/20 shadow-2xl animate-[bounce_5s_ease-in-out_infinite_reverse] delay-700">
-            <Layers className="w-12 h-12 text-brand-green" />
-          </div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/5 backdrop-blur-2xl p-8 rounded-3xl border border-white/10 shadow-[0_0_50px_rgba(55,182,38,0.2)]">
-            <Cpu className="w-16 h-16 text-white" />
-          </div>
-        </div>
-      </section>
-
-      {/* Technologies Strip */}
-      <div className="bg-white py-16 border-b relative overflow-hidden">
-        <div className="container mx-auto px-4 md:px-8">
-          <p className="text-center text-sm font-bold text-brand-green uppercase tracking-widest mb-10">Powered by Industry-Leading Technologies</p>
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-            <span className="text-2xl font-black text-gray-800 flex items-center gap-3 transition-all hover:scale-125 hover:text-[#61DAFB]"><Cpu className="w-8 h-8"/> React</span>
-            <span className="text-2xl font-black text-gray-800 flex items-center gap-3 transition-all hover:scale-125 hover:text-[#FF9900]"><Cloud className="w-8 h-8"/> AWS</span>
-            <span className="text-2xl font-black text-gray-800 flex items-center gap-3 transition-all hover:scale-125 hover:text-[#02569B]"><MonitorSmartphone className="w-8 h-8"/> Flutter</span>
-            <span className="text-2xl font-black text-gray-800 flex items-center gap-3 transition-all hover:scale-125 hover:text-[#4285F4]"><Database className="w-8 h-8"/> Google Cloud</span>
-            <span className="text-2xl font-black text-gray-800 flex items-center gap-3 transition-all hover:scale-125 hover:text-[#3776AB]"><Code className="w-8 h-8"/> Python</span>
-            <span className="text-2xl font-black text-gray-800 flex items-center gap-3 transition-all hover:scale-125 hover:text-[#000000]"><Layers className="w-8 h-8"/> Next.js</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Infinite Tech Marquee */}
-      <div className="bg-brand-green py-8 overflow-hidden relative border-y border-green-400/30">
-        <div className="flex space-x-12 animate-[marquee_20s_linear_infinite] whitespace-nowrap opacity-80">
-          {[...Array(2)].map((_, idx) => (
-            <div key={idx} className="flex space-x-12 items-center">
-              <span className="text-2xl font-bold text-white flex items-center gap-2"><Cpu className="w-8 h-8"/> AI & Machine Learning</span>
-              <span className="text-white/50">•</span>
-              <span className="text-2xl font-bold text-white flex items-center gap-2"><Cloud className="w-8 h-8"/> Cloud Architecture</span>
-              <span className="text-white/50">•</span>
-              <span className="text-2xl font-bold text-white flex items-center gap-2"><Shield className="w-8 h-8"/> Enterprise Security</span>
-              <span className="text-white/50">•</span>
-              <span className="text-2xl font-bold text-white flex items-center gap-2"><Code className="w-8 h-8"/> Custom Software</span>
-              <span className="text-white/50">•</span>
-              <span className="text-2xl font-bold text-white flex items-center gap-2"><Zap className="w-8 h-8"/> Digital Transformation</span>
-              <span className="text-white/50">•</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Interactive Feature Blocks */}
-      <section className="py-24 bg-gray-50 overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-green/5 blur-[100px] pointer-events-none"></div>
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8 animate-in slide-in-from-left duration-1000">
-              <h2 className="text-4xl md:text-5xl font-extrabold text-brand-green leading-tight">
-                Empowering Businesses with <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-green-400">Next-Gen</span> Tech
-              </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                We don't just build software; we build the future. Our approach combines rapid development with enterprise-grade security to ensure your business stays ahead of the curve.
+        <div className="container mx-auto px-4 md:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center md:text-left pt-10">
+              <div className="inline-flex items-center rounded-full border border-gray-200 bg-gray-50 px-4 py-2 text-sm font-semibold text-gray-800 mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
+                <span className="flex h-2 w-2 rounded-full bg-brand-green mr-2 animate-ping"></span>
+                Africa's Premier Tech Hub
+              </div>
+              
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] mb-6 tracking-tight animate-in fade-in slide-in-from-bottom-6 duration-1000">
+                Design the future of <br className="hidden md:block"/>
+                <span className="text-brand-green relative inline-block">
+                  your business.
+                  <svg className="absolute w-full h-3 -bottom-1 left-0 text-green-200 -z-10 opacity-70" viewBox="0 0 100 10" preserveAspectRatio="none">
+                    <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
+                  </svg>
+                </span>
+              </h1>
+              
+              <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-lg mx-auto md:mx-0 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 font-light">
+                We build scalable software, design beautiful brands, and train the next generation of tech leaders across Africa.
               </p>
-              <div className="grid sm:grid-cols-2 gap-6 pt-4">
-                {[
-                  { icon: MousePointer2, title: "Intuitive Design", desc: "User-first experiences" },
-                  { icon: Rocket, title: "Fast Scaling", desc: "Growth-ready systems" },
-                  { icon: Shield, title: "Top Security", desc: "Hardened infrastructure" },
-                  { icon: BarChart3, title: "Data Insights", desc: "Business intelligence" }
-                ].map((item, i) => (
-                  <div key={i} className="group flex gap-4 p-5 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 hover:border-brand-green/30 transition-all duration-300">
-                    <div className="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-brand-green transition-colors duration-300">
-                      <item.icon className="w-6 h-6 text-brand-green group-hover:text-white transition-colors duration-300" />
-                    </div>
-                    <div className="flex flex-col justify-center">
-                      <h4 className="font-bold text-gray-900 group-hover:text-brand-green transition-colors">{item.title}</h4>
-                      <p className="text-sm text-gray-500">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
+                <Button size="lg" className="bg-black text-white hover:bg-gray-800 h-14 px-8 text-base rounded-full transition-all hover:scale-105 font-medium group" asChild>
+                  <Link href="/services">
+                    Our Services <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </Button>
+                <Button size="lg" variant="outline" className="bg-white text-gray-900 border-gray-200 hover:bg-gray-50 hover:border-gray-300 h-14 px-8 text-base rounded-full shadow-sm transition-all font-medium" asChild>
+                  <Link href="/pricing">
+                    View Pricing
+                  </Link>
+                </Button>
+              </div>
+              
+              <div className="mt-12 flex items-center justify-center md:justify-start gap-4 animate-in fade-in duration-1000 delay-500">
+                <div className="flex -space-x-3">
+                  <Avatar className="w-10 h-10 border-2 border-white shadow-sm"><AvatarImage src="https://i.pravatar.cc/100?img=1" /></Avatar>
+                  <Avatar className="w-10 h-10 border-2 border-white shadow-sm"><AvatarImage src="https://i.pravatar.cc/100?img=2" /></Avatar>
+                  <Avatar className="w-10 h-10 border-2 border-white shadow-sm"><AvatarImage src="https://i.pravatar.cc/100?img=3" /></Avatar>
+                </div>
+                <div className="text-sm text-gray-600">
+                  <span className="font-bold text-gray-900">500+</span> businesses trust us
+                </div>
               </div>
             </div>
-            <div className="relative animate-in slide-in-from-right duration-1000">
-              <div className="absolute inset-0 bg-brand-green/20 rounded-full blur-3xl -z-10 animate-pulse"></div>
+            
+            {/* Modern Hero Image/Graphic */}
+            <div className="relative hidden lg:block animate-in fade-in zoom-in duration-1000 delay-300">
+              <div className="absolute inset-0 bg-gradient-to-tr from-brand-green/20 to-emerald-300/20 rounded-[3rem] -rotate-6 transform scale-105 -z-10"></div>
               <img 
                 src="/images/hero_home.jpg" 
-                alt="Technology team" 
-                className="rounded-3xl shadow-2xl w-full h-[600px] object-cover object-top"
+                alt="Tech Team" 
+                className="rounded-[3rem] shadow-2xl object-cover h-[600px] w-full border-4 border-white"
               />
-              <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 animate-bounce duration-[6s]">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white">
-                    <Zap className="w-6 h-6" />
+              
+              {/* Floating modern UI elements */}
+              <div className="absolute top-10 -left-10 bg-white p-4 rounded-2xl shadow-xl border border-gray-100 animate-bounce duration-[6s]">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                    <Shield className="w-5 h-5 text-brand-green" />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-gray-900">99.9%</p>
-                    <p className="text-sm text-gray-500">Uptime Guarantee</p>
+                    <p className="text-xs text-gray-500 font-medium uppercase">Security</p>
+                    <p className="text-sm font-bold text-gray-900">Enterprise Grade</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="absolute bottom-20 -right-8 bg-black text-white p-5 rounded-2xl shadow-2xl animate-bounce duration-[7s] delay-300">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                    <Code className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-2xl font-bold">100%</p>
+                    <p className="text-sm text-gray-400">Custom Code</p>
                   </div>
                 </div>
               </div>
@@ -159,485 +102,125 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Animated Image Gallery Block */}
-      <section className="py-24 bg-white relative overflow-hidden">
+      {/* Modern Technologies Strip */}
+      <div className="bg-gray-50 py-12 border-y border-gray-100 relative overflow-hidden">
         <div className="container mx-auto px-4 md:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-brand-green mb-4">Inside iTech Network</h2>
-            <p className="text-gray-500 text-lg">Glimpses of our vibrant community and state-of-the-art facilities.</p>
+          <p className="text-center text-xs font-semibold text-gray-400 uppercase tracking-widest mb-8">Trusted Technologies & Partners</p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+            <span className="text-xl font-bold text-gray-800 flex items-center gap-2"><Cpu className="w-6 h-6"/> React</span>
+            <span className="text-xl font-bold text-gray-800 flex items-center gap-2"><Cloud className="w-6 h-6"/> AWS</span>
+            <span className="text-xl font-bold text-gray-800 flex items-center gap-2"><MonitorSmartphone className="w-6 h-6"/> Flutter</span>
+            <span className="text-xl font-bold text-gray-800 flex items-center gap-2"><Database className="w-6 h-6"/> Firebase</span>
+            <span className="text-xl font-bold text-gray-800 flex items-center gap-2"><Code className="w-6 h-6"/> Next.js</span>
+            <span className="text-xl font-bold text-gray-800 flex items-center gap-2"><Layers className="w-6 h-6"/> Tailwind</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Modern Feature Grid */}
+      <section className="py-24 bg-white relative">
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="text-center mb-16 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">Everything you need to <span className="text-brand-green">grow online.</span></h2>
+            <p className="text-gray-500 text-lg">We provide end-to-end digital solutions designed to help your business operate efficiently and scale seamlessly.</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:h-[500px]">
-            <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-3xl">
-              <img src="/images/hero_home.jpg" alt="Team working" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-green/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
-                <h3 className="text-white text-2xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Collaborative Workspaces</h3>
-              </div>
-            </div>
-            <div className="relative group overflow-hidden rounded-3xl md:h-full h-64">
-              <img src="/images/hero_about.jpg" alt="Meeting" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-brand-green/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                <Search className="w-10 h-10 text-white" />
-              </div>
-            </div>
-            <div className="relative group overflow-hidden rounded-3xl md:h-full h-64">
-              <img src="/images/service_cloud.jpg" alt="Server room" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-brand-green/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                <Search className="w-10 h-10 text-white" />
-              </div>
-            </div>
-            <div className="md:col-span-2 relative group overflow-hidden rounded-3xl md:h-full h-64">
-              <img src="/images/service_ai.jpg" alt="AI development" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-green/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
-                <h3 className="text-white text-2xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Advanced AI Research</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="bg-brand-green text-white py-24 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-          <div className="absolute top-10 left-10 w-20 h-20 bg-white rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute bottom-10 right-10 w-32 h-32 bg-white rounded-full blur-2xl animate-pulse delay-700"></div>
-        </div>
-        <div className="container mx-auto px-4 md:px-8 relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { label: "Clients Served", value: "500+", icon: Users },
-              { label: "Projects Delivered", value: "1.2k", icon: Briefcase },
-              { label: "Tech Experts", value: "50+", icon: Award },
-              { label: "Global Reach", value: "12+", icon: Globe },
-            ].map((stat, i) => (
-              <div key={i} className="space-y-4 group animate-in zoom-in duration-700" style={{ animationDelay: `${i * 150}ms` }}>
-                <div className="w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center mx-auto transition-all duration-500 group-hover:scale-110 group-hover:bg-white/20 group-hover:rotate-6 shadow-xl">
-                  <stat.icon className="w-10 h-10 text-white" />
+              { icon: Code, title: "Custom Software", desc: "Tailored web and mobile applications built for your specific business needs." },
+              { icon: Briefcase, title: "IT Consultancy", desc: "Strategic technology planning and digital transformation roadmaps." },
+              { icon: MonitorSmartphone, title: "Digital Marketing", desc: "Data-driven campaigns to increase your visibility and attract customers." },
+              { icon: Shield, title: "Cybersecurity", desc: "Enterprise-grade protection to keep your business data safe and secure." },
+              { icon: Layers, title: "Graphic Design", desc: "Professional branding, logos, and marketing materials that stand out." },
+              { icon: BookOpen, title: "Tech Training", desc: "Comprehensive ICT training programs for staff, students, and individuals." }
+            ].map((feature, i) => (
+              <div key={i} className="bg-gray-50 rounded-3xl p-8 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-transparent hover:border-gray-100 group">
+                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-brand-green group-hover:text-white transition-colors duration-300">
+                  <feature.icon className="w-6 h-6 text-gray-700 group-hover:text-white" />
                 </div>
-                <div className="text-5xl md:text-6xl font-black text-white drop-shadow-lg">{stat.value}</div>
-                <div className="text-green-100 font-bold uppercase tracking-widest text-sm">{stat.label}</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+                <p className="text-gray-500 leading-relaxed">{feature.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* NEW: Innovation Lab Section */}
-      <section className="py-24 bg-gray-950 text-white relative overflow-hidden border-t border-white/5">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-green/5 blur-[120px] pointer-events-none"></div>
-        <div className="container mx-auto px-4 md:px-8">
+      {/* Modern Innovation Lab / Highlight Section */}
+      <section className="py-24 bg-black text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-green/20 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="container mx-auto px-4 md:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1 relative group animate-in slide-in-from-left duration-1000">
-              <div className="absolute inset-0 bg-brand-green/20 rounded-[3rem] blur-3xl -z-10 group-hover:bg-brand-green/30 transition-colors duration-700"></div>
+            <div className="space-y-8">
+              <div className="inline-block border border-white/20 bg-white/5 backdrop-blur-md rounded-full px-4 py-1.5 text-xs font-semibold text-green-400 uppercase tracking-widest">
+                Research & Development
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+                iTech Innovation <br />
+                <span className="text-brand-green">Laboratory</span>
+              </h2>
+              <p className="text-lg text-gray-400 leading-relaxed font-light">
+                We invest heavily in R&D to bring the latest technological advancements to Africa. From AI prototypes to Blockchain frameworks, our innovation lab is constantly exploring the frontier of what's possible.
+              </p>
+              
+              <div className="space-y-4 pt-4">
+                {[
+                  "Artificial Intelligence & Machine Learning",
+                  "Internet of Things (IoT) Prototyping",
+                  "Advanced Data Analytics",
+                  "Cloud Infrastructure Optimization"
+                ].map((item, idx) => (
+                  <div key={idx} className="flex items-center gap-4 bg-white/5 rounded-xl p-4 border border-white/5 hover:bg-white/10 transition-colors">
+                    <div className="w-8 h-8 rounded-full bg-brand-green/20 flex items-center justify-center shrink-0">
+                      <CheckCircle className="w-4 h-4 text-brand-green" />
+                    </div>
+                    <span className="font-medium text-gray-200">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="relative">
               <img 
                 src="/images/service_ai.jpg" 
                 alt="Innovation Lab" 
-                className="rounded-[3rem] shadow-2xl w-full h-[500px] object-cover border border-white/10 group-hover:border-brand-green/50 transition-colors duration-700"
+                className="rounded-3xl shadow-2xl w-full h-[600px] object-cover border border-white/10"
               />
-              <div className="absolute -bottom-8 -right-8 bg-brand-green p-8 rounded-3xl shadow-2xl border border-white/20 animate-bounce duration-[7s]">
-                <Rocket className="w-12 h-12 text-white mb-4" />
-                <p className="text-3xl font-black text-white">R&D</p>
-                <p className="text-green-100 font-medium">Division</p>
-              </div>
-            </div>
-            
-            <div className="order-1 lg:order-2 space-y-8 animate-in slide-in-from-right duration-1000">
-              <p className="text-brand-green font-mono text-sm tracking-[0.3em] uppercase">// Future Ready</p>
-              <h2 className="text-4xl md:text-6xl font-black text-white leading-tight uppercase italic tracking-tighter">
-                iTech Innovation <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-emerald-400">Laboratory</span>
-              </h2>
-              <p className="text-lg text-gray-400 leading-relaxed">
-                We invest heavily in Research and Development to bring the latest technological advancements to Africa. From AI prototypes to Blockchain frameworks, our innovation lab is constantly exploring the frontier of what's possible.
-              </p>
-              <ul className="space-y-4 pt-4">
-                {[
-                  "Artificial Intelligence & Machine Learning Models",
-                  "Internet of Things (IoT) Prototyping",
-                  "Web3 and Smart Contract Development",
-                  "Advanced Data Analytics Visualization"
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-center gap-4 text-gray-300">
-                    <CheckCircle className="w-6 h-6 text-brand-green shrink-0" />
-                    <span className="text-lg">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="pt-6">
-                <Button className="bg-transparent border-2 border-brand-green text-brand-green hover:bg-brand-green hover:text-white rounded-full px-10 h-14 font-bold transition-all shadow-[0_0_15px_rgba(55,182,38,0.2)] hover:shadow-[0_0_25px_rgba(55,182,38,0.4)]">
-                  Explore Innovations
-                </Button>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent rounded-3xl"></div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-8 text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-brand-green mb-6">Trusted by Local Leaders</h2>
-          <div className="w-24 h-1.5 bg-brand-green mx-auto rounded-full mb-12"></div>
-          
-          <div className="max-w-4xl mx-auto mb-20 relative">
-            <div className="absolute -top-10 -left-10 text-[10rem] font-serif text-brand-green/10 leading-none select-none">"</div>
-            <div className="bg-gray-950 text-white p-12 md:p-20 rounded-[3rem] shadow-2xl relative z-10 overflow-hidden group">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-green/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
-              <p className="text-xl md:text-2xl lg:text-3xl font-medium leading-relaxed mb-10 relative">
-                "iTech Network Africa didn't just build our app; they engineered a new student engagement platform. The Starz Mobile App is flawless, and the support is world-class."
-              </p>
-              <div className="flex flex-col items-center gap-4">
-                <h4 className="text-xl font-bold uppercase tracking-widest text-brand-green">Mr. Nehbor C. Poquee</h4>
-                <p className="text-gray-400 font-mono text-sm tracking-widest uppercase">Dean of Technology, Starz University</p>
+      {/* Modern Stats & Trust Section */}
+      <section className="py-24 bg-brand-green text-white">
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+            {[
+              { label: "Clients Served", value: "500+" },
+              { label: "Projects Delivered", value: "1.2k" },
+              { label: "Tech Experts", value: "50+" },
+              { label: "Global Reach", value: "12+" },
+            ].map((stat, i) => (
+              <div key={i} className="text-center space-y-2">
+                <div className="text-4xl md:text-6xl font-black tracking-tight">{stat.value}</div>
+                <div className="text-green-100 font-medium text-sm md:text-base uppercase tracking-wider">{stat.label}</div>
               </div>
-            </div>
+            ))}
           </div>
+        </div>
+      </section>
 
-          <p className="text-gray-400 font-mono text-sm tracking-[0.3em] uppercase mb-12">Building the Tech Ecosystem in Africa</p>
+      {/* Clean Logos Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 md:px-8">
+          <p className="text-center text-sm font-semibold text-gray-400 uppercase tracking-widest mb-10">Trusted by Local Leaders</p>
           <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20">
-            <img src="https://cddsrxtfashivrcuirgf.supabase.co/storage/v1/object/public/images/Starz%20Logo.webp" alt="Starz" className="h-16 w-auto opacity-40 grayscale hover:grayscale-0 active:grayscale-0 hover:opacity-100 active:opacity-100 transition-all duration-500 cursor-pointer touch-manipulation" />
-            <img src="https://cddsrxtfashivrcuirgf.supabase.co/storage/v1/object/public/images/dmg%20Logo.jpeg" alt="DMC" className="h-16 w-auto opacity-40 grayscale hover:grayscale-0 active:grayscale-0 hover:opacity-100 active:opacity-100 transition-all duration-500 cursor-pointer touch-manipulation" />
-            <img src="https://cddsrxtfashivrcuirgf.supabase.co/storage/v1/object/public/images/proaffordable-cleaning-logo.png" alt="Pro-Clean" className="h-16 w-auto opacity-40 grayscale hover:grayscale-0 active:grayscale-0 hover:opacity-100 active:opacity-100 transition-all duration-500 cursor-pointer touch-manipulation" />
-            <img src="https://cddsrxtfashivrcuirgf.supabase.co/storage/v1/object/public/images/new%20liberia%20logo.jpeg" alt="New Liberia" className="h-16 w-auto opacity-40 grayscale hover:grayscale-0 active:grayscale-0 hover:opacity-100 active:opacity-100 transition-all duration-500 cursor-pointer touch-manipulation" />
-            <img src="https://cddsrxtfashivrcuirgf.supabase.co/storage/v1/object/public/images/ai%20tech%20logo.webp" alt="A1 Tech" className="h-16 w-auto opacity-40 grayscale hover:grayscale-0 active:grayscale-0 hover:opacity-100 active:opacity-100 transition-all duration-500 cursor-pointer touch-manipulation" />
-          </div>
-        </div>
-      </section>
-
-      {/* Engineering Core (From Innova) */}
-      <section className="py-24 bg-gray-950 text-white overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-green/10 rounded-full blur-[120px] -mr-48 -mt-48"></div>
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="text-center mb-20">
-            <p className="text-brand-green font-mono text-sm tracking-[0.3em] uppercase mb-4">// Expert Stack</p>
-            <h2 className="text-4xl md:text-6xl font-black mb-6 uppercase italic tracking-tighter">Our Engineering Core</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto text-lg">The tech stack driving innovation in Africa's digital ecosystem.</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Frontend",
-                icon: Layers,
-                items: ["React", "Next.js", "Vue.js", "TypeScript", "Tailwind CSS", "Flutter"]
-              },
-              {
-                title: "Backend",
-                icon: Database,
-                items: ["Node.js", "Python", "Go", "Laravel", "PostgreSQL", "MongoDB"]
-              },
-              {
-                title: "DevOps & Cloud",
-                icon: Cloud,
-                items: ["AWS", "Docker", "Kubernetes", "Firebase", "Supabase", "CI/CD"]
-              }
-            ].map((col, i) => (
-              <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 p-10 rounded-[2.5rem] hover:border-brand-green/50 transition-all duration-500 group">
-                <div className="w-16 h-16 bg-brand-green/20 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-                  <col.icon className="w-8 h-8 text-brand-green" />
-                </div>
-                <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
-                  <span className="w-1 h-6 bg-brand-green"></span> {col.title}
-                </h3>
-                <div className="flex flex-wrap gap-3">
-                  {col.items.map((item, idx) => (
-                    <span key={idx} className="px-4 py-2 bg-white/5 rounded-full text-sm font-medium border border-white/5 hover:bg-white/10 hover:border-white/20 transition-all cursor-default">
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Proven Roadmap (From Innova) */}
-      <section className="py-24 bg-white relative overflow-hidden">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="text-center mb-20">
-            <p className="text-brand-green font-mono text-sm tracking-[0.3em] uppercase mb-4">// Development Lifecycle</p>
-            <h2 className="text-4xl md:text-6xl font-black text-brand-green uppercase italic tracking-tighter">Our Proven Roadmap</h2>
-          </div>
-
-          <div className="grid md:grid-cols-5 gap-6">
-            {[
-              { id: "01", title: "Strategic Discovery", desc: "Detailed interviews and market research." },
-              { id: "02", title: "Visual Blueprint", desc: "Wireframing and high-fidelity mockups." },
-              { id: "03", title: "Agile Build", desc: "Iterative development and CI/CD." },
-              { id: "04", title: "Optimization", desc: "Performance tuning and SEO audits." },
-              { id: "05", title: "Market Launch", desc: "Go-live strategy and final QA." }
-            ].map((step, i) => (
-              <div key={i} className="relative group">
-                <div className="p-8 bg-gray-50 rounded-[2rem] h-full border border-transparent hover:border-brand-green transition-all duration-500 hover:shadow-2xl hover:shadow-brand-green/10">
-                  <div className="text-5xl font-black text-brand-green/10 group-hover:text-brand-green/20 transition-colors mb-6">{step.id}</div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-4">{step.title}</h4>
-                  <p className="text-sm text-gray-500 leading-relaxed">{step.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Enterprise Digital Assets (From Innova) */}
-      <section className="py-24 bg-gray-50">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <div className="relative group overflow-hidden rounded-[3rem]">
-              <img 
-                src="/images/feature_1.jpg" 
-                alt="Engineering" 
-                className="w-full h-[600px] object-cover transform group-hover:scale-110 transition-transform duration-[2s]"
-              />
-              <div className="absolute inset-0 bg-brand-green/20 mix-blend-overlay"></div>
-            </div>
-            <div className="space-y-10">
-              <p className="text-brand-green font-mono text-sm tracking-[0.3em] uppercase">// Scale</p>
-              <h2 className="text-4xl md:text-6xl font-black text-brand-green leading-[0.9] uppercase italic tracking-tighter">Enterprise <br />Digital Assets</h2>
-              <div className="space-y-8">
-                <div className="flex gap-6 items-start">
-                  <div className="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center shrink-0">
-                    <Globe className="w-6 h-6 text-brand-green" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-gray-900 mb-2 uppercase tracking-tight">African Web Scale</h4>
-                    <p className="text-gray-600 leading-relaxed">Developing high-availability systems specifically optimized for regional connectivity fluctuations.</p>
-                  </div>
-                </div>
-                <div className="flex gap-6 items-start">
-                  <div className="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center shrink-0">
-                    <PieChart className="w-6 h-6 text-brand-green" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-gray-900 mb-2 uppercase tracking-tight">UX Engineering</h4>
-                    <p className="text-gray-600 leading-relaxed">Designing intuitive interfaces that reduce friction and drive user retention for businesses.</p>
-                  </div>
-                </div>
-              </div>
-              <Button size="lg" className="bg-brand-green text-white rounded-full px-10 h-16 font-black uppercase italic tracking-widest text-sm hover:scale-105 transition-transform" asChild>
-                <Link href="/contact">
-                  Initialize Transformation
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Preview */}
-      <section className="py-24 bg-brand-green text-white overflow-hidden">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Our Core Services</h2>
-            <div className="w-24 h-1.5 bg-brand-green mx-auto rounded-full mb-6"></div>
-            <p className="text-lg text-green-50 max-w-2xl mx-auto leading-relaxed">
-              Comprehensive technology solutions tailored to drive growth and efficiency for your business.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { 
-                icon: Code, 
-                title: "Custom Software Dev", 
-                desc: "Tailor-made software solutions designed to meet your specific business requirements." 
-              },
-              { 
-                icon: Cloud, 
-                title: "Cloud Infrastructure", 
-                desc: "Scalable and secure cloud solutions to modernize your IT operations." 
-              },
-              { 
-                icon: Shield, 
-                title: "Cybersecurity", 
-                desc: "Robust security measures to protect your digital assets and sensitive data." 
-              },
-              { 
-                icon: Zap, 
-                title: "Digital Transformation", 
-                desc: "Strategic guidance to digitize your workflows and improve operational efficiency." 
-              },
-              {
-                icon: BookOpen,
-                title: "Corporate Training",
-                desc: "Upskill your workforce with our customized corporate training programs in tech."
-              },
-              {
-                icon: Users,
-                title: "IT Consultancy",
-                desc: "Expert advice to help you navigate complex technology decisions and strategies."
-              }
-            ].map((service, i) => (
-              <div key={i} className="bg-white/5 backdrop-blur-sm p-10 rounded-[2rem] border border-white/10 hover:bg-white/10 hover:-translate-y-2 transition-all duration-500 group cursor-pointer animate-in fade-in slide-in-from-bottom-10" style={{ animationDelay: `${i * 100}ms` }}>
-                <div className="w-14 h-14 bg-brand-green rounded-xl flex items-center justify-center mb-8 group-hover:scale-125 group-hover:rotate-6 transition-transform duration-500">
-                  <service.icon className="w-7 h-7 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold mb-4 group-hover:text-green-400 transition-colors">{service.title}</h3>
-                <p className="text-green-100 mb-8 leading-relaxed line-clamp-2">{service.desc}</p>
-                <Link href="/services" className="inline-flex items-center text-brand-green font-bold hover:gap-4 transition-all group-hover:text-white">
-                  Learn more <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold text-brand-green mb-6">Success Stories</h2>
-            <div className="w-24 h-1.5 bg-brand-green mx-auto rounded-full"></div>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-10">
-            {[
-              {
-                text: "iTech Network transformed our digital infrastructure. Their team is professional, knowledgeable, and truly cares about our success.",
-                author: "John Doe",
-                role: "CEO, FinTech Solutions",
-                image: "/images/avatar_man_1.jpg"
-              },
-              {
-                text: "The corporate training program was a game-changer for our engineering team. Productivity has increased by 40% in just six months.",
-                author: "Jane Smith",
-                role: "CTO, AgriTech Corp",
-                image: "/images/avatar_woman_1.jpg"
-              },
-              {
-                text: "Their cybersecurity audit saved us from a potential breach. I highly recommend their services to any serious business enterprise.",
-                author: "Robert Brown",
-                role: "Director, HealthPlus",
-                image: "/images/avatar_man_2.jpg"
-              }
-            ].map((testimonial, i) => (
-              <Card key={i} className="border border-gray-100 shadow-lg hover:shadow-2xl hover:-translate-y-3 bg-white rounded-[2.5rem] p-4 transition-all duration-500 group animate-in fade-in slide-in-from-bottom-12" style={{ animationDelay: `${i * 150}ms` }}>
-                <CardContent className="p-8 relative">
-                  <div className="absolute top-8 right-8 text-brand-green/10 text-6xl font-serif group-hover:text-brand-green/20 transition-colors">"</div>
-                  <div className="flex gap-1 text-brand-green mb-6">
-                    {[1, 2, 3, 4, 5].map((s) => <Star key={s} className="w-5 h-5 fill-current group-hover:scale-110 transition-transform" style={{ transitionDelay: `${s * 50}ms` }} />)}
-                  </div>
-                  <p className="text-gray-600 mb-8 italic text-lg leading-relaxed relative z-10">"{testimonial.text}"</p>
-                  <div className="flex items-center gap-4">
-                    <Avatar className="w-14 h-14 border-2 border-brand-green/20 group-hover:border-brand-green transition-colors">
-                      <AvatarImage src={testimonial.image} className="object-cover" />
-                      <AvatarFallback className="bg-brand-green text-white font-bold">{testimonial.author[0]}</AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <h4 className="font-bold text-gray-900 group-hover:text-brand-green transition-colors">{testimonial.author}</h4>
-                      <p className="text-sm text-gray-500">{testimonial.role}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ / Info Blocks */}
-      <section className="py-24 bg-gray-50">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="max-w-4xl mx-auto space-y-16">
-            <div className="text-center">
-              <h2 className="text-3xl md:text-5xl font-bold text-brand-green mb-6">Direct Answers</h2>
-              <div className="w-24 h-1.5 bg-brand-green mx-auto rounded-full"></div>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              {[
-                { q: "How fast can you start?", a: "Most projects can kick off within 1-2 weeks after the initial consultation." },
-                { q: "Do you offer remote work?", a: "Yes, our team is distributed across Africa and highly experienced in remote collaboration." },
-                { q: "Is training certified?", a: "Absolutely. All our training programs come with industry-recognized certifications." },
-                { q: "What's your support model?", a: "We offer 24/7 dedicated support for all our enterprise-tier clients." }
-              ].map((faq, i) => (
-                <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                  <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                    <MessageSquare className="w-6 h-6 text-brand-green" />
-                    {faq.q}
-                  </h4>
-                  <p className="text-gray-600 leading-relaxed">{faq.a}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-gray-950 relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-green/10 rounded-full blur-[120px] pointer-events-none"></div>
-        <div className="container mx-auto px-4 md:px-8 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-6">Stay Ahead of the Curve</h2>
-            <p className="text-gray-400 text-lg mb-10">
-              Join 5,000+ tech leaders in Africa receiving our weekly insights on software engineering, cloud architecture, and digital transformation.
-            </p>
-            <form className="flex flex-col sm:flex-row gap-4 justify-center max-w-xl mx-auto" onSubmit={(e) => e.preventDefault()}>
-              <input 
-                type="email" 
-                placeholder="Enter your email address" 
-                className="flex-1 bg-white/5 border border-white/10 rounded-full px-6 h-14 text-white focus:outline-none focus:border-brand-green/50 focus:ring-1 focus:ring-brand-green/50 transition-all placeholder:text-gray-500"
-              />
-              <Button type="submit" size="lg" className="bg-brand-green hover:bg-green-600 text-white rounded-full h-14 px-8 font-bold whitespace-nowrap shadow-lg shadow-brand-green/20">
-                Subscribe Now
-              </Button>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      {/* Latest Insights / Blog Preview */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-            <div>
-              <h2 className="text-3xl md:text-5xl font-bold text-brand-green mb-6">Latest Insights</h2>
-              <div className="w-24 h-1.5 bg-brand-green rounded-full"></div>
-            </div>
-            <Button variant="outline" className="rounded-full px-8 py-6 text-brand-green border-brand-green hover:bg-brand-green hover:text-white transition-all font-bold" asChild>
-              <Link href="#">
-                View All Articles
-              </Link>
-            </Button>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-10">
-             {[
-               {
-                 title: "The Future of AI in African Business",
-                 date: "Dec 5, 2025",
-                 category: "Technology",
-                 image: "/images/service_ai.jpg"
-               },
-               {
-                 title: "Securing Digital Assets in 2026",
-                 date: "Nov 28, 2025",
-                 category: "Security",
-                 image: "/images/service_security.jpg"
-               },
-               {
-                 title: "Scaling Cloud Infrastructure Effectively",
-                 date: "Nov 15, 2025",
-                 category: "Cloud",
-                 image: "/images/service_cloud.jpg"
-               }
-             ].map((post, i) => (
-               <div key={i} className="group cursor-pointer">
-                 <div className="rounded-[2.5rem] overflow-hidden mb-6 relative h-64 shadow-lg group-hover:shadow-2xl transition-all duration-500">
-                   <img src={post.image} alt={post.title} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
-                   <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full text-xs font-black text-brand-green uppercase tracking-widest shadow-xl">
-                     {post.category}
-                   </div>
-                 </div>
-                 <p className="text-sm font-bold text-gray-400 mb-3">{post.date}</p>
-                 <h3 className="text-2xl font-black text-gray-900 group-hover:text-brand-green transition-colors leading-tight mb-4">{post.title}</h3>
-                 <span className="inline-flex items-center text-gray-500 font-medium group-hover:text-gray-900 transition-colors">
-                   Read Article <ArrowRight className="w-4 h-4 ml-2" />
-                 </span>
-               </div>
-             ))}
+            <img src="https://cddsrxtfashivrcuirgf.supabase.co/storage/v1/object/public/images/Starz%20Logo.webp" alt="Starz" className="h-12 w-auto opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+            <img src="https://cddsrxtfashivrcuirgf.supabase.co/storage/v1/object/public/images/dmg%20Logo.jpeg" alt="DMC" className="h-12 w-auto opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+            <img src="https://cddsrxtfashivrcuirgf.supabase.co/storage/v1/object/public/images/proaffordable-cleaning-logo.png" alt="Pro-Clean" className="h-12 w-auto opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+            <img src="https://cddsrxtfashivrcuirgf.supabase.co/storage/v1/object/public/images/new%20liberia%20logo.jpeg" alt="New Liberia" className="h-12 w-auto opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+            <img src="https://cddsrxtfashivrcuirgf.supabase.co/storage/v1/object/public/images/ai%20tech%20logo.webp" alt="A1 Tech" className="h-12 w-auto opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
           </div>
         </div>
       </section>
