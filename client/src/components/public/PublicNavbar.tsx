@@ -29,6 +29,7 @@ export default function PublicNavbar() {
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Pricing", href: "/pricing" },
+    { name: "Team", href: "/team" },
     { name: "Contact", href: "/contact" },
     { name: "Verify Cert", href: "/verify-certificate" },
   ];

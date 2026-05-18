@@ -146,49 +146,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* NEW: Professional Team Section */}
-      <section className="py-24 bg-gray-50 relative border-t border-gray-100">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="text-center mb-16 max-w-2xl mx-auto">
-            <div className="inline-block border border-gray-200 bg-white rounded-full px-4 py-1.5 text-xs font-semibold text-brand-green uppercase tracking-widest mb-4 shadow-sm">
-              Our Leadership
-            </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">The minds behind the innovation.</h2>
-            <p className="text-gray-500 text-lg">A dedicated team of experts pushing the boundaries of what's possible in the African tech ecosystem.</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { name: "Kerkulah Wilmot", role: "Founder & CEO", img: "https://i.pravatar.cc/300?img=11", linkedin: "#" },
-              { name: "Sarah Johnson", role: "Head of Engineering", img: "https://i.pravatar.cc/300?img=47", linkedin: "#" },
-              { name: "Michael Osei", role: "Design Director", img: "https://i.pravatar.cc/300?img=12", linkedin: "#" },
-              { name: "David Kamara", role: "Lead Consultant", img: "https://i.pravatar.cc/300?img=14", linkedin: "#" }
-            ].map((member, i) => (
-              <div key={i} className="group relative overflow-hidden rounded-3xl bg-white shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300">
-                <div className="aspect-[4/5] overflow-hidden bg-gray-100 relative">
-                  <img src={member.img} alt={member.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
-                  <div className="absolute bottom-0 left-0 w-full p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <h3 className="text-xl font-bold text-white mb-1">{member.name}</h3>
-                    <p className="text-green-300 font-medium text-sm mb-4">{member.role}</p>
-                    
-                    <div className="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-                      <a href={member.linkedin} className="w-8 h-8 rounded-full bg-white/20 hover:bg-brand-green flex items-center justify-center text-white transition-colors backdrop-blur-sm">
-                        <Linkedin className="w-4 h-4" />
-                      </a>
-                      <a href="#" className="w-8 h-8 rounded-full bg-white/20 hover:bg-brand-green flex items-center justify-center text-white transition-colors backdrop-blur-sm">
-                        <Twitter className="w-4 h-4" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Modern Innovation Lab / Highlight Section */}
       <section className="py-24 bg-black text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-green/20 rounded-full blur-[120px] pointer-events-none"></div>

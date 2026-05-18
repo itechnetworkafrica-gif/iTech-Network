@@ -1,0 +1,282 @@
+You are an expert full-stack developer and UI/UX engineer.
+
+We already have an existing website for iTech Network Africa. Your task is to UPGRADE and EXTEND the current platform with modern business, automation, POS, client management, and digital commerce features WITHOUT breaking the existing design, pages, database, or functionality.
+
+IMPORTANT:
+- Maintain the current branding, responsiveness, and existing layouts.
+- Improve the UI/UX professionally.
+- Ensure mobile-first optimization.
+- Use scalable architecture.
+- Add modern animations and transitions where appropriate.
+- Keep the code modular and production-ready.
+- Optimize performance and SEO.
+- Ensure security best practices.
+
+FEATURES TO ADD:
+
+==================================================
+1. SMART SERVICE BOOKING SYSTEM
+==================================================
+Create a booking system where clients can:
+- Schedule consultations
+- Book business assessments
+- Reserve technical support
+- Book training sessions
+
+Include:
+- Calendar date/time picker
+- Email notifications
+- WhatsApp confirmation
+- Admin approval system
+- Booking management dashboard
+- Status tracking (Pending, Approved, Completed)
+
+==================================================
+2. CLIENT PORTAL / DASHBOARD
+==================================================
+Build a secure client portal with authentication.
+
+Clients should be able to:
+- View project progress
+- Download invoices
+- Access reports
+- Track support requests
+- View receipts and contracts
+- Update profile information
+
+Admin should be able to:
+- Manage all clients
+- Upload files
+- Assign project statuses
+- Send notifications
+
+==================================================
+3. LIVE CHAT & WHATSAPP INTEGRATION
+==================================================
+Add:
+- Floating WhatsApp button
+- Live chat support
+- AI FAQ assistant
+- Quick contact widget
+
+The system should:
+- Work on mobile and desktop
+- Support quick replies
+- Collect leads automatically
+
+==================================================
+4. ONLINE PAYMENT SYSTEM
+==================================================
+Integrate payment methods:
+- Orange Money
+- MTN Mobile Money
+- Visa/MasterCard
+- PayPal
+
+Features:
+- Payment confirmation
+- Invoice generation
+- Transaction history
+- Secure payment validation
+
+==================================================
+5. DIGITAL PRODUCTS STORE
+==================================================
+Create a modern digital marketplace section.
+
+Allow selling:
+- Templates
+- Branding kits
+- POS materials
+- E-books
+- Training documents
+- Digital assets
+
+Features:
+- Instant downloads
+- Shopping cart
+- Coupon system
+- Featured products
+- Search and filtering
+- Related products section
+
+==================================================
+6. POS DEMONSTRATION PAGE
+==================================================
+Create an interactive POS showcase page.
+
+Include:
+- Inventory dashboard demo
+- Sales analytics
+- Receipt examples
+- Staff management UI
+- Product management preview
+- Demo screenshots/videos
+
+Add animations and professional layouts.
+
+==================================================
+7. BUSINESS ASSESSMENT REQUEST SYSTEM
+==================================================
+Create a form-based assessment system where businesses can submit:
+- Business type
+- Inventory methods
+- Current challenges
+- Existing systems
+
+Admin receives:
+- Structured reports
+- Client assessment requests
+- Automated summaries
+
+==================================================
+8. INVENTORY & BUSINESS CALCULATORS
+==================================================
+Create interactive calculators:
+- Profit calculator
+- Pricing calculator
+- Inventory valuation
+- Daily sales calculator
+- Break-even calculator
+
+Use modern card layouts and responsive design.
+
+==================================================
+9. NEWSLETTER & EMAIL MARKETING SYSTEM
+==================================================
+Add newsletter functionality:
+- Email subscription forms
+- Campaign management
+- Automated emails
+- Promotion announcements
+
+Integrate with:
+- Mailchimp
+- Brevo
+
+==================================================
+10. E-LEARNING PLATFORM
+==================================================
+Create a training section with:
+- Video lessons
+- Course modules
+- Student dashboard
+- Progress tracking
+- Certificates
+- Quiz system
+
+==================================================
+11. PORTFOLIO & PROJECT SHOWCASE
+==================================================
+Upgrade the portfolio section.
+
+Features:
+- Filterable projects
+- Before/after previews
+- Case studies
+- Client testimonials
+- Animated galleries
+
+==================================================
+12. TEAM & STAFF PROFILES
+==================================================
+Create a professional team page with:
+- Staff photos
+- Roles
+- Skills
+- Social links
+- Certifications
+
+==================================================
+13. ADMIN DASHBOARD
+==================================================
+Build a complete admin system for:
+- Managing products
+- Viewing analytics
+- Managing bookings
+- Managing users
+- Sending notifications
+- Monitoring payments
+
+==================================================
+14. ANALYTICS & TRACKING
+==================================================
+Integrate:
+- Google Analytics
+- Microsoft Clarity
+- Visitor tracking
+- Sales analytics
+- User activity logs
+
+==================================================
+15. SECURITY & PERFORMANCE
+==================================================
+Implement:
+- SSL-ready architecture
+- Secure authentication
+- Role-based access
+- Anti-spam protection
+- Input validation
+- Daily backup strategy
+- Fast loading optimization
+
+==================================================
+16. UI/UX MODERNIZATION
+==================================================
+Improve the entire UI with:
+- Modern dashboard design
+- Better spacing and typography
+- Smooth animations
+- Responsive mobile layouts
+- Professional color consistency
+- Better navigation experience
+
+==================================================
+17. SEO OPTIMIZATION
+==================================================
+Implement:
+- Meta tags
+- Structured data
+- Sitemap generation
+- Open Graph support
+- Fast page indexing
+- SEO-friendly URLs
+
+==================================================
+18. TECHNICAL REQUIREMENTS
+==================================================
+Preferred stack:
+- React / Next.js frontend
+- Tailwind CSS
+- Node.js or Laravel backend
+- PostgreSQL or MySQL
+- REST API or GraphQL
+- Secure authentication system
+
+==================================================
+19. DELIVERABLES
+==================================================
+Provide:
+- Clean production-ready code
+- Reusable components
+- Organized folder structure
+- Documentation/comments
+- Responsive layouts
+- Admin access system
+- Deployment readiness
+
+==================================================
+20. FINAL GOAL
+==================================================
+Transform the current iTech Network Africa website into a modern African technology business platform that supports:
+- Digital commerce
+- POS services
+- Client management
+- Online learning
+- Business automation
+- Technical consulting
+- Digital product sales
+- Scalable growth
+
+Do not remove existing functionality unless necessary for optimization.
+Preserve current content while improving the platform professionally.
