@@ -1,11 +1,16 @@
 import { Button } from "@/components/ui/button";
-import { Check, Star, Plus } from "lucide-react";
+import { Check, Star, Plus, ArrowRight } from "lucide-react";
 import PublicNavbar from "@/components/public/PublicNavbar";
 import Footer from "@/components/public/Footer";
-import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
+import { useState } from "react";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 export default function Pricing() {
+  const [selectedPlan, setSelectedPlan] = useState("");
+
   const plans = [
     {
       name: "STARTER Package",
@@ -210,19 +215,59 @@ export default function Pricing() {
                 </div>
 
                 <div className="mt-auto">
-                  <Link href="/contact">
-                    <Button 
-                      className={`w-full h-14 rounded-xl text-base font-bold mb-10 group overflow-hidden relative ${
-                        plan.popular 
-                          ? "bg-brand-green hover:bg-green-700 text-white shadow-[0_10px_30px_rgba(55,182,38,0.3)] hover:scale-105 transition-all duration-300" 
-                          : "bg-gray-50 text-gray-900 hover:bg-brand-green hover:text-white border border-gray-200 hover:border-brand-green hover:scale-105 transition-all duration-300 shadow-sm"
-                      }`}
-                    >
-                      <span className="relative z-10 flex items-center justify-center gap-2">
-                        {plan.cta} {plan.popular && <Star className="w-4 h-4 fill-current" />}
-                      </span>
-                    </Button>
-                  </Link>
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button 
+                        onClick={() => setSelectedPlan(plan.name)}
+                        className={`w-full h-14 rounded-xl text-base font-bold mb-10 group overflow-hidden relative ${
+                          plan.popular 
+                            ? "bg-brand-green hover:bg-green-700 text-white shadow-[0_10px_30px_rgba(55,182,38,0.3)] hover:scale-105 transition-all duration-300" 
+                            : "bg-gray-50 text-gray-900 hover:bg-brand-green hover:text-white border border-gray-200 hover:border-brand-green hover:scale-105 transition-all duration-300 shadow-sm"
+                        }`}
+                      >
+                        <span className="relative z-10 flex items-center justify-center gap-2">
+                          {plan.cta} {plan.popular && <Star className="w-4 h-4 fill-current" />}
+                        </span>
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="sm:max-w-[500px]">
+                      <DialogHeader>
+                        <DialogTitle className="text-2xl font-black text-gray-900">Get Started with {plan.name}</DialogTitle>
+                        <DialogDescription className="text-gray-500">
+                          Fill out this form or proceed directly to payment. Our team will contact you within 24 hours.
+                        </DialogDescription>
+                      </DialogHeader>
+                      <form className="space-y-4 py-4" onSubmit={(e) => { e.preventDefault(); alert("Payment integration would trigger here."); }}>
+                        <div className="space-y-2">
+                          <label className="text-sm font-semibold text-gray-700">Full Name</label>
+                          <Input placeholder="John Doe" required className="bg-gray-50 border-gray-200" />
+                        </div>
+                        <div className="grid grid-cols-2 gap-4">
+                          <div className="space-y-2">
+                            <label className="text-sm font-semibold text-gray-700">Email Address</label>
+                            <Input type="email" placeholder="john@company.com" required className="bg-gray-50 border-gray-200" />
+                          </div>
+                          <div className="space-y-2">
+                            <label className="text-sm font-semibold text-gray-700">Phone / WhatsApp</label>
+                            <Input placeholder="+231..." required className="bg-gray-50 border-gray-200" />
+                          </div>
+                        </div>
+                        <div className="space-y-2">
+                          <label className="text-sm font-semibold text-gray-700">Project Details (Optional)</label>
+                          <Textarea placeholder="Tell us briefly about your business or project..." className="bg-gray-50 border-gray-200 resize-none h-24" />
+                        </div>
+                        
+                        <div className="pt-4 flex flex-col gap-3">
+                          <Button type="submit" className="w-full bg-brand-green hover:bg-green-700 text-white h-12 rounded-xl font-bold shadow-[0_10px_30px_rgba(55,182,38,0.2)]">
+                            Pay {plan.price} Now
+                          </Button>
+                          <Button type="button" variant="outline" className="w-full border-gray-200 text-gray-700 hover:bg-gray-50 h-12 rounded-xl font-bold">
+                            Submit Inquiry Only
+                          </Button>
+                        </div>
+                      </form>
+                    </DialogContent>
+                  </Dialog>
 
                   <div className="space-y-4 border-t border-gray-100 pt-8">
                     <p className="text-xs font-bold text-gray-400 uppercase tracking-[0.15em]">Core Features</p>
