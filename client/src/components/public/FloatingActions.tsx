@@ -22,7 +22,7 @@ export default function FloatingActions() {
   };
 
   return (
-    <div className="fixed bottom-8 left-8 z-50 flex flex-col gap-4">
+    <div className="fixed bottom-8 left-8 z-50 flex flex-col gap-4 font-sans">
       {/* WhatsApp Button */}
       <button
         onClick={openWhatsApp}

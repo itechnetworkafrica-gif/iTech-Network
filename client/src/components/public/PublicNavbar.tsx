@@ -30,8 +30,9 @@ export default function PublicNavbar() {
     { name: "Services", href: "/services" },
     { name: "Pricing", href: "/pricing" },
     { name: "Team", href: "/team" },
+    { name: "Store", href: "/store" },
+    { name: "POS Demo", href: "/pos-demo" },
     { name: "Contact", href: "/contact" },
-    { name: "Verify Cert", href: "/verify-certificate" },
   ];
 
   const changeLanguage = (lng: string) => {

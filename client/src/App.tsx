@@ -21,6 +21,9 @@ import Pricing from "@/pages/public/Pricing";
 import Contact from "@/pages/public/Contact";
 import VerifyCertificate from "@/pages/public/VerifyCertificate";
 import Team from "@/pages/public/Team";
+import Booking from "@/pages/public/Booking";
+import Store from "@/pages/public/Store";
+import POSDemo from "@/pages/public/POSDemo";
 
 import FloatingActions from "@/components/public/FloatingActions";
 import Chatbot from "@/components/public/Chatbot";
@@ -39,6 +42,9 @@ function Router() {
         <Route path="/pricing" component={Pricing} />
         <Route path="/contact" component={Contact} />
         <Route path="/team" component={Team} />
+        <Route path="/booking" component={Booking} />
+        <Route path="/store" component={Store} />
+        <Route path="/pos-demo" component={POSDemo} />
         <Route path="/verify-certificate" component={VerifyCertificate} />
 
         {/* Dashboard Routes - Flattened for reliability */}

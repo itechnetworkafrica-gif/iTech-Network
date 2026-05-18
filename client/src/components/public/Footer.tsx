@@ -57,6 +57,7 @@ export default function Footer() {
               <li><Link href="/about" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> About Us</Link></li>
               <li><Link href="/services" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Our Services</Link></li>
               <li><Link href="/pricing" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Pricing Plans</Link></li>
+              <li><Link href="/team" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Leadership Team</Link></li>
               <li><Link href="/verify-certificate" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Verify Certificate</Link></li>
             </ul>
           </div>
@@ -67,11 +68,11 @@ export default function Footer() {
               <span className="w-2 h-2 rounded-full bg-brand-green"></span> Solutions
             </h3>
             <ul className="space-y-3 text-sm text-gray-400">
-              <li><Link href="/services" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Web & Mobile Dev</Link></li>
-              <li><Link href="/services" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Cloud Architecture</Link></li>
-              <li><Link href="/services" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Cybersecurity</Link></li>
-              <li><Link href="/services" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Digital Marketing</Link></li>
-              <li><Link href="/services" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> IT Consultancy</Link></li>
+              <li><Link href="/store" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Digital Marketplace</Link></li>
+              <li><Link href="/pos-demo" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Smart POS</Link></li>
+              <li><Link href="/booking" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Book a Consultation</Link></li>
+              <li><Link href="/dashboard" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Client Portal</Link></li>
+              <li><Link href="/services" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Custom Software</Link></li>
             </ul>
           </div>
 
