@@ -5,38 +5,6 @@ import { CheckCircle, Users, Target, Lightbulb, ArrowRight, Linkedin, Twitter, G
 import { Link } from "wouter";
 
 export default function About() {
-  const team = [
-    {
-      name: "Wilmot Kerkulah",
-      role: "Chief Executive Officer",
-      image: "/images/team_ceo.jpg",
-      bio: "Former Tech Lead at Google with 15 years of experience in scaling digital platforms.",
-      socials: { linkedin: "#", twitter: "#" }
-    },
-    {
-      name: "James Kerkulah",
-      role: "CTO & Co-Founder",
-      image: "/images/team_cto.jpg",
-      bio: "Cloud infrastructure expert and open-source contributor passionate about African tech.",
-      socials: { linkedin: "#", github: "#", twitter: "#" }
-    },
-    {
-      
-      name: "Amara Diallo",
-      role: "Head of Design",
-      image: "/images/team_lead.jpg",
-      bio: "Award-winning product designer focused on creating accessible and intuitive user experiences.",
-      socials: { linkedin: "#", twitter: "#" }
-    },
-    {
-      name: "Michael Chen",
-      role: "Lead Developer",
-      image: "/images/team_dev.jpg",
-      bio: "Full-stack wizard specializing in React and Node.js enterprise applications.",
-      socials: { linkedin: "#", github: "#" }
-    }
-  ];
-
   return (
     <div className="min-h-screen flex flex-col font-sans bg-gray-50">
       <PublicNavbar />
@@ -59,11 +27,6 @@ export default function About() {
             We are a premier technology institution dedicated to bridging the digital divide through world-class engineering, innovation, and enterprise solutions.
           </p>
         </div>
-      </section>
-
-      {/* Mission Vision Values */}
-      <section className="py-24 -mt-10 relative z-20">
-        {/* ... existing code ... */}
       </section>
 
       {/* Modern Impact Grid - NEW BLOCK */}
@@ -141,86 +104,12 @@ export default function About() {
               <p className="text-gray-600 mb-8 leading-relaxed">
                 We believe that the future belongs to those who build it. That's why we partner with businesses to build robust digital infrastructure and with individuals to build career-defining skills.
               </p>
-              <Button className="bg-brand-green text-white hover:bg-green-700 rounded-full px-8">
-                Join Our Team <ArrowRight className="w-4 h-4 ml-2" />
+              <Button className="bg-brand-green text-white hover:bg-green-700 rounded-full px-8" asChild>
+                <Link href="/team">
+                  Meet Our Experts <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
               </Button>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-24 bg-gray-50 relative overflow-hidden">
-        {/* Abstract Background Shapes */}
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-green/5 rounded-full blur-[120px] pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-green-400/5 rounded-full blur-[100px] pointer-events-none"></div>
-        
-        <div className="container mx-auto px-4 md:px-8 relative z-10">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-            <div className="max-w-2xl">
-              <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-white border border-gray-200 text-brand-green text-sm font-bold uppercase tracking-widest mb-6 shadow-sm">
-                <span className="w-2 h-2 rounded-full bg-brand-green"></span>
-                Leadership & Experts
-              </span>
-              <h2 className="text-4xl md:text-6xl font-black text-gray-900 tracking-tight leading-[1.1]">
-                The Minds Behind <br />Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-green-500 italic pr-2">Innovations</span>
-              </h2>
-            </div>
-            <div className="max-w-md text-gray-600 text-lg leading-relaxed">
-              Our team consists of industry veterans and brilliant minds dedicated to pushing the boundaries of what's possible in African tech.
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
-            {team.map((member, i) => (
-              <div key={i} className="group relative animate-in fade-in slide-in-from-bottom-10" style={{ animationDelay: `${i * 150}ms` }}>
-                <div className="bg-white rounded-[2.5rem] overflow-hidden shadow-xl shadow-gray-200/50 aspect-[3/4] relative border border-white/50 group-hover:shadow-2xl group-hover:shadow-brand-green/20 transition-all duration-700">
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000 ease-out"
-                  />
-                  
-                  {/* Elegant Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
-
-                  {/* Content Container */}
-                  <div className="absolute inset-0 flex flex-col justify-end p-8 text-left z-10">
-                    <div className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                      <p className="text-brand-green font-mono text-xs font-bold tracking-[0.2em] uppercase mb-2 drop-shadow-md">{member.role}</p>
-                      <h3 className="text-2xl font-bold text-white mb-4 drop-shadow-lg leading-tight">{member.name}</h3>
-                      
-                      {/* Bio - Appears on hover */}
-                      <p className="text-gray-300 text-sm leading-relaxed mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 h-0 group-hover:h-auto overflow-hidden">
-                        {member.bio}
-                      </p>
-                      
-                      {/* Socials & Interactive Line */}
-                      <div className="flex items-center justify-between opacity-100 pt-4 border-t border-white/20">
-                        <div className="flex gap-3">
-                          {member.socials.linkedin && (
-                            <a href={member.socials.linkedin} className="text-white hover:text-brand-green transition-colors">
-                              <Linkedin className="w-5 h-5" />
-                            </a>
-                          )}
-                          {member.socials.twitter && (
-                            <a href={member.socials.twitter} className="text-white hover:text-brand-green transition-colors">
-                              <Twitter className="w-5 h-5" />
-                            </a>
-                          )}
-                          {member.socials.github && (
-                            <a href={member.socials.github} className="text-white hover:text-brand-green transition-colors">
-                              <Github className="w-5 h-5" />
-                            </a>
-                          )}
-                        </div>
-                        <ArrowRight className="w-5 h-5 text-brand-green transform -translate-x-4 group-hover:translate-x-0 transition-transform duration-500 delay-300 opacity-0 group-hover:opacity-100" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
