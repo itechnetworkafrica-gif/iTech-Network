@@ -1,7 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
-import { Menu, X, Globe, Phone, Mail, MapPin, ChevronRight, LayoutDashboard, ShoppingBag, CreditCard, Users, Briefcase } from "lucide-react";
+import { Menu, X, Globe, Phone, Mail, MapPin, ChevronRight, LayoutDashboard, ShoppingBag, CreditCard, Users, Briefcase, Cpu, Code, Building, Lightbulb, GraduationCap, Server } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -28,25 +28,45 @@ export default function PublicNavbar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { 
-      name: "Platform", 
-      isDropdown: true,
-      items: [
-        { name: "Client Portal", href: "/dashboard", icon: LayoutDashboard, desc: "Manage projects and reports" },
-        { name: "Digital Store", href: "/store", icon: ShoppingBag, desc: "Buy templates and assets" },
-        { name: "Smart POS", href: "/pos-demo", icon: CreditCard, desc: "Next-gen point of sale system" },
-      ]
-    },
     { 
       name: "Company", 
       isDropdown: true,
       items: [
-        { name: "Services", href: "/services", icon: Briefcase, desc: "What we can do for you" },
-        { name: "Pricing", href: "/pricing", icon: CreditCard, desc: "Transparent packages" },
-        { name: "Leadership", href: "/team", icon: Users, desc: "Meet our tech experts" },
+        { name: "About Us", href: "/about", icon: Building, desc: "Our global mission" },
+        { name: "Our Story", href: "/about#story", icon: Globe, desc: "How we started" },
+        { name: "Leadership", href: "/team", icon: Users, desc: "Meet our executives" },
+        { name: "Global Strategy", href: "/about#strategy", icon: Briefcase, desc: "Our worldwide approach" },
       ]
     },
+    { 
+      name: "Gotecx", 
+      isDropdown: true,
+      items: [
+        { name: "About Gotecx", href: "/about", icon: Cpu, desc: "The technology ecosystem" },
+        { name: "Innovation Lab", href: "/services#lab", icon: Lightbulb, desc: "R&D and future tech" },
+        { name: "Ecosystem", href: "/#ecosystem", icon: LayoutDashboard, desc: "Our interconnected platforms" },
+      ]
+    },
+    { 
+      name: "Solutions", 
+      isDropdown: true,
+      items: [
+        { name: "Enterprise Software", href: "/services", icon: Code, desc: "Custom development" },
+        { name: "Cloud Services", href: "/services", icon: Server, desc: "Infrastructure and scaling" },
+        { name: "Digital Transformation", href: "/services", icon: Zap, desc: "Modernize your business" },
+      ]
+    },
+    { 
+      name: "Products", 
+      isDropdown: true,
+      items: [
+        { name: "Gotecx POS", href: "/pos-demo", icon: CreditCard, desc: "Smart retail system" },
+        { name: "Gotecx AI", href: "/services", icon: Cpu, desc: "Intelligent automation" },
+        { name: "Client Portal", href: "/dashboard", icon: LayoutDashboard, desc: "Manage your projects" },
+        { name: "Digital Store", href: "/store", icon: ShoppingBag, desc: "Tech assets & templates" },
+      ]
+    },
+    { name: "Partners", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -60,18 +80,12 @@ export default function PublicNavbar() {
       <div className={`w-full bg-gray-950 text-gray-300 text-xs py-2 transition-all duration-300 ${scrolled ? "h-0 opacity-0 overflow-hidden py-0" : "opacity-100"}`}>
         <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
           <div className="flex items-center gap-6 hidden sm:flex">
-            <div className="flex items-center gap-2 hover:text-brand-green transition-colors cursor-pointer">
-              <Phone className="w-3 h-3 text-brand-green" /> +231 555 770 641
-            </div>
-            <div className="flex items-center gap-2 hover:text-brand-green transition-colors cursor-pointer">
-              <Mail className="w-3 h-3 text-brand-green" /> info@itechnetwork.africa
-            </div>
-            <div className="flex items-center gap-2 hover:text-brand-green transition-colors cursor-pointer">
-              <MapPin className="w-3 h-3 text-brand-green" /> Monrovia, Liberia
+            <div className="flex items-center gap-2 hover:text-brand-green transition-colors cursor-pointer text-[10px] tracking-wider uppercase font-bold text-gray-400">
+              <span className="text-brand-green">Powered by</span> iTech Network Africa
             </div>
           </div>
           <div className="flex items-center gap-4 w-full justify-between sm:w-auto sm:justify-end">
-            <span className="font-bold text-brand-green animate-pulse">NEW: African Tech Innovation Lab Now Open</span>
+            <span className="font-bold text-brand-green animate-pulse text-xs tracking-widest uppercase">Global Technology Ecosystem</span>
             <div className="flex items-center gap-3">
               <a href="#" className="hover:text-white transition-colors hidden md:block">Support</a>
               <span className="text-gray-700 hidden md:block">|</span>
@@ -84,25 +98,28 @@ export default function PublicNavbar() {
       {/* Main Navbar */}
       <nav
         className={`w-full transition-all duration-300 ${
-          scrolled ? "bg-white/95 backdrop-blur-xl shadow-sm py-4" : "bg-transparent py-5"
+          scrolled ? "bg-gray-950/95 backdrop-blur-xl shadow-lg border-b border-white/5 py-4" : "bg-transparent py-5"
         }`}
       >
         <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
           {/* Logo */}
           <Link href="/">
-            <div className="flex items-center gap-3 cursor-pointer group">
-              <div className="relative">
-                <img src="/images/logo-new.png" alt="iTech Network Africa Logo" className="h-10 w-auto group-hover:scale-105 transition-transform duration-300" />
+            <div className="flex items-center gap-4 cursor-pointer group">
+              <div className="relative flex items-center justify-center bg-white p-1.5 rounded-xl shadow-lg">
+                <img src="/images/gotecx-logo.png" alt="Gotecx Logo" className="h-8 md:h-10 w-auto group-hover:scale-105 transition-transform duration-300" />
                 <div className="absolute inset-0 bg-brand-green/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </div>
-              <span className={`font-black text-xl tracking-tight hidden sm:block ${scrolled ? "text-gray-900" : "text-white"}`}>
-                iTech<span className="text-brand-green font-light">Network</span>
-              </span>
+              <div className="hidden sm:flex flex-col">
+                 <span className={`font-black text-2xl tracking-tighter leading-none ${scrolled ? "text-white" : "text-white"}`}>
+                   GOTEC<span className="text-brand-green">X</span>
+                 </span>
+                 <span className="text-[9px] text-gray-400 tracking-[0.2em] font-bold uppercase mt-0.5">Global Ecosystem</span>
+              </div>
             </div>
           </Link>
 
           {/* Desktop Nav - Modern Tech Slider */}
-          <div className="hidden md:flex items-center gap-1 bg-white/5 backdrop-blur-md rounded-full px-2 py-1.5 border border-white/10 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)]">
+          <div className="hidden lg:flex items-center gap-1 bg-white/5 backdrop-blur-md rounded-full px-2 py-1.5 border border-white/10 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)]">
             {navLinks.map((link) => (
               <div 
                 key={link.name} 
@@ -115,8 +132,6 @@ export default function PublicNavbar() {
                     className={`relative px-4 py-2 text-sm font-semibold rounded-full transition-colors flex items-center gap-1.5 ${
                       activeMenu === link.name
                         ? "text-brand-green bg-white/10"
-                        : scrolled
-                        ? "text-gray-700 hover:text-brand-green hover:bg-gray-100"
                         : "text-white/90 hover:text-white hover:bg-white/10"
                     }`}
                   >
@@ -127,7 +142,7 @@ export default function PublicNavbar() {
                     {activeMenu === link.name && (
                       <motion.div 
                         layoutId="nav-indicator"
-                        className="absolute inset-0 bg-gray-100/10 rounded-full border border-gray-200/20 -z-10"
+                        className="absolute inset-0 bg-white/5 rounded-full border border-white/10 -z-10"
                         transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
                       />
                     )}
@@ -138,8 +153,6 @@ export default function PublicNavbar() {
                     className={`relative px-4 py-2 text-sm font-semibold rounded-full transition-colors block ${
                       location === link.href
                         ? "text-brand-green bg-brand-green/10"
-                        : scrolled
-                        ? "text-gray-700 hover:text-brand-green hover:bg-gray-100"
                         : "text-white/90 hover:text-white hover:bg-white/10"
                     }`}
                   >
@@ -163,18 +176,18 @@ export default function PublicNavbar() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-[300px]"
+                        className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-[320px]"
                       >
-                        <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-2 relative overflow-hidden">
-                          <div className="absolute inset-0 bg-gradient-to-b from-brand-green/5 to-transparent pointer-events-none"></div>
+                        <div className="bg-gray-950 rounded-2xl shadow-2xl border border-white/10 p-2 relative overflow-hidden">
+                          <div className="absolute inset-0 bg-gradient-to-b from-brand-green/10 to-transparent pointer-events-none"></div>
                           {link.items?.map((item) => (
                             <Link key={item.name} href={item.href}>
-                              <div className="flex items-start gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors cursor-pointer group">
-                                <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center shrink-0 group-hover:bg-brand-green group-hover:text-white transition-colors border border-gray-100">
-                                  <item.icon className="w-5 h-5 text-gray-500 group-hover:text-white" />
+                              <div className="flex items-start gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors cursor-pointer group">
+                                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0 group-hover:bg-brand-green group-hover:text-white transition-colors border border-white/10">
+                                  <item.icon className="w-5 h-5 text-gray-400 group-hover:text-white" />
                                 </div>
                                 <div>
-                                  <div className="font-bold text-gray-900 text-sm group-hover:text-brand-green transition-colors">{item.name}</div>
+                                  <div className="font-bold text-white text-sm group-hover:text-brand-green transition-colors">{item.name}</div>
                                   <div className="text-xs text-gray-500 leading-tight mt-0.5">{item.desc}</div>
                                 </div>
                               </div>
@@ -190,17 +203,13 @@ export default function PublicNavbar() {
           </div>
 
           {/* Actions */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4">
             <Link href="/contact">
               <Button
                 variant="outline"
-                className={`font-bold rounded-full border-2 transition-all ${
-                  scrolled
-                    ? "border-gray-200 text-gray-700 hover:border-brand-green hover:text-brand-green hover:bg-transparent"
-                    : "border-white/30 text-white hover:bg-white hover:text-gray-900 bg-white/10 backdrop-blur-sm"
-                }`}
+                className="font-bold rounded-full border border-white/20 text-white hover:bg-white hover:text-gray-900 bg-white/5 backdrop-blur-sm transition-all shadow-[0_0_15px_rgba(255,255,255,0.05)]"
               >
-                Talk to Sales
+                Book Consultation
               </Button>
             </Link>
             
@@ -209,35 +218,23 @@ export default function PublicNavbar() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className={scrolled ? "text-gray-500 hover:text-brand-green hover:bg-brand-green/10 rounded-full" : "text-white hover:bg-white/10 hover:text-white rounded-full"}
+                  className="text-white hover:bg-white/10 hover:text-white rounded-full border border-transparent hover:border-white/10"
                 >
                   <Globe className="w-4 h-4" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="rounded-xl">
-                <DropdownMenuItem onClick={() => changeLanguage("en")} className="font-medium cursor-pointer rounded-lg focus:bg-brand-green/10 focus:text-brand-green">English</DropdownMenuItem>
-                <DropdownMenuItem onClick={() => changeLanguage("fr")} className="font-medium cursor-pointer rounded-lg focus:bg-brand-green/10 focus:text-brand-green">Français</DropdownMenuItem>
+              <DropdownMenuContent align="end" className="rounded-xl bg-gray-950 border-white/10 text-white">
+                <DropdownMenuItem onClick={() => changeLanguage("en")} className="font-medium cursor-pointer rounded-lg focus:bg-brand-green/20 focus:text-brand-green">English</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => changeLanguage("fr")} className="font-medium cursor-pointer rounded-lg focus:bg-brand-green/20 focus:text-brand-green">Français</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-
-            <Link href="/dashboard">
-              <Button
-                className={`font-bold rounded-full px-6 h-10 transition-all hover:scale-105 active:scale-95 ${
-                  scrolled
-                    ? "bg-black text-white hover:bg-gray-800 shadow-md"
-                    : "bg-brand-green text-white hover:bg-green-600 shadow-[0_0_20px_rgba(55,182,38,0.4)]"
-                }`}
-              >
-                Login
-              </Button>
-            </Link>
           </div>
 
           {/* Mobile Toggle */}
           <button
-            className={`md:hidden p-2 rounded-full backdrop-blur-sm border transition-colors ${
+            className={`lg:hidden p-2 rounded-full backdrop-blur-sm border transition-colors ${
               scrolled 
-                ? "text-gray-900 border-gray-200 bg-white/50" 
+                ? "text-white border-white/20 bg-white/5" 
                 : "text-white border-white/20 bg-black/20"
             }`}
             onClick={() => setIsOpen(!isOpen)}
@@ -254,15 +251,17 @@ export default function PublicNavbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="md:hidden fixed inset-0 bg-gray-950 z-40 flex flex-col"
+            className="lg:hidden fixed inset-0 bg-gray-950 z-40 flex flex-col"
           >
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
             <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-brand-green/20 rounded-full blur-[100px] pointer-events-none"></div>
             
             <div className="p-6 flex justify-between items-center relative z-10 border-b border-white/10">
               <div className="flex items-center gap-3">
-                <img src="/images/logo-new.png" alt="Logo" className="h-8 w-auto" />
-                <span className="font-black text-xl text-white tracking-tight">iTech<span className="text-brand-green font-light">Network</span></span>
+                <div className="bg-white p-1.5 rounded-lg">
+                  <img src="/images/gotecx-logo.png" alt="Logo" className="h-6 w-auto" />
+                </div>
+                <span className="font-black text-xl text-white tracking-tight">GOTEC<span className="text-brand-green">X</span></span>
               </div>
               <button 
                 onClick={() => setIsOpen(false)} 
@@ -283,16 +282,16 @@ export default function PublicNavbar() {
                 >
                   {link.isDropdown ? (
                     <div className="space-y-4">
-                      <div className="text-gray-400 text-xs font-black uppercase tracking-widest">{link.name}</div>
+                      <div className="text-brand-green text-xs font-black uppercase tracking-widest">{link.name}</div>
                       <div className="grid grid-cols-1 gap-3">
                         {link.items?.map(item => (
                           <Link 
                             key={item.name} 
                             href={item.href}
                             onClick={() => setIsOpen(false)}
-                            className="flex items-center gap-4 bg-white/5 p-4 rounded-2xl active:bg-brand-green/20 transition-colors"
+                            className="flex items-center gap-4 bg-white/5 p-4 rounded-2xl active:bg-brand-green/20 transition-colors border border-white/5"
                           >
-                            <div className="w-10 h-10 rounded-full bg-brand-green/20 text-brand-green flex items-center justify-center shrink-0">
+                            <div className="w-10 h-10 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center shrink-0 border border-brand-green/20">
                               <item.icon className="w-5 h-5" />
                             </div>
                             <div>
@@ -318,9 +317,9 @@ export default function PublicNavbar() {
             </div>
             
             <div className="p-6 border-t border-white/10 space-y-4 bg-black relative z-10">
-              <Link href="/dashboard">
+              <Link href="/contact">
                 <Button className="w-full bg-brand-green hover:bg-green-700 text-white rounded-full font-bold h-14 text-lg">
-                  Access Client Portal
+                  Book Consultation
                 </Button>
               </Link>
             </div>
