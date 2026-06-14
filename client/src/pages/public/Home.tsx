@@ -25,8 +25,8 @@ export default function Home() {
       {/* GLOBAL ECOSYSTEM HERO SECTION */}
       <section className="relative pt-40 pb-32 md:pt-48 md:pb-40 overflow-hidden bg-gray-950">
         <motion.div style={{ y, opacity }} className="absolute inset-0 z-0">
-           <img src="/images/hero_home.jpg" alt="Global Technology" className="w-full h-full object-cover opacity-10 mix-blend-overlay" />
-           <div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-gray-950/80 to-gray-950"></div>
+           <img src="/images/hero_home.jpg" alt="Global Technology" className="w-full h-full object-cover opacity-10" />
+           <div className="absolute inset-0 bg-gradient-to-b from-gray-950/50 via-gray-950/80 to-gray-950"></div>
         </motion.div>
         
         {/* Deep Tech Gradients */}
@@ -117,7 +117,7 @@ export default function Home() {
 
       {/* THE GOTECX ECOSYSTEM */}
       <section id="ecosystem" className="py-32 bg-gray-950 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-green/10 via-transparent to-transparent opacity-50 blur-[50px] pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-green/10 rounded-full blur-[120px] pointer-events-none"></div>
         <div className="container mx-auto px-4 md:px-8 relative z-10">
           <div className="text-center mb-20">
             <span className="text-brand-green font-mono text-sm tracking-[0.3em] uppercase mb-4 block">// Connected Platforms</span>
@@ -251,22 +251,23 @@ export default function Home() {
 
       {/* WHY CHOOSE GOTECX */}
       <section className="py-24 bg-gray-950 text-white overflow-hidden relative">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-green/5 via-transparent to-transparent opacity-50"></div>
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-green/5 rounded-full blur-[100px] pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-[100px] pointer-events-none"></div>
         <div className="container mx-auto px-4 md:px-8 relative z-10 max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="flex flex-col items-start">
               <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none mb-6">Why Organizations <br/>Choose Gotecx</h2>
               <p className="text-gray-400 text-lg leading-relaxed mb-8">
                 We engineer trust. From startup innovators to government institutions, our partners rely on our enterprise mindset and global vision.
               </p>
-              <Button className="bg-brand-green hover:bg-green-600 text-white rounded-full h-14 px-8 font-bold text-lg shadow-lg shadow-brand-green/20">
+              <Button className="bg-brand-green hover:bg-green-600 text-white rounded-full h-14 px-8 font-bold text-lg shadow-lg shadow-brand-green/20 mb-8 lg:mb-0">
                 Partner With Us
               </Button>
             </div>
             
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
               {["Innovation First", "Customer Focused", "Reliable Solutions", "Scalable Technology", "Future Ready", "Global Vision", "Professional Support", "Enterprise Mindset"].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/5 hover:bg-white/10 hover:border-brand-green/50 transition-colors">
+                <div key={i} className="flex items-center gap-3 bg-gray-900 p-4 rounded-xl border border-gray-800 shadow-sm">
                   <CheckCircle className="w-5 h-5 text-brand-green shrink-0" />
                   <span className="font-bold text-sm tracking-wide text-gray-200">{item}</span>
                 </div>

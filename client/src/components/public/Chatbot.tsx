@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { MessageSquare, X, Send, Bot, User, Minimize2, Briefcase, Code, HeadphonesIcon, ArrowRight, UserPlus, HelpCircle, PhoneCall, Sparkles, MapPin, Mail, Clock } from "lucide-react";
+import { MessageSquare, X, Send, Bot, User, Minimize2, Briefcase, Code, HeadphonesIcon, ArrowRight, UserPlus, HelpCircle, PhoneCall, Sparkles, MapPin, Mail, Clock, CheckCircle } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { useLocation } from "wouter";
@@ -22,12 +22,12 @@ export default function Chatbot() {
   const initialMessage: Message = { 
     id: "1", 
     type: "bot", 
-    text: "Hello! Welcome to iTech Network Africa. I'm your AI assistant. How can we help you scale your business today?",
+    text: "Hello! Welcome to the Gotecx Global Technology Ecosystem (powered by iTech Network Africa). I'm your enterprise AI assistant. How can we help you scale your business today?",
     options: [
-      { label: "Website / App Development", action: "software", icon: <Code className="w-3.5 h-3.5" /> },
-      { label: "Digital Marketing", action: "marketing", icon: <Sparkles className="w-3.5 h-3.5" /> },
-      { label: "Pricing & Packages", action: "pricing", icon: <Briefcase className="w-3.5 h-3.5" /> },
-      { label: "Contact Info", action: "contact_info", icon: <MapPin className="w-3.5 h-3.5" /> },
+      { label: "Enterprise Software", action: "software", icon: <Code className="w-3.5 h-3.5" /> },
+      { label: "Gotecx AI Solutions", action: "ai", icon: <Sparkles className="w-3.5 h-3.5" /> },
+      { label: "Enterprise Licensing", action: "pricing", icon: <Briefcase className="w-3.5 h-3.5" /> },
+      { label: "Global Contact Info", action: "contact_info", icon: <MapPin className="w-3.5 h-3.5" /> },
       { label: "Talk to an Expert", action: "expert", icon: <PhoneCall className="w-3.5 h-3.5" /> }
     ]
   };
@@ -51,12 +51,12 @@ export default function Chatbot() {
 
     // Handle quick navigation actions immediately without adding a user message
     if (action === "nav_pricing") {
-      setMessages(prev => [...prev, { id: Date.now().toString(), type: "bot", text: "Taking you to our Pricing page..." }]);
+      setMessages(prev => [...prev, { id: Date.now().toString(), type: "bot", text: "Taking you to our Enterprise Licensing page..." }]);
       setTimeout(() => setLocation("/pricing"), 800);
       return;
     }
     if (action === "nav_services") {
-      setMessages(prev => [...prev, { id: Date.now().toString(), type: "bot", text: "Taking you to our Services page..." }]);
+      setMessages(prev => [...prev, { id: Date.now().toString(), type: "bot", text: "Taking you to our Enterprise Services page..." }]);
       setTimeout(() => setLocation("/services"), 800);
       return;
     }
@@ -79,8 +79,8 @@ export default function Chatbot() {
         const botMsg: Message = { 
           id: (Date.now() + 1).toString(), 
           type: "bot", 
-          text: "I understand. Please send an email to itechnetworkafrica@gmail.com with those details and our team will get started on it right away. Is there anything else you need help with?",
-          agentName: "Human Support"
+          text: "I understand. Please send an email to enterprise@gotecx.global with those details and our global engineering team will get started on it right away. Is there anything else you need help with?",
+          agentName: "Gotecx Enterprise Support"
         };
         setMessages(prev => [...prev, botMsg]);
       }, 1500);
@@ -97,61 +97,58 @@ export default function Chatbot() {
       const lowerText = text.toLowerCase();
       
       // Comprehensive intent matching
-      if (action === "software" || lowerText.includes("software") || lowerText.includes("app") || lowerText.includes("web") || lowerText.includes("development") || lowerText.includes("build") || lowerText.includes("create a website")) {
-        responseText = "We build scalable web and mobile applications using modern tech stacks like React, Next.js, and Flutter. We also provide Premium Hosting and Domain Registration. What are you looking to build?";
+      if (action === "software" || lowerText.includes("software") || lowerText.includes("app") || lowerText.includes("web") || lowerText.includes("development") || lowerText.includes("build") || lowerText.includes("create")) {
+        responseText = "We engineer high-performance, enterprise-grade software applications tailored to your operational needs using robust microservices architectures. What are you looking to build?";
         options = [
-          { label: "New Website", action: "general_inquiry" },
-          { label: "Mobile App", action: "general_inquiry" },
-          { label: "E-Commerce Store", action: "general_inquiry" },
+          { label: "Custom ERP & CRM", action: "general_inquiry" },
+          { label: "Cloud Migration", action: "general_inquiry" },
+          { label: "Legacy System Modernization", action: "general_inquiry" },
           { label: "Speak to an Expert", action: "expert" }
         ];
-      } else if (action === "marketing" || lowerText.includes("marketing") || lowerText.includes("seo") || lowerText.includes("social media") || lowerText.includes("ads") || lowerText.includes("promote")) {
-        responseText = "Our Digital Marketing services include Social Media Management, SEO Optimization, Paid Ads (FB/IG), and Content Creation to help you reach a wider audience and increase sales.";
+      } else if (action === "ai" || lowerText.includes("ai") || lowerText.includes("machine learning") || lowerText.includes("automation") || lowerText.includes("bot")) {
+        responseText = "Gotecx AI builds predictive models, natural language processing tools, and intelligent automation systems that learn from your data to drive smarter business decisions.";
         options = [
-          { label: "View Services", action: "nav_services" },
+          { label: "View AI Solutions", action: "nav_services" },
           { label: "Speak to an Expert", action: "expert" }
         ];
-      } else if (action === "design" || lowerText.includes("design") || lowerText.includes("logo") || lowerText.includes("flyer") || lowerText.includes("branding") || lowerText.includes("graphics")) {
-        responseText = "Our Graphic Design team creates strong brand identities, including Logos, Flyers, Business Cards, Billboards, and complete Brand Kits.";
+      } else if (action === "design" || lowerText.includes("design") || lowerText.includes("branding") || lowerText.includes("ui")) {
+        responseText = "Our world-class design team creates enterprise-grade interfaces, complete corporate branding, and cohesive digital ecosystems.";
         options = [
           { label: "Start a Design Project", action: "expert" },
           { label: "View Our Services", action: "nav_services" }
         ];
       } else if (action === "consulting" || lowerText.includes("consulting") || lowerText.includes("advice") || lowerText.includes("it support") || lowerText.includes("cybersecurity") || lowerText.includes("audit")) {
-        responseText = "Our IT Consultancy team helps optimize digital infrastructure. We offer system audits, cybersecurity setups, and digital transformation strategies.";
+        responseText = "Our enterprise consultants navigate the complex transition to digital. We provide zero-trust cybersecurity, system architecture, and strategic technology advisory.";
         options = [
-          { label: "System Audit", action: "general_inquiry" },
-          { label: "Cybersecurity", action: "general_inquiry" },
+          { label: "Cybersecurity Solutions", action: "general_inquiry" },
+          { label: "Digital Transformation", action: "general_inquiry" },
           { label: "Speak to an Expert", action: "expert" }
         ];
-      } else if (action === "pricing" || lowerText.includes("price") || lowerText.includes("cost") || lowerText.includes("package") || lowerText.includes("how much") || lowerText.includes("fee")) {
+      } else if (action === "pricing" || lowerText.includes("price") || lowerText.includes("cost") || lowerText.includes("package") || lowerText.includes("how much") || lowerText.includes("fee") || lowerText.includes("licensing")) {
         responseText = (
           <div className="space-y-3">
-            <p className="font-medium text-gray-900">We offer transparent, comprehensive packages:</p>
-            <div className="grid grid-cols-2 gap-2 text-sm">
-              <div className="bg-gray-50 p-2 rounded-lg border border-gray-100"><span className="font-bold">STARTER:</span> $150</div>
-              <div className="bg-green-50 p-2 rounded-lg border border-green-100 text-brand-green"><span className="font-bold">BUSINESS:</span> $350</div>
-              <div className="bg-gray-50 p-2 rounded-lg border border-gray-100"><span className="font-bold">NGO:</span> $400</div>
-              <div className="bg-gray-50 p-2 rounded-lg border border-gray-100"><span className="font-bold">E-COMM:</span> $650</div>
-              <div className="bg-gray-50 p-2 rounded-lg border border-gray-100"><span className="font-bold">PRO:</span> $800</div>
-              <div className="bg-gray-50 p-2 rounded-lg border border-gray-100"><span className="font-bold">CORP:</span> $1,000</div>
+            <p className="font-medium text-gray-900">We offer transparent enterprise licensing:</p>
+            <div className="grid grid-cols-1 gap-2 text-sm">
+              <div className="bg-gray-50 p-3 rounded-lg border border-gray-100 flex justify-between items-center"><span className="font-bold uppercase">Essential</span> <span>$2,500/mo</span></div>
+              <div className="bg-green-50 p-3 rounded-lg border border-green-100 text-brand-green flex justify-between items-center"><span className="font-bold uppercase">Enterprise</span> <span>$7,500/mo</span></div>
+              <div className="bg-gray-50 p-3 rounded-lg border border-gray-100 flex justify-between items-center"><span className="font-bold uppercase">Global Scale</span> <span>Custom</span></div>
             </div>
-            <p className="text-xs text-gray-500 flex items-center gap-1"><CheckCircle className="w-3 h-3 text-brand-green"/> All packages include free domain & hosting.</p>
+            <p className="text-xs text-gray-500 flex items-center gap-1"><CheckCircle className="w-3 h-3 text-brand-green"/> All tiers include enterprise-grade SLAs.</p>
           </div>
         );
         options = [
-          { label: "View Full Details", action: "nav_pricing" },
-          { label: "Get Custom Quote", action: "expert" }
+          { label: "View Full Licensing Details", action: "nav_pricing" },
+          { label: "Request Custom Proposal", action: "expert" }
         ];
       } else if (action === "contact_info" || lowerText.includes("location") || lowerText.includes("where") || lowerText.includes("address") || lowerText.includes("contact") || lowerText.includes("phone") || lowerText.includes("email") || lowerText.includes("number")) {
         responseText = (
           <div className="space-y-3">
-            <p className="font-medium text-gray-900">Here's how to reach us:</p>
+            <p className="font-medium text-gray-900">Here's how to reach our global team:</p>
             <div className="space-y-2 text-[13px]">
-              <div className="flex items-center gap-2"><MapPin className="w-4 h-4 text-brand-green"/> <span>Monrovia, Liberia, West Africa</span></div>
-              <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-brand-green"/> <a href="mailto:itechnetworkafrica@gmail.com" className="text-brand-green hover:underline">itechnetworkafrica@gmail.com</a></div>
-              <div className="flex items-center gap-2"><PhoneCall className="w-4 h-4 text-brand-green"/> <span>+231 770 000 000</span></div>
-              <div className="flex items-center gap-2"><Clock className="w-4 h-4 text-brand-green"/> <span>Mon-Fri: 9:00 AM - 5:00 PM</span></div>
+              <div className="flex items-center gap-2"><MapPin className="w-4 h-4 text-brand-green"/> <span>HQ: Monrovia, Liberia</span></div>
+              <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-brand-green"/> <a href="mailto:enterprise@gotecx.global" className="text-brand-green hover:underline">enterprise@gotecx.global</a></div>
+              <div className="flex items-center gap-2"><PhoneCall className="w-4 h-4 text-brand-green"/> <span>+231 555 770 641</span></div>
+              <div className="flex items-center gap-2"><Clock className="w-4 h-4 text-brand-green"/> <span>Global Support: 24/7 SLAs Available</span></div>
             </div>
           </div>
         );
@@ -160,13 +157,13 @@ export default function Chatbot() {
           { label: "Speak to an Expert", action: "expert" }
         ];
       } else if (lowerText.includes("about") || lowerText.includes("who are you") || lowerText.includes("what do you do") || lowerText.includes("company")) {
-        responseText = "iTech Network Africa is a premier tech institution based in Liberia. We specialize in software development, digital marketing, graphic design, and IT consultancy. We also run an Innovation Lab focusing on AI and advanced tech research to build Africa's digital future.";
+        responseText = "iTech Network Africa established the foundation. Gotecx expands the vision. Together, we are building a world-class technology ecosystem that drives enterprise growth, intelligent automation, and borderless innovation.";
         options = [
-          { label: "Our Services", action: "nav_services" },
-          { label: "Our Pricing", action: "nav_pricing" }
+          { label: "Explore Solutions", action: "nav_services" },
+          { label: "View Enterprise Licensing", action: "nav_pricing" }
         ];
       } else if (lowerText.includes("hello") || lowerText.includes("hi") || lowerText.includes("hey") || lowerText.includes("greetings") || lowerText.includes("morning") || lowerText.includes("afternoon")) {
-        responseText = "Hello again! How can I assist you with your digital goals today? I can help with pricing, services, or connecting you to our team.";
+        responseText = "Hello again! How can I assist you with your enterprise digital transformation today?";
         options = initialMessage.options;
       } else if (lowerText.includes("thank") || lowerText.includes("thanks") || lowerText.includes("appreciate")) {
         responseText = "You're very welcome! Is there anything else I can help you with today?";
@@ -175,15 +172,15 @@ export default function Chatbot() {
           { label: "Yes, I need more help", action: "help" }
         ];
       } else if (action === "bye" || lowerText.includes("bye") || lowerText.includes("goodbye")) {
-        responseText = "Goodbye! Have a great day. Feel free to return if you need any more assistance, or email us at itechnetworkafrica@gmail.com.";
+        responseText = "Goodbye! Have a great day. Feel free to return if you need any more assistance, or email us at enterprise@gotecx.global.";
       } else if (action === "expert" || action === "help" || lowerText.includes("human") || lowerText.includes("person") || lowerText.includes("expert") || lowerText.includes("support") || lowerText.includes("talk to someone") || lowerText.includes("agent")) {
-        responseText = "I'm transferring you to our expert team right now. You can also reach us directly anytime at itechnetworkafrica@gmail.com.";
+        responseText = "I'm transferring you to our Gotecx Enterprise Experts right now. You can also reach us directly anytime at enterprise@gotecx.global.";
         triggerAgentJoin = true;
       } else {
-        responseText = "I can help with that! At iTech Network Africa, we specialize in Software Development, Digital Marketing, Graphic Design, and IT Consultancy. Could you provide a bit more detail about what you're looking for?";
+        responseText = "I can help with that! We specialize in Enterprise Software Engineering, Cloud Architecture, Gotecx AI Solutions, and Cybersecurity. Could you provide a bit more detail about your organization's requirements?";
         options = [
-          { label: "View All Services", action: "nav_services" },
-          { label: "See Pricing Plans", action: "nav_pricing" },
+          { label: "View All Solutions", action: "nav_services" },
+          { label: "See Enterprise Licensing", action: "nav_pricing" },
           { label: "Speak to an Expert", action: "expert" }
         ];
       }
@@ -202,12 +199,12 @@ export default function Chatbot() {
           setIsAgentJoined(true);
           setMessages(prev => [
             ...prev, 
-            { id: Date.now().toString(), type: "system", text: "iTech Expert has joined the chat." },
+            { id: Date.now().toString(), type: "system", text: "Gotecx Enterprise Expert has joined the chat." },
             { 
               id: (Date.now() + 1).toString(), 
               type: "bot", 
-              text: "Hi there! I'm an iTech Expert. How can I assist you with your project today? (You can also email me at itechnetworkafrica@gmail.com)",
-              agentName: "Human Support"
+              text: "Hi there! I'm an Enterprise Solutions Expert. How can I assist you with your project today? (You can also email me at enterprise@gotecx.global)",
+              agentName: "Gotecx Enterprise Support"
             }
           ]);
         }, 1500);

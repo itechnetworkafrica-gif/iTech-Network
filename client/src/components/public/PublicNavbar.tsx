@@ -33,27 +33,27 @@ export default function PublicNavbar() {
       isDropdown: true,
       items: [
         { name: "About Us", href: "/about", icon: Building, desc: "Our global mission" },
-        { name: "Our Story", href: "/about#story", icon: Globe, desc: "How we started" },
         { name: "Leadership", href: "/team", icon: Users, desc: "Meet our executives" },
-        { name: "Global Strategy", href: "/about#strategy", icon: Briefcase, desc: "Our worldwide approach" },
+        { name: "Careers", href: "/careers", icon: Briefcase, desc: "Join our team" },
+        { name: "Partners", href: "/partners", icon: Globe, desc: "Our global network" },
       ]
     },
     { 
-      name: "Gotecx", 
+      name: "Ecosystem", 
       isDropdown: true,
       items: [
-        { name: "About Gotecx", href: "/about", icon: Cpu, desc: "The technology ecosystem" },
-        { name: "Innovation Lab", href: "/services#lab", icon: Lightbulb, desc: "R&D and future tech" },
-        { name: "Ecosystem", href: "/#ecosystem", icon: LayoutDashboard, desc: "Our interconnected platforms" },
+        { name: "Gotecx Platforms", href: "/about", icon: Cpu, desc: "The technology ecosystem" },
+        { name: "Innovation News", href: "/news", icon: Lightbulb, desc: "R&D and future tech" },
+        { name: "Case Studies", href: "/case-studies", icon: LayoutDashboard, desc: "Our success stories" },
       ]
     },
     { 
       name: "Solutions", 
       isDropdown: true,
       items: [
-        { name: "Enterprise Software", href: "/services", icon: Code, desc: "Custom development" },
-        { name: "Cloud Services", href: "/services", icon: Server, desc: "Infrastructure and scaling" },
-        { name: "Digital Transformation", href: "/services", icon: Zap, desc: "Modernize your business" },
+        { name: "Enterprise Software", href: "/solutions", icon: Code, desc: "Custom development" },
+        { name: "Cloud Architecture", href: "/solutions", icon: Server, desc: "Infrastructure and scaling" },
+        { name: "Industries", href: "/industries", icon: Building, desc: "Sectors we serve" },
       ]
     },
     { 
@@ -66,7 +66,7 @@ export default function PublicNavbar() {
         { name: "Digital Store", href: "/store", icon: ShoppingBag, desc: "Tech assets & templates" },
       ]
     },
-    { name: "Partners", href: "/about" },
+    { name: "Pricing", href: "/pricing" },
     { name: "Contact", href: "/contact" },
   ];
 

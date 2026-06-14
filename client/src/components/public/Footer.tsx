@@ -33,12 +33,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-6 lg:col-span-2">
             <div className="flex flex-col gap-2">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-4">
+                <img src="/images/itech-logo.png" alt="iTech Network Africa Logo" className="h-10 w-auto bg-white p-1 rounded-xl shadow-lg" />
                 <img src="/images/gotecx-logo.png" alt="Gotecx Logo" className="h-10 w-auto bg-white p-1.5 rounded-xl shadow-lg" />
                 <span className="font-black text-3xl tracking-tighter text-white uppercase">GOTEC<span className="text-brand-green">X</span></span>
               </div>
-              <span className="text-xs font-bold text-gray-400 tracking-[0.2em] uppercase">Global Technology Ecosystem</span>
-              <span className="text-[10px] font-bold text-brand-green tracking-wider uppercase mt-2">Powered by iTech Network Africa</span>
+              <span className="text-xs font-bold text-gray-400 tracking-[0.2em] uppercase mt-2">Global Technology Ecosystem</span>
+              <span className="text-[10px] font-bold text-brand-green tracking-wider uppercase">Powered by iTech Network Africa</span>
             </div>
             
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm">

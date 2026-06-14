@@ -1,5 +1,10 @@
 uploads = []
-generated = []
+
+[[generated]]
+id = "ITwykSZ5x3exBwb7zanIA"
+uri = "file://client/public/images/itech-logo.png"
+type = "image"
+title = "iTech Network Africa Logo"
 
 [[outputs]]
 id = "bzrZJhSfcBAnmlHJDSrQl"
