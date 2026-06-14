@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Code, Shield, Cloud, Zap, Star, Users, Globe, BookOpen, Award, Cpu, MonitorSmartphone, MousePointer2, Rocket, Briefcase, BarChart3, MessageSquare, Database, Layers, Search, Settings, PieChart, Linkedin, Twitter, Facebook, ExternalLink, RefreshCw, Smartphone, Store, Terminal, HeartPulse, Building2, ShoppingBag } from "lucide-react";
+import { ArrowRight, CheckCircle, Code, Shield, Cloud, Zap, Star, Users, Globe, BookOpen, Award, Cpu, MonitorSmartphone, MousePointer2, Rocket, Briefcase, BarChart3, MessageSquare, Database, Layers, Search, Settings, PieChart, Linkedin, Twitter, Facebook, ExternalLink, RefreshCw, Smartphone, Store, Terminal, HeartPulse, Building2, ShoppingBag, CreditCard, LayoutDashboard, Server, Lightbulb, GraduationCap } from "lucide-react";
 import PublicNavbar from "@/components/public/PublicNavbar";
 import Footer from "@/components/public/Footer";
 import { Link } from "wouter";

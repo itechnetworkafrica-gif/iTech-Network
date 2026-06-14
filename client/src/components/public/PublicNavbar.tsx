@@ -1,7 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
-import { Menu, X, Globe, Phone, Mail, MapPin, ChevronRight, LayoutDashboard, ShoppingBag, CreditCard, Users, Briefcase, Cpu, Code, Building, Lightbulb, GraduationCap, Server } from "lucide-react";
+import { Menu, X, Globe, Phone, Mail, MapPin, ChevronRight, LayoutDashboard, ShoppingBag, CreditCard, Users, Briefcase, Cpu, Code, Building, Lightbulb, GraduationCap, Server, Zap } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
