@@ -54,13 +54,14 @@ export default function Footer() {
           {/* Platforms */}
           <div>
             <h3 className="text-sm font-black tracking-widest uppercase mb-6 text-white flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-green"></span> Platforms
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-green"></span> Quick Links
             </h3>
             <ul className="space-y-4 text-sm text-gray-400 font-medium">
-              <li><Link href="/pos-demo" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Gotecx POS</Link></li>
-              <li><Link href="/services" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Gotecx AI</Link></li>
-              <li><Link href="/dashboard" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Client Portal</Link></li>
-              <li><Link href="/store" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Digital Store</Link></li>
+              <li><Link href="/" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Home</Link></li>
+              <li><Link href="/about" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> About Us</Link></li>
+              <li><Link href="/services" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Services</Link></li>
+              <li><Link href="/pricing" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Pricing</Link></li>
+              <li><Link href="/faq" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> FAQ</Link></li>
             </ul>
           </div>
 
@@ -70,31 +71,24 @@ export default function Footer() {
               <span className="w-1.5 h-1.5 rounded-full bg-brand-green"></span> Enterprise
             </h3>
             <ul className="space-y-4 text-sm text-gray-400 font-medium">
-              <li><Link href="/services" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Custom Software</Link></li>
-              <li><Link href="/services" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Cloud Architecture</Link></li>
-              <li><Link href="/about" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Global Vision</Link></li>
-              <li><Link href="/team" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Leadership</Link></li>
+              <li><Link href="/solutions" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Solutions</Link></li>
+              <li><Link href="/industries" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Industries</Link></li>
+              <li><Link href="/portfolio" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Portfolio</Link></li>
+              <li><Link href="/case-studies" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Case Studies</Link></li>
+              <li><Link href="/partners" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Partners</Link></li>
             </ul>
           </div>
 
-          {/* Global Reach */}
+          {/* Connect */}
           <div>
             <h3 className="text-sm font-black tracking-widest uppercase mb-6 text-white flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-green"></span> Connect
             </h3>
             <ul className="space-y-5 text-sm text-gray-400">
-              <li className="flex items-start gap-4">
-                <Globe className="w-5 h-5 text-brand-green shrink-0 mt-0.5" />
-                <span className="font-medium">Global Headquarters<br /><span className="text-xs text-gray-500">Monrovia, Liberia</span></span>
-              </li>
-              <li className="flex items-center gap-4">
-                <Phone className="w-5 h-5 text-brand-green shrink-0" />
-                <span className="font-medium">+231 555 770 641</span>
-              </li>
-              <li className="flex items-center gap-4">
-                <Mail className="w-5 h-5 text-brand-green shrink-0" />
-                <span className="font-medium">connect@gotecx.global</span>
-              </li>
+              <li><Link href="/contact" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Contact Us</Link></li>
+              <li><Link href="/team" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Leadership</Link></li>
+              <li><Link href="/careers" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> Careers</Link></li>
+              <li><Link href="/news" className="hover:text-brand-green transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3"/> News & Insights</Link></li>
             </ul>
           </div>
         </div>
@@ -104,9 +98,9 @@ export default function Footer() {
             © {new Date().getFullYear()} GOTECX Global Ecosystem. <span className="hidden md:inline">|</span> Powered by iTech Network Africa.
           </p>
           <div className="flex gap-6 uppercase tracking-wider">
-            <a href="#" className="hover:text-brand-green transition-colors flex items-center gap-1"><Shield className="w-3 h-3"/> Privacy</a>
-            <a href="#" className="hover:text-brand-green transition-colors">Terms</a>
-            <a href="#" className="hover:text-brand-green transition-colors">Security</a>
+            <Link href="/privacy-policy" className="hover:text-brand-green transition-colors flex items-center gap-1"><Shield className="w-3 h-3"/> Privacy</Link>
+            <Link href="/terms" className="hover:text-brand-green transition-colors">Terms</Link>
+            <Link href="/cookie-policy" className="hover:text-brand-green transition-colors">Cookie Policy</Link>
           </div>
         </div>
       </div>

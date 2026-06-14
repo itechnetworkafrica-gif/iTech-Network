@@ -25,6 +25,19 @@ import Booking from "@/pages/public/Booking";
 import Store from "@/pages/public/Store";
 import POSDemo from "@/pages/public/POSDemo";
 
+// New Corporate Pages
+import Solutions from "@/pages/public/Solutions";
+import Industries from "@/pages/public/Industries";
+import Portfolio from "@/pages/public/Portfolio";
+import CaseStudies from "@/pages/public/CaseStudies";
+import Partners from "@/pages/public/Partners";
+import Careers from "@/pages/public/Careers";
+import News from "@/pages/public/News";
+import FAQ from "@/pages/public/FAQ";
+import PrivacyPolicy from "@/pages/public/PrivacyPolicy";
+import Terms from "@/pages/public/Terms";
+import CookiePolicy from "@/pages/public/CookiePolicy";
+
 import FloatingActions from "@/components/public/FloatingActions";
 import Chatbot from "@/components/public/Chatbot";
 import "./lib/i18n";
@@ -46,6 +59,19 @@ function Router() {
         <Route path="/store" component={Store} />
         <Route path="/pos-demo" component={POSDemo} />
         <Route path="/verify-certificate" component={VerifyCertificate} />
+        
+        {/* New Corporate Routes */}
+        <Route path="/solutions" component={Solutions} />
+        <Route path="/industries" component={Industries} />
+        <Route path="/portfolio" component={Portfolio} />
+        <Route path="/case-studies" component={CaseStudies} />
+        <Route path="/partners" component={Partners} />
+        <Route path="/careers" component={Careers} />
+        <Route path="/news" component={News} />
+        <Route path="/faq" component={FAQ} />
+        <Route path="/privacy-policy" component={PrivacyPolicy} />
+        <Route path="/terms" component={Terms} />
+        <Route path="/cookie-policy" component={CookiePolicy} />
 
         {/* Dashboard Routes - Flattened for reliability */}
         <Route path="/dashboard">

@@ -4,156 +4,177 @@ import Footer from "@/components/public/Footer";
 import { Mail, Phone, MapPin, Send, MessageSquare, Globe2, Building2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent } from "@/components/ui/card";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen flex flex-col font-sans bg-gray-50">
+    <div className="min-h-screen flex flex-col font-sans bg-gray-950 text-white">
       <PublicNavbar />
       
-      <section className="pt-40 pb-32 bg-gray-950 text-center text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5 mix-blend-overlay"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-green/20 rounded-full blur-[120px] pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/20 rounded-full blur-[120px] pointer-events-none"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <p className="text-brand-green font-mono text-sm tracking-[0.3em] uppercase mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">// Contact Us</p>
-          <h1 className="text-5xl md:text-7xl font-black mb-6 uppercase italic tracking-tighter drop-shadow-2xl animate-in fade-in slide-in-from-bottom-6 duration-1000">Get in Touch</h1>
-          <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
+      <section className="pt-40 pb-32 md:pt-48 md:pb-40 text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 mix-blend-overlay"></div>
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-green/20 rounded-full blur-[150px] pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[150px] pointer-events-none"></div>
+        
+        <div className="container mx-auto px-4 relative z-10 max-w-5xl">
+          <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-6 py-2.5 text-xs font-bold text-gray-300 mb-8 backdrop-blur-md uppercase tracking-widest">
+            <span className="flex h-2 w-2 rounded-full bg-brand-green mr-3 animate-ping"></span>
+            Global Communications
+          </div>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 uppercase tracking-tighter leading-none drop-shadow-2xl">
+            Partner With <br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-emerald-500">Gotecx</span>
+          </h1>
+          <p className="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-light">
             Ready to transform your digital infrastructure? Connect with our enterprise experts today and let's build the future together.
           </p>
         </div>
       </section>
 
-      <section className="py-20 -mt-20 relative z-10">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <section className="py-24 bg-white text-gray-900 border-t border-white/10 rounded-t-[3rem] -mt-10 relative z-20">
+        <div className="container mx-auto px-4 md:px-8 max-w-7xl">
+          <div className="grid lg:grid-cols-5 gap-12">
             
             {/* Contact Info Card */}
-            <Card className="lg:col-span-1 bg-white border-0 shadow-2xl h-full rounded-3xl overflow-hidden group">
-              <div className="h-2 w-full bg-gradient-to-r from-brand-green to-emerald-400"></div>
-              <CardContent className="p-8 md:p-10 space-y-8">
-                <div>
-                  <h3 className="text-2xl font-black text-gray-900 mb-8 uppercase tracking-tight">Headquarters</h3>
-                  <div className="space-y-8">
-                    <div className="flex items-start gap-5 group/item">
-                      <div className="w-12 h-12 rounded-2xl bg-gray-50 flex items-center justify-center shrink-0 group-hover/item:bg-brand-green group-hover/item:text-white transition-colors duration-300">
-                        <Building2 className="w-6 h-6 text-brand-green group-hover/item:text-white transition-colors" />
-                      </div>
-                      <div>
-                        <p className="font-bold text-gray-900 mb-1">Corporate Office</p>
-                        <p className="text-gray-500 text-sm leading-relaxed">iTech Network Africa<br />Monrovia, Liberia</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-5 group/item">
-                      <div className="w-12 h-12 rounded-2xl bg-gray-50 flex items-center justify-center shrink-0 group-hover/item:bg-brand-green group-hover/item:text-white transition-colors duration-300">
-                        <Mail className="w-6 h-6 text-brand-green group-hover/item:text-white transition-colors" />
-                      </div>
-                      <div>
-                        <p className="font-bold text-gray-900 mb-1">Email Directory</p>
-                        <p className="text-gray-500 text-sm leading-relaxed">info@itechnetwork.africa<br />support@itechnetwork.africa</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-5 group/item">
-                      <div className="w-12 h-12 rounded-2xl bg-gray-50 flex items-center justify-center shrink-0 group-hover/item:bg-brand-green group-hover/item:text-white transition-colors duration-300">
-                        <Phone className="w-6 h-6 text-brand-green group-hover/item:text-white transition-colors" />
-                      </div>
-                      <div>
-                        <p className="font-bold text-gray-900 mb-1">Global Support</p>
-                        <p className="text-gray-500 text-sm leading-relaxed">+231 555 770 641<br />Mon-Fri, 8am-6pm GMT</p>
-                      </div>
-                    </div>
+            <div className="lg:col-span-2 space-y-8">
+              <div>
+                <p className="text-brand-green font-mono text-sm tracking-[0.3em] uppercase mb-4">// Direct Channels</p>
+                <h3 className="text-4xl font-black uppercase tracking-tight mb-8">Enterprise Directory</h3>
+              </div>
+              
+              <div className="space-y-6">
+                <div className="bg-gray-50 p-8 rounded-[2rem] border border-gray-100 flex items-start gap-5 group hover:border-brand-green/50 hover:shadow-xl transition-all">
+                  <div className="w-14 h-14 rounded-2xl bg-white border border-gray-200 flex items-center justify-center shrink-0 group-hover:bg-brand-green transition-colors shadow-sm">
+                    <Building2 className="w-6 h-6 text-gray-900 group-hover:text-white transition-colors" />
+                  </div>
+                  <div>
+                    <p className="font-black text-xl mb-1 uppercase tracking-tight">Corporate HQ</p>
+                    <p className="text-gray-500 leading-relaxed font-medium">Monrovia, Liberia<br />Global Technology Center</p>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+
+                <div className="bg-gray-50 p-8 rounded-[2rem] border border-gray-100 flex items-start gap-5 group hover:border-brand-green/50 hover:shadow-xl transition-all">
+                  <div className="w-14 h-14 rounded-2xl bg-white border border-gray-200 flex items-center justify-center shrink-0 group-hover:bg-brand-green transition-colors shadow-sm">
+                    <Mail className="w-6 h-6 text-gray-900 group-hover:text-white transition-colors" />
+                  </div>
+                  <div>
+                    <p className="font-black text-xl mb-1 uppercase tracking-tight">Email Communications</p>
+                    <p className="text-gray-500 leading-relaxed font-medium">connect@gotecx.global<br />enterprise@gotecx.global</p>
+                  </div>
+                </div>
+
+                <div className="bg-gray-50 p-8 rounded-[2rem] border border-gray-100 flex items-start gap-5 group hover:border-brand-green/50 hover:shadow-xl transition-all">
+                  <div className="w-14 h-14 rounded-2xl bg-white border border-gray-200 flex items-center justify-center shrink-0 group-hover:bg-brand-green transition-colors shadow-sm">
+                    <Phone className="w-6 h-6 text-gray-900 group-hover:text-white transition-colors" />
+                  </div>
+                  <div>
+                    <p className="font-black text-xl mb-1 uppercase tracking-tight">Global Support</p>
+                    <p className="text-gray-500 leading-relaxed font-medium">+231 555 770 641<br />Mon-Fri, 08:00 - 18:00 GMT</p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             {/* Form Card */}
-            <Card className="lg:col-span-2 bg-white border-0 shadow-2xl rounded-3xl overflow-hidden">
-              <CardContent className="p-8 md:p-12">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 bg-brand-green/10 rounded-full flex items-center justify-center">
-                    <MessageSquare className="w-5 h-5 text-brand-green" />
+            <div className="lg:col-span-3 bg-gray-950 rounded-[3rem] p-10 md:p-14 shadow-2xl relative overflow-hidden border border-white/10 text-white">
+               <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+               <div className="absolute top-0 right-0 w-64 h-64 bg-brand-green/20 rounded-full blur-[80px] pointer-events-none"></div>
+               
+               <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-10 border-b border-white/10 pb-8">
+                  <div className="w-14 h-14 bg-white/10 border border-white/20 rounded-2xl flex items-center justify-center">
+                    <MessageSquare className="w-6 h-6 text-brand-green" />
                   </div>
-                  <h3 className="text-3xl font-black text-gray-900 uppercase tracking-tight">Project Inquiry</h3>
+                  <div>
+                    <h3 className="text-3xl font-black uppercase tracking-tight">Project Inquiry</h3>
+                    <p className="text-gray-400 font-medium">Enterprise response time: <span className="text-brand-green">&lt; 4 hours</span></p>
+                  </div>
                 </div>
-                <p className="text-gray-500 mb-10 text-lg ml-13">Submit your requirements and our enterprise team will respond within 24 hours.</p>
                 
-                <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div className="space-y-3">
-                      <label htmlFor="name" className="text-sm font-bold text-gray-700 uppercase tracking-wider">Full Name</label>
-                      <Input id="name" placeholder="Enter your full name" className="bg-gray-50 border-gray-100 focus:border-brand-green focus:ring-brand-green/20 h-14 rounded-xl px-5 text-lg transition-all" />
+                <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label htmlFor="name" className="text-xs font-bold text-gray-400 uppercase tracking-widest">Full Name</label>
+                      <Input id="name" placeholder="John Doe" className="bg-white/5 border-white/10 focus:border-brand-green focus:bg-white/10 text-white h-14 rounded-xl px-5 transition-all placeholder:text-gray-600" />
                     </div>
-                    <div className="space-y-3">
-                      <label htmlFor="email" className="text-sm font-bold text-gray-700 uppercase tracking-wider">Business Email</label>
-                      <Input id="email" type="email" placeholder="name@company.com" className="bg-gray-50 border-gray-100 focus:border-brand-green focus:ring-brand-green/20 h-14 rounded-xl px-5 text-lg transition-all" />
+                    <div className="space-y-2">
+                      <label htmlFor="email" className="text-xs font-bold text-gray-400 uppercase tracking-widest">Corporate Email</label>
+                      <Input id="email" type="email" placeholder="name@company.com" className="bg-white/5 border-white/10 focus:border-brand-green focus:bg-white/10 text-white h-14 rounded-xl px-5 transition-all placeholder:text-gray-600" />
                     </div>
                   </div>
                   
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div className="space-y-3">
-                      <label htmlFor="phone" className="text-sm font-bold text-gray-700 uppercase tracking-wider">Phone Number</label>
-                      <Input id="phone" placeholder="+231..." className="bg-gray-50 border-gray-100 focus:border-brand-green focus:ring-brand-green/20 h-14 rounded-xl px-5 text-lg transition-all" />
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label htmlFor="phone" className="text-xs font-bold text-gray-400 uppercase tracking-widest">Phone Number</label>
+                      <Input id="phone" placeholder="+1..." className="bg-white/5 border-white/10 focus:border-brand-green focus:bg-white/10 text-white h-14 rounded-xl px-5 transition-all placeholder:text-gray-600" />
                     </div>
-                    <div className="space-y-3">
-                      <label htmlFor="company" className="text-sm font-bold text-gray-700 uppercase tracking-wider">Company Name</label>
-                      <Input id="company" placeholder="Your organization" className="bg-gray-50 border-gray-100 focus:border-brand-green focus:ring-brand-green/20 h-14 rounded-xl px-5 text-lg transition-all" />
+                    <div className="space-y-2">
+                      <label htmlFor="company" className="text-xs font-bold text-gray-400 uppercase tracking-widest">Company Name</label>
+                      <Input id="company" placeholder="Organization Inc." className="bg-white/5 border-white/10 focus:border-brand-green focus:bg-white/10 text-white h-14 rounded-xl px-5 transition-all placeholder:text-gray-600" />
                     </div>
                   </div>
 
-                  <div className="space-y-3">
-                    <label htmlFor="subject" className="text-sm font-bold text-gray-700 uppercase tracking-wider">Inquiry Type</label>
-                    <select id="subject" className="w-full bg-gray-50 border border-gray-100 focus:border-brand-green focus:ring-2 focus:ring-brand-green/20 h-14 rounded-xl px-5 text-lg transition-all outline-none text-gray-700">
-                      <option value="">Select a subject...</option>
-                      <option value="software">Custom Software Development</option>
-                      <option value="cloud">Cloud Infrastructure</option>
-                      <option value="security">Cybersecurity Audit</option>
-                      <option value="training">Corporate Training</option>
-                      <option value="other">Other Inquiry</option>
+                  <div className="space-y-2">
+                    <label htmlFor="subject" className="text-xs font-bold text-gray-400 uppercase tracking-widest">Primary Interest</label>
+                    <select id="subject" className="w-full bg-white/5 border border-white/10 focus:border-brand-green focus:bg-white/10 text-white h-14 rounded-xl px-5 transition-all outline-none appearance-none">
+                      <option value="" className="text-gray-900">Select a solution area...</option>
+                      <option value="software" className="text-gray-900">Enterprise Software Development</option>
+                      <option value="ai" className="text-gray-900">Gotecx AI Integration</option>
+                      <option value="pos" className="text-gray-900">Gotecx POS Deployment</option>
+                      <option value="cloud" className="text-gray-900">Cloud Architecture</option>
+                      <option value="other" className="text-gray-900">Other Inquiry</option>
                     </select>
                   </div>
 
-                  <div className="space-y-3">
-                    <label htmlFor="message" className="text-sm font-bold text-gray-700 uppercase tracking-wider">Project Details</label>
-                    <Textarea id="message" placeholder="Please describe your requirements in detail..." className="min-h-[180px] bg-gray-50 border-gray-100 focus:border-brand-green focus:ring-brand-green/20 rounded-xl p-5 text-lg transition-all resize-none" />
+                  <div className="space-y-2">
+                    <label htmlFor="message" className="text-xs font-bold text-gray-400 uppercase tracking-widest">Project Details</label>
+                    <Textarea id="message" placeholder="Please describe your technical requirements or business challenges..." className="min-h-[160px] bg-white/5 border-white/10 focus:border-brand-green focus:bg-white/10 text-white rounded-xl p-5 transition-all resize-none placeholder:text-gray-600" />
                   </div>
 
-                  <Button className="w-full bg-brand-green hover:bg-green-600 text-white h-16 text-lg font-black uppercase tracking-widest rounded-xl shadow-xl shadow-brand-green/20 transition-all hover:-translate-y-1">
-                    Submit Inquiry <Send className="w-5 h-5 ml-3" />
-                  </Button>
+                  <div className="pt-4 border-t border-white/10">
+                    <Button className="w-full bg-brand-green hover:bg-green-600 text-white h-16 text-sm font-black uppercase tracking-widest rounded-xl shadow-xl shadow-brand-green/20 transition-all hover:-translate-y-1">
+                      Transmit Inquiry <Send className="w-5 h-5 ml-3" />
+                    </Button>
+                  </div>
                 </form>
-              </CardContent>
-            </Card>
+               </div>
+            </div>
 
           </div>
         </div>
       </section>
 
       {/* Global Presence Section */}
-      <section className="py-24 bg-white border-t border-gray-100">
+      <section className="py-32 bg-gray-50 border-t border-gray-200">
         <div className="container mx-auto px-4 md:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-6 uppercase tracking-tight">Our Global Network</h2>
-            <div className="w-24 h-1.5 bg-brand-green mx-auto rounded-full"></div>
+          <div className="text-center mb-20 max-w-3xl mx-auto">
+             <span className="text-brand-green font-mono text-sm tracking-[0.3em] uppercase block mb-4">// Operational Reach</span>
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 uppercase tracking-tight">Worldwide Infrastructure</h2>
+            <p className="text-gray-500 text-lg">Operating across multiple time zones to provide uninterrupted engineering support and server reliability.</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-gray-50 rounded-3xl p-8 border border-gray-100 text-center hover:border-brand-green/50 transition-colors">
-              <Globe2 className="w-10 h-10 text-brand-green mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-2">West Africa</h3>
-              <p className="text-gray-500">Monrovia, Liberia<br />Regional HQ</p>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="bg-white rounded-[2.5rem] p-10 border border-gray-100 text-center hover:border-brand-green/50 hover:shadow-2xl transition-all group">
+              <div className="w-20 h-20 bg-gray-50 rounded-2xl mx-auto flex items-center justify-center mb-6 group-hover:bg-brand-green transition-colors">
+                <Globe2 className="w-10 h-10 text-gray-900 group-hover:text-white transition-colors" />
+              </div>
+              <h3 className="text-2xl font-black text-gray-900 mb-2 uppercase">West Africa</h3>
+              <p className="text-gray-500 font-medium">Monrovia, Liberia<br />Global Technology Center</p>
             </div>
-            <div className="bg-gray-50 rounded-3xl p-8 border border-gray-100 text-center hover:border-brand-green/50 transition-colors">
-              <Globe2 className="w-10 h-10 text-brand-green mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-2">East Africa</h3>
-              <p className="text-gray-500">Nairobi, Kenya<br />Development Center</p>
+            
+            <div className="bg-white rounded-[2.5rem] p-10 border border-gray-100 text-center hover:border-brand-green/50 hover:shadow-2xl transition-all group">
+              <div className="w-20 h-20 bg-gray-50 rounded-2xl mx-auto flex items-center justify-center mb-6 group-hover:bg-brand-green transition-colors">
+                <Globe2 className="w-10 h-10 text-gray-900 group-hover:text-white transition-colors" />
+              </div>
+              <h3 className="text-2xl font-black text-gray-900 mb-2 uppercase">East Africa</h3>
+              <p className="text-gray-500 font-medium">Nairobi, Kenya<br />Development Hub</p>
             </div>
-            <div className="bg-gray-50 rounded-3xl p-8 border border-gray-100 text-center hover:border-brand-green/50 transition-colors">
-              <Globe2 className="w-10 h-10 text-brand-green mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-2">North America</h3>
-              <p className="text-gray-500">Delaware, USA<br />Partner Office</p>
+            
+            <div className="bg-white rounded-[2.5rem] p-10 border border-gray-100 text-center hover:border-brand-green/50 hover:shadow-2xl transition-all group">
+              <div className="w-20 h-20 bg-gray-50 rounded-2xl mx-auto flex items-center justify-center mb-6 group-hover:bg-brand-green transition-colors">
+                <Globe2 className="w-10 h-10 text-gray-900 group-hover:text-white transition-colors" />
+              </div>
+              <h3 className="text-2xl font-black text-gray-900 mb-2 uppercase">North America</h3>
+              <p className="text-gray-500 font-medium">Delaware, USA<br />Partner Operations</p>
             </div>
           </div>
         </div>
