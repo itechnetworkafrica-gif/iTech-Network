@@ -37,6 +37,7 @@ import FAQ from "@/pages/public/FAQ";
 import PrivacyPolicy from "@/pages/public/PrivacyPolicy";
 import Terms from "@/pages/public/Terms";
 import CookiePolicy from "@/pages/public/CookiePolicy";
+import DynamicPage from "@/pages/public/DynamicPage";
 
 import FloatingActions from "@/components/public/FloatingActions";
 import Chatbot from "@/components/public/Chatbot";
@@ -72,6 +73,14 @@ function Router() {
         <Route path="/privacy-policy" component={PrivacyPolicy} />
         <Route path="/terms" component={Terms} />
         <Route path="/cookie-policy" component={CookiePolicy} />
+
+        {/* Dynamic Pages for the huge navigation tree */}
+        <Route path="/solutions/:slug" component={DynamicPage} />
+        <Route path="/products/:slug" component={DynamicPage} />
+        <Route path="/services/:slug" component={DynamicPage} />
+        <Route path="/industries/:slug" component={DynamicPage} />
+        <Route path="/support/:slug" component={DynamicPage} />
+        <Route path="/:slug" component={DynamicPage} />
 
         {/* Dashboard Routes - Flattened for reliability */}
         <Route path="/dashboard">

@@ -1,20 +1,14 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
-import { Menu, X, Globe, Phone, Mail, MapPin, ChevronRight, LayoutDashboard, ShoppingBag, CreditCard, Users, Briefcase, Cpu, Code, Building, Lightbulb, GraduationCap, Server, Zap } from "lucide-react";
+import { Menu, X, Search, ChevronDown, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 
 export default function PublicNavbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [expandedSection, setExpandedSection] = useState<string | null>(null);
   const [location] = useLocation();
   const { i18n } = useTranslation();
 
@@ -26,306 +20,359 @@ export default function PublicNavbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: "Home", href: "/" },
-    { 
-      name: "Company", 
-      isDropdown: true,
-      items: [
-        { name: "About Us", href: "/about", icon: Building, desc: "Our global mission" },
-        { name: "Leadership", href: "/team", icon: Users, desc: "Meet our executives" },
-        { name: "Careers", href: "/careers", icon: Briefcase, desc: "Join our team" },
-        { name: "Partners", href: "/partners", icon: Globe, desc: "Our global network" },
-      ]
-    },
-    { 
-      name: "Ecosystem", 
-      isDropdown: true,
-      items: [
-        { name: "Gotecx Platforms", href: "/about", icon: Cpu, desc: "The technology ecosystem" },
-        { name: "Innovation News", href: "/news", icon: Lightbulb, desc: "R&D and future tech" },
-        { name: "Case Studies", href: "/case-studies", icon: LayoutDashboard, desc: "Our success stories" },
-      ]
-    },
-    { 
-      name: "Solutions", 
-      isDropdown: true,
-      items: [
-        { name: "Enterprise Software", href: "/solutions", icon: Code, desc: "Custom development" },
-        { name: "Cloud Architecture", href: "/solutions", icon: Server, desc: "Infrastructure and scaling" },
-        { name: "Industries", href: "/industries", icon: Building, desc: "Sectors we serve" },
-      ]
-    },
-    { 
-      name: "Products", 
-      isDropdown: true,
-      items: [
-        { name: "Gotecx POS", href: "/pos-demo", icon: CreditCard, desc: "Smart retail system" },
-        { name: "Gotecx AI", href: "/services", icon: Cpu, desc: "Intelligent automation" },
-        { name: "Client Portal", href: "/dashboard", icon: LayoutDashboard, desc: "Manage your projects" },
-        { name: "Digital Store", href: "/store", icon: ShoppingBag, desc: "Tech assets & templates" },
-      ]
-    },
-    { name: "Pricing", href: "/pricing" },
-    { name: "Contact", href: "/contact" },
-  ];
-
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
   };
 
+  const toggleSection = (section: string) => {
+    setExpandedSection(expandedSection === section ? null : section);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+    setExpandedSection(null);
+  };
+
+  const menuData = [
+    {
+      title: "Home",
+      links: [
+        { name: "Home", href: "/" },
+        { name: "Request Demo", href: "/request-demo" },
+        { name: "Schedule Consultation", href: "/consultation" },
+        { name: "Contact Sales", href: "/contact-sales" },
+      ]
+    },
+    {
+      title: "About",
+      links: [
+        { name: "About Us", href: "/about" },
+        { name: "Our Story", href: "/our-story" },
+        { name: "Vision & Mission", href: "/vision-mission" },
+        { name: "Founder Message", href: "/founder-message" },
+        { name: "Leadership", href: "/team" },
+        { name: "Company Timeline", href: "/timeline" },
+        { name: "Global Presence", href: "/global-presence" },
+        { name: "Why Gotecx", href: "/why-gotecx" },
+      ]
+    },
+    {
+      title: "Solutions",
+      links: [
+        { name: "Business Solutions", href: "/solutions/business" },
+        { name: "Retail Solutions", href: "/solutions/retail" },
+        { name: "Restaurant Solutions", href: "/solutions/restaurant" },
+        { name: "Healthcare Solutions", href: "/solutions/healthcare" },
+        { name: "Education Solutions", href: "/solutions/education" },
+        { name: "NGO Solutions", href: "/solutions/ngo" },
+        { name: "Government Solutions", href: "/solutions/government" },
+        { name: "Enterprise Solutions", href: "/solutions/enterprise" },
+        { name: "SME Solutions", href: "/solutions/sme" },
+        { name: "Technology Solutions", href: "/solutions/technology" },
+        { name: "AI Solutions", href: "/solutions/ai" },
+        { name: "Automation Solutions", href: "/solutions/automation" },
+        { name: "Cloud Solutions", href: "/solutions/cloud" },
+        { name: "Cybersecurity", href: "/solutions/cybersecurity" },
+        { name: "Data Analytics", href: "/solutions/data" },
+        { name: "Digital Transformation", href: "/solutions/transformation" },
+      ]
+    },
+    {
+      title: "Products",
+      links: [
+        { name: "Gotecx POS", href: "/pos-demo" },
+        { name: "Product Features", href: "/products/features" },
+        { name: "Product Documentation", href: "/products/docs" },
+        { name: "Product Roadmap", href: "/products/roadmap" },
+        { name: "Request Demo", href: "/request-demo" },
+        { name: "Future Products", href: "/products/future" },
+        { name: "Gotecx AI", href: "/products/ai", badge: "Coming Soon" },
+        { name: "Gotecx CRM", href: "/products/crm", badge: "Coming Soon" },
+        { name: "Gotecx ERP", href: "/products/erp", badge: "Coming Soon" },
+        { name: "Gotecx Analytics", href: "/products/analytics", badge: "Coming Soon" },
+        { name: "Gotecx Cloud", href: "/products/cloud", badge: "Coming Soon" },
+      ]
+    },
+    {
+      title: "Services",
+      links: [
+        { name: "Website Development", href: "/services/website" },
+        { name: "Mobile App Development", href: "/services/mobile" },
+        { name: "Software Development", href: "/services/software" },
+        { name: "Cloud Solutions", href: "/services/cloud" },
+        { name: "AI Solutions", href: "/services/ai" },
+        { name: "Cybersecurity", href: "/services/cybersecurity" },
+        { name: "Digital Marketing", href: "/services/marketing" },
+        { name: "Branding & Design", href: "/services/branding" },
+        { name: "Business Automation", href: "/services/automation" },
+        { name: "IT Consulting", href: "/services/consulting" },
+        { name: "Enterprise Technology Consulting", href: "/services/enterprise-consulting" },
+      ]
+    },
+    {
+      title: "Industries",
+      links: [
+        { name: "Retail", href: "/industries/retail" },
+        { name: "Healthcare", href: "/industries/healthcare" },
+        { name: "Education", href: "/industries/education" },
+        { name: "Government", href: "/industries/government" },
+        { name: "NGOs", href: "/industries/ngos" },
+        { name: "Hospitality", href: "/industries/hospitality" },
+        { name: "Banking", href: "/industries/banking" },
+        { name: "Manufacturing", href: "/industries/manufacturing" },
+        { name: "Telecommunications", href: "/industries/telecom" },
+        { name: "Logistics", href: "/industries/logistics" },
+      ]
+    },
+    {
+      title: "Resources",
+      links: [
+        { name: "Blog", href: "/blog" },
+        { name: "Case Studies", href: "/case-studies" },
+        { name: "Whitepapers", href: "/whitepapers" },
+        { name: "Documentation", href: "/docs" },
+        { name: "Guides & E-books", href: "/guides" },
+        { name: "FAQs", href: "/faq" },
+        { name: "Knowledge Base", href: "/knowledge-base" },
+        { name: "Downloads", href: "/downloads" },
+        { name: "Support Center", href: "/support" },
+      ]
+    },
+    {
+      title: "Company",
+      links: [
+        { name: "Leadership", href: "/team" },
+        { name: "Careers", href: "/careers" },
+        { name: "Partners", href: "/partners" },
+        { name: "Success Stories", href: "/success-stories" },
+        { name: "Events", href: "/events" },
+        { name: "Media Center", href: "/media" },
+        { name: "News & Announcements", href: "/news" },
+        { name: "Investors", href: "/investors" },
+      ]
+    },
+    {
+      title: "Support",
+      links: [
+        { name: "Contact Support", href: "/support/contact" },
+        { name: "Submit Ticket", href: "/support/ticket" },
+        { name: "Product Help Center", href: "/support/help" },
+        { name: "Community Forum", href: "/support/forum" },
+        { name: "Schedule Consultation", href: "/consultation" },
+        { name: "Contact Sales", href: "/contact-sales" },
+      ]
+    },
+    {
+      title: "Contact",
+      links: [
+        { name: "Contact Us", href: "/contact" },
+        { name: "Request Demo", href: "/request-demo" },
+        { name: "Become a Partner", href: "/become-partner" },
+        { name: "Join Our Team", href: "/careers" },
+        { name: "Phone: +231 776 836 689", href: "tel:+231776836689" },
+        { name: "Email: itechnetworkafrica@gmail.com", href: "mailto:itechnetworkafrica@gmail.com" },
+      ]
+    }
+  ];
+
   return (
-    <header className="fixed top-0 w-full z-50 flex flex-col transition-all duration-300">
-      {/* Top Utility Bar */}
-      <div className={`w-full bg-gray-950 text-gray-300 text-xs py-2 transition-all duration-300 ${scrolled ? "h-0 opacity-0 overflow-hidden py-0" : "opacity-100"}`}>
-        <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
-          <div className="flex items-center gap-6 hidden sm:flex">
-            <div className="flex items-center gap-2 hover:text-brand-green transition-colors cursor-pointer text-[10px] tracking-wider uppercase font-bold text-gray-400">
-              <span className="text-brand-green">Powered by</span> iTech Network Africa
-            </div>
-          </div>
-          <div className="flex items-center gap-4 w-full justify-between sm:w-auto sm:justify-end">
-            <span className="font-bold text-brand-green animate-pulse text-xs tracking-widest uppercase">Global Technology Ecosystem</span>
-            <div className="flex items-center gap-3">
-              <a href="#" className="hover:text-white transition-colors hidden md:block">Support</a>
-              <span className="text-gray-700 hidden md:block">|</span>
-              <a href="#" className="hover:text-white transition-colors hidden md:block">Careers</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Navbar */}
-      <nav
-        className={`w-full transition-all duration-300 ${
-          scrolled ? "bg-gray-950/95 backdrop-blur-xl shadow-lg border-b border-white/5 py-4" : "bg-transparent py-5"
-        }`}
-      >
-        <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
-          {/* Logo */}
-          <Link href="/">
-            <div className="flex items-center gap-4 cursor-pointer group">
-              <div className="relative flex items-center justify-center bg-white p-1.5 rounded-xl shadow-lg">
-                <img src="/images/gotecx-logo.png" alt="Gotecx Logo" className="h-8 md:h-10 w-auto group-hover:scale-105 transition-transform duration-300" />
-                <div className="absolute inset-0 bg-brand-green/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              </div>
-              <div className="hidden sm:flex flex-col">
-                 <span className={`font-black text-2xl tracking-tighter leading-none ${scrolled ? "text-white" : "text-white"}`}>
-                   GOTEC<span className="text-brand-green">X</span>
-                 </span>
-                 <span className="text-[9px] text-gray-400 tracking-[0.2em] font-bold uppercase mt-0.5">Global Ecosystem</span>
-              </div>
-            </div>
-          </Link>
-
-          {/* Desktop Nav - Modern Tech Slider */}
-          <div className="hidden lg:flex items-center gap-1 bg-white/5 backdrop-blur-md rounded-full px-2 py-1.5 border border-white/10 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)]">
-            {navLinks.map((link) => (
-              <div 
-                key={link.name} 
-                className="relative"
-                onMouseEnter={() => link.isDropdown && setActiveMenu(link.name)}
-                onMouseLeave={() => link.isDropdown && setActiveMenu(null)}
+    <>
+      <header className="fixed top-0 w-full z-40 flex flex-col transition-all duration-300">
+        {/* Main Navbar */}
+        <nav
+          className={`w-full transition-all duration-300 ${
+            scrolled ? "bg-gray-950/95 backdrop-blur-xl shadow-lg border-b border-white/5 py-4" : "bg-transparent py-5"
+          }`}
+        >
+          <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
+            {/* Logo & Menu Trigger */}
+            <div className="flex items-center gap-6">
+              <button
+                onClick={() => setIsOpen(true)}
+                className="flex items-center gap-3 group"
               >
-                {link.isDropdown ? (
-                  <button
-                    className={`relative px-4 py-2 text-sm font-semibold rounded-full transition-colors flex items-center gap-1.5 ${
-                      activeMenu === link.name
-                        ? "text-brand-green bg-white/10"
-                        : "text-white/90 hover:text-white hover:bg-white/10"
-                    }`}
-                  >
-                    {link.name}
-                    <ChevronRight className={`w-3.5 h-3.5 transition-transform duration-300 ${activeMenu === link.name ? "rotate-90" : "rotate-0"}`} />
-                    
-                    {/* Active indicator pill */}
-                    {activeMenu === link.name && (
-                      <motion.div 
-                        layoutId="nav-indicator"
-                        className="absolute inset-0 bg-white/5 rounded-full border border-white/10 -z-10"
-                        transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
-                      />
-                    )}
-                  </button>
-                ) : (
-                  <Link 
-                    href={link.href!}
-                    className={`relative px-4 py-2 text-sm font-semibold rounded-full transition-colors block ${
-                      location === link.href
-                        ? "text-brand-green bg-brand-green/10"
-                        : "text-white/90 hover:text-white hover:bg-white/10"
-                    }`}
-                  >
-                    {link.name}
-                    {location === link.href && (
-                      <motion.div 
-                        layoutId="nav-indicator"
-                        className="absolute inset-0 border-b-2 border-brand-green rounded-full -z-10 bg-brand-green/5"
-                        transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
-                      />
-                    )}
-                  </Link>
-                )}
-
-                {/* Dropdown Menu */}
-                {link.isDropdown && (
-                  <AnimatePresence>
-                    {activeMenu === link.name && (
-                      <motion.div 
-                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                        transition={{ duration: 0.2 }}
-                        className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-[320px]"
-                      >
-                        <div className="bg-gray-950 rounded-2xl shadow-2xl border border-white/10 p-2 relative overflow-hidden">
-                          <div className="absolute inset-0 bg-gradient-to-b from-brand-green/10 to-transparent pointer-events-none"></div>
-                          {link.items?.map((item) => (
-                            <Link key={item.name} href={item.href}>
-                              <div className="flex items-start gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors cursor-pointer group">
-                                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0 group-hover:bg-brand-green group-hover:text-white transition-colors border border-white/10">
-                                  <item.icon className="w-5 h-5 text-gray-400 group-hover:text-white" />
-                                </div>
-                                <div>
-                                  <div className="font-bold text-white text-sm group-hover:text-brand-green transition-colors">{item.name}</div>
-                                  <div className="text-xs text-gray-500 leading-tight mt-0.5">{item.desc}</div>
-                                </div>
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* Actions */}
-          <div className="hidden lg:flex items-center gap-4">
-            <Link href="/contact">
-              <Button
-                variant="outline"
-                className="font-bold rounded-full border border-white/20 text-white hover:bg-white hover:text-gray-900 bg-white/5 backdrop-blur-sm transition-all shadow-[0_0_15px_rgba(255,255,255,0.05)]"
-              >
-                Book Consultation
-              </Button>
-            </Link>
-            
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="text-white hover:bg-white/10 hover:text-white rounded-full border border-transparent hover:border-white/10"
-                >
-                  <Globe className="w-4 h-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="rounded-xl bg-gray-950 border-white/10 text-white">
-                <DropdownMenuItem onClick={() => changeLanguage("en")} className="font-medium cursor-pointer rounded-lg focus:bg-brand-green/20 focus:text-brand-green">English</DropdownMenuItem>
-                <DropdownMenuItem onClick={() => changeLanguage("fr")} className="font-medium cursor-pointer rounded-lg focus:bg-brand-green/20 focus:text-brand-green">Français</DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </div>
-
-          {/* Mobile Toggle */}
-          <button
-            className={`lg:hidden p-2 rounded-full backdrop-blur-sm border transition-colors ${
-              scrolled 
-                ? "text-white border-white/20 bg-white/5" 
-                : "text-white border-white/20 bg-black/20"
-            }`}
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
-        </div>
-      </nav>
-
-      {/* Mobile Menu - Full Screen Tech Overlay */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="lg:hidden fixed inset-0 bg-gray-950 z-40 flex flex-col"
-          >
-            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
-            <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-brand-green/20 rounded-full blur-[100px] pointer-events-none"></div>
-            
-            <div className="p-6 flex justify-between items-center relative z-10 border-b border-white/10">
-              <div className="flex items-center gap-3">
-                <div className="bg-white p-1.5 rounded-lg">
-                  <img src="/images/gotecx-logo.png" alt="Logo" className="h-6 w-auto" />
+                <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:bg-brand-green group-hover:text-white transition-all group-hover:scale-105 shadow-lg">
+                  <Menu className="w-5 h-5" />
                 </div>
-                <span className="font-black text-xl text-white tracking-tight">GOTEC<span className="text-brand-green">X</span></span>
-              </div>
-              <button 
-                onClick={() => setIsOpen(false)} 
-                className="text-gray-400 hover:text-white bg-white/10 p-2.5 rounded-full transition-colors"
-              >
-                <X className="w-5 h-5" />
+                <span className="text-white font-bold tracking-widest uppercase hidden sm:block group-hover:text-brand-green transition-colors">Menu</span>
               </button>
+
+              <Link href="/">
+                <div className="flex items-center gap-4 cursor-pointer group">
+                  <div className="relative flex items-center justify-center bg-white p-1.5 rounded-xl shadow-lg">
+                    <img src="/images/gotecx-logo.png" alt="Gotecx Logo" className="h-8 md:h-10 w-auto group-hover:scale-105 transition-transform duration-300" />
+                  </div>
+                  <div className="hidden lg:flex flex-col">
+                     <span className="font-black text-2xl tracking-tighter leading-none text-white">
+                       GOTEC<span className="text-brand-green">X</span>
+                     </span>
+                     <span className="text-[9px] text-gray-400 tracking-[0.2em] font-bold uppercase mt-0.5">Powered by iTech Network Africa</span>
+                  </div>
+                </div>
+              </Link>
             </div>
-            
-            <div className="flex-1 overflow-y-auto py-8 px-6 flex flex-col gap-6 relative z-10">
-              {navLinks.map((link, idx) => (
-                <motion.div 
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: idx * 0.1 }}
-                  key={link.name} 
-                  className="border-b border-white/5 pb-4 last:border-0"
+
+            {/* Actions */}
+            <div className="flex items-center gap-4">
+              <div className="hidden md:flex bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2 items-center gap-2 text-gray-400 focus-within:ring-1 focus-within:ring-brand-green focus-within:border-brand-green transition-all cursor-text w-64">
+                <Search className="w-4 h-4 shrink-0" />
+                <input 
+                  type="text" 
+                  placeholder="Search Gotecx..." 
+                  className="bg-transparent border-none outline-none text-sm text-white w-full placeholder:text-gray-500"
+                />
+              </div>
+
+              <Link href="/request-demo">
+                <Button
+                  className="hidden sm:flex bg-brand-green hover:bg-green-600 text-white rounded-full font-bold shadow-lg shadow-brand-green/20 border-none"
                 >
-                  {link.isDropdown ? (
-                    <div className="space-y-4">
-                      <div className="text-brand-green text-xs font-black uppercase tracking-widest">{link.name}</div>
-                      <div className="grid grid-cols-1 gap-3">
-                        {link.items?.map(item => (
-                          <Link 
-                            key={item.name} 
-                            href={item.href}
-                            onClick={() => setIsOpen(false)}
-                            className="flex items-center gap-4 bg-white/5 p-4 rounded-2xl active:bg-brand-green/20 transition-colors border border-white/5"
-                          >
-                            <div className="w-10 h-10 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center shrink-0 border border-brand-green/20">
-                              <item.icon className="w-5 h-5" />
-                            </div>
-                            <div>
-                              <div className="text-white font-bold">{item.name}</div>
-                              <div className="text-gray-400 text-xs">{item.desc}</div>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  ) : (
-                    <Link 
-                      href={link.href!}
-                      className="flex items-center justify-between text-white font-bold text-2xl py-2 group"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <span>{link.name}</span>
-                      <ChevronRight className="w-6 h-6 text-brand-green opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </Link>
-                  )}
-                </motion.div>
-              ))}
-            </div>
-            
-            <div className="p-6 border-t border-white/10 space-y-4 bg-black relative z-10">
-              <Link href="/contact">
-                <Button className="w-full bg-brand-green hover:bg-green-700 text-white rounded-full font-bold h-14 text-lg">
-                  Book Consultation
+                  Request Demo
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
+        </nav>
+      </header>
+
+      {/* Slide-out Navigation Overlay & Sidebar */}
+      <AnimatePresence>
+        {isOpen && (
+          <>
+            {/* Backdrop */}
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={closeMenu}
+              className="fixed inset-0 bg-gray-950/80 backdrop-blur-sm z-50"
+            />
+
+            {/* Sidebar */}
+            <motion.div 
+              initial={{ x: "-100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "-100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="fixed top-0 left-0 bottom-0 w-[85%] md:w-[450px] lg:w-[500px] bg-gray-950 border-r border-white/10 z-50 flex flex-col shadow-2xl overflow-hidden"
+            >
+              {/* Sidebar Header */}
+              <div className="p-6 md:p-8 flex justify-between items-center border-b border-white/10 relative">
+                <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-brand-green/10 rounded-full blur-[60px] pointer-events-none"></div>
+                
+                <div className="flex flex-col relative z-10">
+                  <img src="/images/gotecx-logo.png" alt="Gotecx Logo" className="h-10 w-auto object-contain self-start bg-white p-1 rounded-lg mb-3" />
+                  <span className="text-[10px] text-gray-400 font-bold uppercase tracking-[0.15em]">Powered by iTech Network Africa</span>
+                </div>
+                
+                <div className="flex items-center gap-3 relative z-10">
+                  <button className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-white/10 transition-colors">
+                    <Search className="w-4 h-4" />
+                  </button>
+                  <button 
+                    onClick={closeMenu}
+                    className="w-10 h-10 rounded-full bg-brand-green/10 border border-brand-green/20 flex items-center justify-center text-brand-green hover:bg-brand-green hover:text-white transition-colors"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+
+              {/* Accordion Menu */}
+              <div className="flex-1 overflow-y-auto custom-scrollbar">
+                <div className="p-6 md:p-8 flex flex-col gap-2">
+                  {menuData.map((section, idx) => {
+                    const isExpanded = expandedSection === section.title;
+                    
+                    return (
+                      <div key={idx} className="border-b border-white/5 pb-2 last:border-0">
+                        <button
+                          onClick={() => toggleSection(section.title)}
+                          className={`w-full flex justify-between items-center py-4 text-left transition-colors ${
+                            isExpanded ? "text-brand-green" : "text-white hover:text-gray-300"
+                          }`}
+                        >
+                          <span className="text-xl md:text-2xl font-bold uppercase tracking-tight">{section.title}</span>
+                          <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isExpanded ? "rotate-180" : ""}`} />
+                        </button>
+                        
+                        <AnimatePresence>
+                          {isExpanded && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.3 }}
+                              className="overflow-hidden"
+                            >
+                              <div className="flex flex-col gap-1 pb-6 pt-2">
+                                {section.links.map((link, linkIdx) => (
+                                  <Link 
+                                    key={linkIdx} 
+                                    href={link.href}
+                                    onClick={closeMenu}
+                                    className={`flex items-center gap-3 py-2.5 px-4 rounded-xl transition-all group ${
+                                      location === link.href ? "bg-white/10 text-white font-bold" : "text-gray-400 hover:text-white hover:bg-white/5"
+                                    }`}
+                                  >
+                                    <ArrowRight className={`w-4 h-4 opacity-0 -ml-2 group-hover:opacity-100 group-hover:ml-0 transition-all ${
+                                      location === link.href ? "opacity-100 ml-0 text-brand-green" : "text-brand-green"
+                                    }`} />
+                                    <span>{link.name}</span>
+                                    {link.badge && (
+                                      <span className="ml-auto text-[9px] font-black uppercase tracking-wider bg-brand-green/20 text-brand-green px-2 py-0.5 rounded-full">
+                                        {link.badge}
+                                      </span>
+                                    )}
+                                  </Link>
+                                ))}
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+              
+              {/* Sidebar Footer */}
+              <div className="p-6 md:p-8 bg-gray-900 border-t border-white/10 relative z-10 flex flex-col gap-4">
+                <Link href="/consultation">
+                  <Button className="w-full bg-brand-green hover:bg-green-600 text-white rounded-full font-bold h-12 uppercase tracking-wide">
+                    Schedule Consultation
+                  </Button>
+                </Link>
+                <div className="flex justify-between items-center text-xs font-medium text-gray-500">
+                  <span>© Gotecx {new Date().getFullYear()}</span>
+                  <div className="flex items-center gap-3">
+                    <button className="hover:text-white transition-colors">EN</button>
+                    <span>|</span>
+                    <button className="hover:text-white transition-colors">FR</button>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
-    </header>
+      
+      {/* Add global styles for scrollbar in menu */}
+      <style dangerouslySetInnerHTML={{__html: `
+        .custom-scrollbar::-webkit-scrollbar {
+          width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+          background: rgba(255, 255, 255, 0.02);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: rgba(255, 255, 255, 0.2);
+        }
+      `}} />
+    </>
   );
 }

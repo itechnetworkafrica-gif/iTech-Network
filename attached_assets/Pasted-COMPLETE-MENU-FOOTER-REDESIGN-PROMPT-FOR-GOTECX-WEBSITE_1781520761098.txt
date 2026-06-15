@@ -1,0 +1,826 @@
+COMPLETE MENU & FOOTER REDESIGN PROMPT FOR GOTECX WEBSITE
+
+You are a Senior Enterprise UX Architect, Product Designer, Frontend Engineer, and Information Architecture Specialist.
+
+Your task is to completely redesign, rebuild, and upgrade the entire website navigation system and footer system for the Gotecx website.
+
+The goal is to create a world-class enterprise experience comparable to Microsoft, Google Cloud, Salesforce, AWS, Oracle, Stripe, Shopify, HubSpot, and Vercel.
+
+IMPORTANT:
+
+Before making any changes, audit the existing website.
+
+Identify:
+
+• Existing pages
+• Existing navigation links
+• Existing footer links
+• Existing routes
+• Existing layouts
+• Existing content
+
+Do not remove pages that already exist.
+
+Improve existing pages.
+
+Automatically create any missing pages required by the navigation and footer architecture below.
+
+No dead links.
+
+No empty pages.
+
+Every menu item and footer link must connect to a real page.
+
+---
+
+BRAND INFORMATION
+
+Parent Company:
+iTech Network Africa
+
+Global Technology Brand:
+Gotecx
+
+Founded:
+Monrovia, Liberia
+
+Founder & Executive Director:
+Kerkulah Kerkulah
+
+Tagline:
+
+Empowering Businesses Through Technology
+
+Use the uploaded Gotecx and iTech Network Africa logos.
+
+Automatically extract the exact brand colors from the logos.
+
+Use those colors throughout the navigation and footer.
+
+Do not use generic colors.
+
+---
+
+PART 1 – ENTERPRISE MENU SYSTEM
+
+The navigation must become one of the strongest visual elements on the website.
+
+The navigation should feel premium, modern, futuristic, clean, and enterprise-grade.
+
+Inspired by:
+
+Google Cloud
+
+Microsoft
+
+AWS
+
+Salesforce
+
+HubSpot
+
+Oracle
+
+Stripe
+
+Vercel
+
+The navigation should instantly communicate:
+
+• Innovation
+• Trust
+• Global Scale
+• Enterprise Technology
+• Professionalism
+
+---
+
+MENU DESIGN STYLE
+
+Create a premium slide-out navigation inspired by the uploaded reference image.
+
+Menu should slide from the left.
+
+Use:
+
+• Glassmorphism
+• Frosted blur
+• Smooth animations
+• Elegant shadows
+• Enterprise typography
+• Rounded corners
+• Responsive design
+• Dark mode support
+• Light mode support
+
+Menu should occupy approximately:
+
+85% width on mobile
+
+450–500px on desktop
+
+---
+
+MENU HEADER
+
+Display:
+
+Gotecx Logo
+
+Small text:
+
+Powered by iTech Network Africa
+
+Include:
+
+Search Button
+
+Close Button
+
+Large visible close icon
+
+Smooth open and close animations
+
+---
+
+MENU STRUCTURE
+
+Use accordion navigation exactly like the reference image.
+
+Only one section remains expanded at a time.
+
+Smooth accordion animations.
+
+Premium hover effects.
+
+---
+
+HOME
+
+Home
+
+Request Demo
+
+Schedule Consultation
+
+Contact Sales
+
+---
+
+ABOUT
+
+About Us
+
+Our Story
+
+Vision & Mission
+
+Founder Message
+
+Leadership
+
+Company Timeline
+
+Global Presence
+
+Why Gotecx
+
+---
+
+SOLUTIONS
+
+Business Solutions
+
+Retail Solutions
+
+Restaurant Solutions
+
+Healthcare Solutions
+
+Education Solutions
+
+NGO Solutions
+
+Government Solutions
+
+Enterprise Solutions
+
+SME Solutions
+
+Technology Solutions
+
+AI Solutions
+
+Automation Solutions
+
+Cloud Solutions
+
+Cybersecurity
+
+Data Analytics
+
+Digital Transformation
+
+---
+
+PRODUCTS
+
+Gotecx POS
+
+Product Features
+
+Product Documentation
+
+Product Roadmap
+
+Request Demo
+
+Future Products
+
+Gotecx AI
+
+Gotecx CRM
+
+Gotecx ERP
+
+Gotecx Analytics
+
+Gotecx Cloud
+
+Mark future products:
+
+Coming Soon
+
+---
+
+SERVICES
+
+Website Development
+
+Mobile App Development
+
+Software Development
+
+Cloud Solutions
+
+AI Solutions
+
+Cybersecurity
+
+Digital Marketing
+
+Branding & Design
+
+Business Automation
+
+IT Consulting
+
+Enterprise Technology Consulting
+
+---
+
+INDUSTRIES
+
+Retail
+
+Healthcare
+
+Education
+
+Government
+
+NGOs
+
+Hospitality
+
+Banking
+
+Manufacturing
+
+Telecommunications
+
+Logistics
+
+---
+
+RESOURCES
+
+Blog
+
+Case Studies
+
+Whitepapers
+
+Documentation
+
+Guides & E-books
+
+FAQs
+
+Knowledge Base
+
+Downloads
+
+Support Center
+
+---
+
+COMPANY
+
+Leadership
+
+Careers
+
+Partners
+
+Success Stories
+
+Events
+
+Media Center
+
+News & Announcements
+
+Investors
+
+---
+
+SUPPORT
+
+Contact Support
+
+Submit Ticket
+
+Product Help Center
+
+Community Forum
+
+Schedule Consultation
+
+Contact Sales
+
+---
+
+CONTACT
+
+Contact Us
+
+Request Demo
+
+Become a Partner
+
+Join Our Team
+
+Phone:
++231 776 836 689
+
+Email:
+itechnetworkafrica@gmail.com
+
+---
+
+MOBILE EXPERIENCE
+
+Create a premium full-screen navigation experience.
+
+Include:
+
+Logo
+
+Accordion menu
+
+Social icons
+
+Theme toggle
+
+Language selector
+
+Contact button
+
+Request Demo button
+
+Large touch-friendly design
+
+Smooth animations
+
+---
+
+SEARCH EXPERIENCE
+
+Allow users to search:
+
+Products
+
+Solutions
+
+Services
+
+Blog Posts
+
+Resources
+
+Documentation
+
+Knowledge Base
+
+Support Articles
+
+Display results instantly.
+
+Include:
+
+Recent searches
+
+Popular searches
+
+Suggested pages
+
+---
+
+PART 2 – ENTERPRISE FOOTER SYSTEM
+
+Completely redesign the footer using the uploaded reference image.
+
+The footer should become a secondary navigation system.
+
+Large.
+
+Premium.
+
+Modern.
+
+Enterprise-grade.
+
+Organized.
+
+Responsive.
+
+---
+
+FOOTER HERO SECTION
+
+Display:
+
+Empowering Businesses Through Technology
+
+Description:
+
+Gotecx, powered by iTech Network Africa, delivers innovative technology solutions that help businesses, organizations, governments, NGOs, startups, SMEs, and enterprises grow, automate, and scale globally.
+
+---
+
+SOCIAL SECTION
+
+Display:
+
+Follow Us
+
+Include large icons:
+
+Facebook
+
+LinkedIn
+
+Instagram
+
+X
+
+YouTube
+
+Hover animations.
+
+Glow effects.
+
+Smooth transitions.
+
+---
+
+FOOTER ACCORDION SECTIONS
+
+Use accordion sections exactly like the reference image.
+
+Desktop:
+
+Multi-column + accordion hybrid.
+
+Mobile:
+
+Full accordion system.
+
+---
+
+ABOUT GOTECX
+
+About Us
+
+Our Story
+
+Vision & Mission
+
+Founder Message
+
+Leadership
+
+Company Timeline
+
+Careers
+
+Partners
+
+Global Presence
+
+---
+
+SOLUTIONS
+
+Retail Solutions
+
+Restaurant Solutions
+
+Healthcare Solutions
+
+Education Solutions
+
+NGO Solutions
+
+Government Solutions
+
+Enterprise Solutions
+
+SME Solutions
+
+AI Solutions
+
+Cloud Solutions
+
+Digital Transformation
+
+Automation Solutions
+
+---
+
+PRODUCTS
+
+Gotecx POS
+
+Product Features
+
+Documentation
+
+Product Roadmap
+
+Request Demo
+
+Gotecx AI
+
+Gotecx CRM
+
+Gotecx ERP
+
+Gotecx Analytics
+
+Gotecx Cloud
+
+---
+
+SERVICES
+
+Website Development
+
+Mobile App Development
+
+Software Development
+
+Cloud Solutions
+
+AI Solutions
+
+Cybersecurity
+
+Digital Marketing
+
+Branding & Design
+
+Business Automation
+
+IT Consulting
+
+---
+
+INDUSTRIES
+
+Retail
+
+Healthcare
+
+Education
+
+Government
+
+NGOs
+
+Hospitality
+
+Banking
+
+Manufacturing
+
+Telecommunications
+
+Logistics
+
+---
+
+RESOURCES
+
+Blog
+
+Case Studies
+
+Whitepapers
+
+Documentation
+
+Guides
+
+Knowledge Base
+
+Downloads
+
+FAQs
+
+Support Center
+
+---
+
+COMPANY
+
+Leadership
+
+Careers
+
+Partners
+
+Success Stories
+
+Events
+
+Media Center
+
+News & Announcements
+
+Investors
+
+---
+
+SUPPORT
+
+Contact Support
+
+Submit Ticket
+
+Product Help Center
+
+Community Forum
+
+Contact Sales
+
+Schedule Consultation
+
+---
+
+LEGAL
+
+Privacy Policy
+
+Terms & Conditions
+
+Cookie Policy
+
+Acceptable Use Policy
+
+Disclaimer
+
+Accessibility Statement
+
+---
+
+FOOTER BRAND SECTION
+
+Display both logos prominently.
+
+Gotecx Logo
+
+iTech Network Africa Logo
+
+Text:
+
+Powered by iTech Network Africa
+
+Founded in Monrovia, Liberia
+
+Founder & Executive Director:
+Kerkulah Kerkulah
+
+---
+
+NEWSLETTER SECTION
+
+Headline:
+
+Stay Connected With Gotecx
+
+Include:
+
+Newsletter signup form
+
+Email field
+
+Subscribe button
+
+Privacy notice
+
+---
+
+CONTACT SECTION
+
+Phone:
++231 776 836 689
+
+Email:
+itechnetworkafrica@gmail.com
+
+Buttons:
+
+Contact Sales
+
+Request Demo
+
+Become a Partner
+
+Join Our Team
+
+---
+
+FOOTER BOTTOM BAR
+
+Display:
+
+© 2026 Gotecx. All Rights Reserved.
+
+Powered by iTech Network Africa.
+
+Include:
+
+Privacy Policy
+
+Terms & Conditions
+
+Cookie Policy
+
+Accessibility
+
+Sitemap
+
+---
+
+BACK TO TOP BUTTON
+
+Create a floating back-to-top button inspired by the reference image.
+
+Features:
+
+• Smooth scroll
+• Hover animation
+• Premium appearance
+• Visible only after scrolling
+
+---
+
+PAGE CREATION REQUIREMENT
+
+Audit the entire website.
+
+If any menu page or footer page does not exist:
+
+Automatically create it.
+
+Create unique content for every page.
+
+No placeholder pages.
+
+No dead links.
+
+No empty pages.
+
+Every page must be connected to the navigation and footer.
+
+---
+
+FINAL EXPECTATION
+
+The final menu and footer should make Gotecx look like a global enterprise technology company.
+
+Navigation and footer should become the primary information architecture of the website.
+
+Everything must be modern, responsive, accessible, visually stunning, and worthy of a future billion-dollar technology brand.
