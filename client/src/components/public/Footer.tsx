@@ -235,7 +235,7 @@ export default function Footer() {
             <div>
               <span className="text-xs font-bold text-brand-green tracking-[0.2em] uppercase block mb-1">Powered by iTech Network Africa</span>
               <span className="text-sm text-gray-400 block">Founded in Monrovia, Liberia</span>
-              <span className="text-sm text-gray-400 block mt-2">Founder & Executive Director: <strong>Kerkulah Kerkulah</strong></span>
+              <span className="text-sm text-gray-400 block mt-2">Founder & Executive Director: <strong>Wilmot Kerkulah</strong></span>
             </div>
           </div>
 

@@ -254,7 +254,7 @@ export default function PublicNavbar() {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 left-0 bottom-0 w-[85%] md:w-[450px] lg:w-[500px] bg-gray-950 border-r border-white/10 z-50 flex flex-col shadow-2xl overflow-hidden"
+              className="fixed top-0 left-0 bottom-0 w-full lg:w-[600px] bg-gray-950 border-r border-white/10 z-50 flex flex-col shadow-2xl overflow-hidden"
             >
               {/* Sidebar Header */}
               <div className="p-6 md:p-8 flex justify-between items-center border-b border-white/10 relative">

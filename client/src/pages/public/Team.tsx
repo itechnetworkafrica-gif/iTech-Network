@@ -6,7 +6,7 @@ import { Link } from "wouter";
 
 export default function Team() {
   const teamMembers = [
-    { name: "Kerkulah Wilmot", role: "Founder & CEO", desc: "Visionary leader driving Gotecx's global expansion strategy and product ecosystem.", img: "https://i.pravatar.cc/300?img=11", linkedin: "#" },
+    { name: "Wilmot Kerkulah", role: "Founder & CEO", desc: "Visionary leader driving Gotecx's global expansion strategy and product ecosystem.", img: "https://i.pravatar.cc/300?img=11", linkedin: "#" },
     { name: "Sarah Johnson", role: "Chief Technology Officer", desc: "Former AWS engineer leading the development of scalable enterprise architectures.", img: "https://i.pravatar.cc/300?img=47", linkedin: "#" },
     { name: "Michael Osei", role: "VP of Product", desc: "Directing the Gotecx POS and AI integration roadmaps.", img: "https://i.pravatar.cc/300?img=12", linkedin: "#" },
     { name: "David Kamara", role: "Head of Enterprise Sales", desc: "Connecting global organizations with transformative technology solutions.", img: "https://i.pravatar.cc/300?img=14", linkedin: "#" },
@@ -54,7 +54,7 @@ export default function Team() {
                   <img src="https://i.pravatar.cc/300?img=11" alt="CEO" className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <h4 className="font-black text-gray-900 uppercase">Kerkulah Wilmot</h4>
+                  <h4 className="font-black text-gray-900 uppercase">Wilmot Kerkulah</h4>
                   <p className="text-sm text-gray-500">Founder & CEO</p>
                 </div>
               </div>

@@ -1,4 +1,4 @@
-import { useLocation } from "wouter";
+import { useLocation, Link } from "wouter";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -65,12 +65,16 @@ export default function DynamicPage() {
               <p className="text-green-50/80 mb-8 text-sm leading-relaxed">
                 Connect with our enterprise team to discuss how {title} can drive your business forward.
               </p>
-              <Button className="w-full bg-brand-green hover:bg-green-600 text-white rounded-full h-12 font-bold mb-4">
-                Schedule Consultation
-              </Button>
-              <Button variant="outline" className="w-full border-white/20 text-white hover:bg-white hover:text-gray-900 rounded-full h-12 font-bold">
-                Request Demo
-              </Button>
+              <Link href="/consultation">
+                <Button className="w-full bg-brand-green hover:bg-green-600 text-white rounded-full h-12 font-bold mb-4">
+                  Schedule Consultation
+                </Button>
+              </Link>
+              <Link href="/request-demo">
+                <Button variant="outline" className="w-full border-white/20 text-white hover:bg-white hover:text-gray-900 rounded-full h-12 font-bold">
+                  Request Demo
+                </Button>
+              </Link>
             </div>
             
             <div className="bg-gray-900 p-8 rounded-3xl border border-gray-800">
