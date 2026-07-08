@@ -6,11 +6,11 @@ import { Link } from "wouter";
 
 export default function Team() {
   const teamMembers = [
-    { name: "Wilmot Kerkulah", role: "Founder & CEO", desc: "Visionary leader driving Gotecx's global expansion strategy and product ecosystem.", img: "https://facebook_profile_no_crop.jpg?", linkedin: "#" },
-    { name: "Foday Kabah", role: "Chief Technology Officer", desc: "Former AWS engineer leading the development of scalable enterprise architectures.", img: "https://i.pravatar.cc/300?img=47", linkedin: "#" },
-    { name: "AlvinaDahn", role: "Finance Officer", desc: "Directing the Gotecx | iTech Network Africa finances.", img: "https://i.pravatar.cc/300?img=12", linkedin: "#" },
+    { name: "Wilmot Kerkulah", role: "Founder & CEO", desc: "Visionary leader driving Gotecx's global expansion strategy and product ecosystem.", img: "https://share.google/CSbJJSo7JASftXJ56", linkedin: "#" },
+    { name: "Foday Kabah", role: "Chief Technology Officer", desc: "Former AWS engineer leading the development of scalable enterprise architectures.", img: "https://share.google/YPRvAwp0dhvjCm0Ff", linkedin: "#" },
+    { name: "Alvina Dahn", role: "Finance Officer", desc: "Directing the Gotecx | iTech Network Africa finances.", img: "https://share.google/ogZDEvFMaLr4o9FHM", linkedin: "#" },
     { name: "David Kamara", role: "Head of Enterprise Sales", desc: "Connecting global organizations with transformative technology solutions.", img: "https://i.pravatar.cc/300?img=14", linkedin: "#" },
-    { name: "Grace Oye", role: "Chief Marketing Officer", desc: "Building the Gotecx brand presence across international markets.", img: "https://i.pravatar.cc/300?img=20", linkedin: "#" },
+    { name: "James Kerkula", role: "Chief Marketing Officer", desc: "Building the Gotecx brand presence across international markets.", img: "https://i.pravatar.cc/300?img=20", linkedin: "#" },
     { name: "Emmanuel Mensah", role: "Director of Cybersecurity", desc: "Ensuring zero-trust protocols and enterprise-grade data protection.", img: "https://i.pravatar.cc/300?img=33", linkedin: "#" },
     { name: "Fatima Diallo", role: "Head of AI Research", desc: "Leading the innovation lab focused on machine learning and predictive analytics.", img: "https://i.pravatar.cc/300?img=41", linkedin: "#" },
     { name: "Samuel Doe", role: "Lead Systems Architect", desc: "Designing high-availability cloud deployments for our largest clients.", img: "https://i.pravatar.cc/300?img=52", linkedin: "#" }
