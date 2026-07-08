@@ -6,9 +6,9 @@ import { Link } from "wouter";
 
 export default function Team() {
   const teamMembers = [
-    { name: "Wilmot Kerkulah", role: "Founder & CEO", desc: "Visionary leader driving Gotecx's global expansion strategy and product ecosystem.", img: "https://i.pravatar.cc/300?img=11", linkedin: "#" },
-    { name: "Sarah Johnson", role: "Chief Technology Officer", desc: "Former AWS engineer leading the development of scalable enterprise architectures.", img: "https://i.pravatar.cc/300?img=47", linkedin: "#" },
-    { name: "Michael Osei", role: "VP of Product", desc: "Directing the Gotecx POS and AI integration roadmaps.", img: "https://i.pravatar.cc/300?img=12", linkedin: "#" },
+    { name: "Wilmot Kerkulah", role: "Founder & CEO", desc: "Visionary leader driving Gotecx's global expansion strategy and product ecosystem.", img: "https://facebook_profile_no_crop.jpg?", linkedin: "#" },
+    { name: "Foday Kabah", role: "Chief Technology Officer", desc: "Former AWS engineer leading the development of scalable enterprise architectures.", img: "https://i.pravatar.cc/300?img=47", linkedin: "#" },
+    { name: "AlvinaDahn", role: "Finance Officer", desc: "Directing the Gotecx | iTech Network Africa finances.", img: "https://i.pravatar.cc/300?img=12", linkedin: "#" },
     { name: "David Kamara", role: "Head of Enterprise Sales", desc: "Connecting global organizations with transformative technology solutions.", img: "https://i.pravatar.cc/300?img=14", linkedin: "#" },
     { name: "Grace Oye", role: "Chief Marketing Officer", desc: "Building the Gotecx brand presence across international markets.", img: "https://i.pravatar.cc/300?img=20", linkedin: "#" },
     { name: "Emmanuel Mensah", role: "Director of Cybersecurity", desc: "Ensuring zero-trust protocols and enterprise-grade data protection.", img: "https://i.pravatar.cc/300?img=33", linkedin: "#" },
