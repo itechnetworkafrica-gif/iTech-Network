@@ -71,16 +71,16 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
-            <Button size="lg" className="bg-brand-green text-white hover:bg-green-600 h-16 px-10 text-lg rounded-full transition-all hover:scale-105 font-bold shadow-[0_0_30px_rgba(55,182,38,0.3)] group w-full sm:w-auto" asChild>
-              <Link href="#ecosystem">
+            <Link href="#ecosystem">
+              <Button size="lg" className="bg-brand-green text-white hover:bg-green-600 h-16 px-10 text-lg rounded-full transition-all hover:scale-105 font-bold shadow-[0_0_30px_rgba(55,182,38,0.3)] group w-full sm:w-auto cursor-pointer">
                 Explore Ecosystem <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Button>
-            <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white hover:text-gray-900 h-16 px-10 text-lg rounded-full transition-all font-bold backdrop-blur-sm w-full sm:w-auto" asChild>
-              <Link href="/contact">
+              </Button>
+            </Link>
+            <Link href="/consultation">
+              <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white hover:text-gray-900 h-16 px-10 text-lg rounded-full transition-all font-bold backdrop-blur-sm w-full sm:w-auto cursor-pointer">
                 Book Consultation
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -179,9 +179,11 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-                <Button className="w-full bg-gray-950 text-white hover:bg-brand-green rounded-xl h-14 font-bold text-lg" asChild>
-                  <Link href="/pos-demo">View Platform Demo</Link>
-                </Button>
+                <Link href="/pos-demo" className="w-full">
+                  <Button className="w-full bg-gray-950 text-white hover:bg-brand-green rounded-xl h-14 font-bold text-lg cursor-pointer">
+                    View Platform Demo
+                  </Button>
+                </Link>
               </div>
             </div>
 
@@ -197,7 +199,7 @@ export default function Home() {
                   </div>
                   <span className="px-3 py-1 bg-white/10 text-brand-green text-xs font-bold rounded-full border border-brand-green/30">Innovation Initiative</span>
                 </div>
-                <p className="text-green-400 font-bold text-lg mb-4">Intelligence For The Modern World.</p>
+                <p className="text-brand-green font-bold text-lg mb-4">Intelligence For The Modern World.</p>
                 <p className="text-gray-400 mb-8 leading-relaxed">
                   A next-generation AI initiative focused on helping businesses improve productivity, decision-making, automation, customer engagement, and operational efficiency through intelligent technologies and R&D.
                 </p>
@@ -208,9 +210,11 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-                <Button variant="outline" className="w-full border-white/20 text-white hover:bg-white hover:text-gray-950 rounded-xl h-14 font-bold text-lg" asChild>
-                  <Link href="/services">Explore AI Capabilities</Link>
-                </Button>
+                <Link href="/services" className="w-full">
+                  <Button variant="outline" className="w-full border-white/20 text-white hover:bg-white hover:text-gray-950 rounded-xl h-14 font-bold text-lg cursor-pointer">
+                    Explore AI Capabilities
+                  </Button>
+                </Link>
               </div>
             </div>
 
@@ -260,9 +264,11 @@ export default function Home() {
               <p className="text-gray-400 text-lg leading-relaxed mb-8">
                 We engineer trust. From startup innovators to government institutions, our partners rely on our enterprise mindset and global vision.
               </p>
-              <Button className="bg-brand-green hover:bg-green-600 text-white rounded-full h-14 px-8 font-bold text-lg shadow-lg shadow-brand-green/20 mb-8 lg:mb-0">
-                Partner With Us
-              </Button>
+              <Link href="/consultation">
+                <Button className="bg-brand-green hover:bg-green-600 text-white rounded-full h-14 px-8 font-bold text-lg shadow-lg shadow-brand-green/20 mb-8 lg:mb-0 cursor-pointer">
+                  Partner With Us
+                </Button>
+              </Link>
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">

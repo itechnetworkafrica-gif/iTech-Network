@@ -6,14 +6,14 @@ import { Link } from "wouter";
 
 export default function Team() {
   const teamMembers = [
-    { name: "Wilmot Kerkulah", role: "Founder & CEO", desc: "Visionary leader driving Gotecx's global expansion strategy and product ecosystem.", img: "https://share.google/CSbJJSo7JASftXJ56", linkedin: "#" },
-    { name: "Foday Kabah", role: "Chief Technology Officer", desc: "Former AWS engineer leading the development of scalable enterprise architectures.", img: "https://share.google/YPRvAwp0dhvjCm0Ff", linkedin: "#" },
-    { name: "Alvina Dahn", role: "Finance Officer", desc: "Directing the Gotecx | iTech Network Africa finances.", img: "https://share.google/ogZDEvFMaLr4o9FHM", linkedin: "#" },
-    { name: "David Kamara", role: "Head of Enterprise Sales", desc: "Connecting global organizations with transformative technology solutions.", img: "https://i.pravatar.cc/300?img=14", linkedin: "#" },
-    { name: "James Kerkula", role: "Chief Marketing Officer", desc: "Building the Gotecx brand presence across international markets.", img: "https://i.pravatar.cc/300?img=20", linkedin: "#" },
-    { name: "Emmanuel Mensah", role: "Director of Cybersecurity", desc: "Ensuring zero-trust protocols and enterprise-grade data protection.", img: "https://i.pravatar.cc/300?img=33", linkedin: "#" },
-    { name: "Fatima Diallo", role: "Head of AI Research", desc: "Leading the innovation lab focused on machine learning and predictive analytics.", img: "https://i.pravatar.cc/300?img=41", linkedin: "#" },
-    { name: "Samuel Doe", role: "Lead Systems Architect", desc: "Designing high-availability cloud deployments for our largest clients.", img: "https://i.pravatar.cc/300?img=52", linkedin: "#" }
+    { name: "Wilmot Kerkulah", role: "Founder & CEO", desc: "Visionary leader driving Gotecx's global expansion strategy and product ecosystem.", img: "/images/team_ceo.jpg", fallback: "https://i.pravatar.cc/300?img=11", linkedin: "#" },
+    { name: "Foday Kabah", role: "Chief Technology Officer", desc: "Former AWS engineer leading the development of scalable enterprise architectures.", img: "/images/team_cto.jpg", fallback: "https://i.pravatar.cc/300?img=12", linkedin: "#" },
+    { name: "Alvina Dahn", role: "Finance Officer", desc: "Directing the Gotecx | iTech Network Africa finances.", img: "/images/profile_1.jpg", fallback: "https://i.pravatar.cc/300?img=5", linkedin: "#" },
+    { name: "David Kamara", role: "Head of Enterprise Sales", desc: "Connecting global organizations with transformative technology solutions.", img: "/images/team_lead.jpg", fallback: "https://i.pravatar.cc/300?img=14", linkedin: "#" },
+    { name: "James Kerkula", role: "Chief Marketing Officer", desc: "Building the Gotecx brand presence across international markets.", img: "/images/profile_2.jpg", fallback: "https://i.pravatar.cc/300?img=20", linkedin: "#" },
+    { name: "Emmanuel Mensah", role: "Director of Cybersecurity", desc: "Ensuring zero-trust protocols and enterprise-grade data protection.", img: "/images/team_dev.jpg", fallback: "https://i.pravatar.cc/300?img=33", linkedin: "#" },
+    { name: "Fatima Diallo", role: "Head of AI Research", desc: "Leading the innovation lab focused on machine learning and predictive analytics.", img: "/images/profile_3.jpg", fallback: "https://i.pravatar.cc/300?img=41", linkedin: "#" },
+    { name: "Samuel Doe", role: "Lead Systems Architect", desc: "Designing high-availability cloud deployments for our largest clients.", img: "/images/profile_4.jpg", fallback: "https://i.pravatar.cc/300?img=52", linkedin: "#" }
   ];
 
   return (
@@ -83,7 +83,7 @@ export default function Team() {
             {teamMembers.map((member, i) => (
               <div key={i} className="group relative overflow-hidden rounded-[2.5rem] bg-gray-50 shadow-sm border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
                 <div className="aspect-square overflow-hidden bg-gray-100 relative">
-                  <img src={member.img} alt={member.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
+                  <img src={member.img} onError={(e) => { e.currentTarget.src = member.fallback || "https://i.pravatar.cc/300"; }} alt={member.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-900/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
                   
                   <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-[-10px] group-hover:translate-y-0">
@@ -120,9 +120,11 @@ export default function Team() {
               We are constantly looking for exceptional engineers, strategists, and visionaries to help us build the global technology ecosystem.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
-              <Button size="lg" className="bg-gray-950 text-white hover:bg-gray-800 rounded-2xl px-10 h-16 text-sm font-black uppercase tracking-widest shadow-xl hover:-translate-y-1 transition-transform w-full sm:w-auto">
-                View Open Positions
-              </Button>
+              <Link href="/careers">
+                <Button size="lg" className="bg-gray-950 text-white hover:bg-gray-800 rounded-2xl px-10 h-16 text-sm font-black uppercase tracking-widest shadow-xl hover:-translate-y-1 transition-transform w-full sm:w-auto">
+                  View Open Positions
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

@@ -177,8 +177,29 @@ export default function PublicNavbar() {
 
   return (
     <>
-      <header className="fixed top-0 w-full z-40 flex flex-col transition-all duration-300">
-        {/* Main Navbar */}
+    <header className="fixed top-0 w-full z-40 flex flex-col transition-all duration-300">
+      {/* Top Utility Bar (Above Header) */}
+      <div className={`w-full bg-brand-green/10 text-brand-green text-xs py-2 transition-all duration-300 border-b border-brand-green/20 ${scrolled ? "h-0 opacity-0 overflow-hidden py-0 border-transparent" : "opacity-100"}`}>
+        <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2 hover:text-white transition-colors cursor-pointer text-[10px] tracking-widest uppercase font-bold text-gray-300">
+              <span className="text-brand-green">Powered by</span> iTech Network Africa
+            </div>
+          </div>
+          <div className="flex items-center gap-4">
+            <span className="font-bold animate-pulse text-[10px] sm:text-xs tracking-widest uppercase hidden sm:block">Global Technology Ecosystem</span>
+            <div className="flex items-center gap-3">
+              <Link href="/support/contact" className="hover:text-white transition-colors">Support</Link>
+              <span className="text-brand-green/50">|</span>
+              <Link href="/careers" className="hover:text-white transition-colors">Careers</Link>
+              <span className="text-brand-green/50">|</span>
+              <Link href="/partners" className="hover:text-white transition-colors">Partners</Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navbar */}
         <nav
           className={`w-full transition-all duration-300 ${
             scrolled ? "bg-gray-950/95 backdrop-blur-xl shadow-lg border-b border-white/5 py-4" : "bg-transparent py-5"
@@ -227,7 +248,7 @@ export default function PublicNavbar() {
                 <Button
                   className="hidden sm:flex bg-brand-green hover:bg-green-600 text-white rounded-full font-bold shadow-lg shadow-brand-green/20 border-none"
                 >
-                  Request Demo
+                  Get Started
                 </Button>
               </Link>
             </div>
