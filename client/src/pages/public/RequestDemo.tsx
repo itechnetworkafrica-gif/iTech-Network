@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MonitorPlay, CheckCircle2, ArrowRight } from "lucide-react";
 import PublicNavbar from "@/components/public/PublicNavbar";
-import PublicFooter from "@/components/public/PublicFooter";
+import Footer from "@/components/public/Footer";
 
 export default function RequestDemo() {
   return (
@@ -122,7 +122,7 @@ export default function RequestDemo() {
         </div>
       </main>
       
-      <PublicFooter />
+      <Footer />
     </div>
   );
 }

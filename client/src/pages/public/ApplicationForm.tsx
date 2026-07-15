@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Briefcase, CheckCircle2, ArrowRight, Upload } from "lucide-react";
 import PublicNavbar from "@/components/public/PublicNavbar";
-import PublicFooter from "@/components/public/PublicFooter";
+import Footer from "@/components/public/Footer";
 
 export default function ApplicationForm() {
   return (
@@ -131,7 +131,7 @@ export default function ApplicationForm() {
         </div>
       </main>
       
-      <PublicFooter />
+      <Footer />
     </div>
   );
 }

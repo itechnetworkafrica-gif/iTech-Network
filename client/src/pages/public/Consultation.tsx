@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { CalendarDays, CheckCircle2, ArrowRight } from "lucide-react";
 import PublicNavbar from "@/components/public/PublicNavbar";
-import PublicFooter from "@/components/public/PublicFooter";
+import Footer from "@/components/public/Footer";
 
 export default function Consultation() {
   return (
@@ -118,7 +118,7 @@ export default function Consultation() {
         </div>
       </main>
       
-      <PublicFooter />
+      <Footer />
     </div>
   );
 }
