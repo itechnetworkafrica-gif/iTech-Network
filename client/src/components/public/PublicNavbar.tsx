@@ -244,7 +244,16 @@ export default function PublicNavbar() {
                 />
               </div>
 
-              <Link href="/request-demo">
+              {/* Mobile Get Started */}
+              <Link href="/consultation">
+                <Button
+                  className="flex sm:hidden bg-brand-green hover:bg-green-600 text-white rounded-full font-bold shadow-lg shadow-brand-green/20 border-none text-xs h-8 px-4"
+                >
+                  Get Started
+                </Button>
+              </Link>
+
+              <Link href="/consultation">
                 <Button
                   className="hidden sm:flex bg-brand-green hover:bg-green-600 text-white rounded-full font-bold shadow-lg shadow-brand-green/20 border-none"
                 >

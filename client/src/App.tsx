@@ -25,6 +25,11 @@ import Booking from "@/pages/public/Booking";
 import Store from "@/pages/public/Store";
 import POSDemo from "@/pages/public/POSDemo";
 
+// New Form Pages
+import RequestDemo from "@/pages/public/RequestDemo";
+import Consultation from "@/pages/public/Consultation";
+import ApplicationForm from "@/pages/public/ApplicationForm";
+
 // New Corporate Pages
 import Solutions from "@/pages/public/Solutions";
 import Industries from "@/pages/public/Industries";
@@ -60,6 +65,11 @@ function Router() {
         <Route path="/store" component={Store} />
         <Route path="/pos-demo" component={POSDemo} />
         <Route path="/verify-certificate" component={VerifyCertificate} />
+        
+        {/* Form Routes */}
+        <Route path="/request-demo" component={RequestDemo} />
+        <Route path="/consultation" component={Consultation} />
+        <Route path="/application" component={ApplicationForm} />
         
         {/* New Corporate Routes */}
         <Route path="/solutions" component={Solutions} />
