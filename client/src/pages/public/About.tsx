@@ -46,15 +46,17 @@ export default function About() {
       </section>
 
       {/* The Gotecx & iTech Network Relationship */}
-      <section className="py-24 bg-white text-gray-900 relative">
-        <div className="container mx-auto px-4 md:px-8 max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
+      <section className="py-24 bg-white text-gray-900 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gray-100 rounded-full blur-[100px] pointer-events-none"></div>
+        
+        <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
+          <div className="grid lg:grid-cols-12 gap-16 items-center">
+            <div className="lg:col-span-7">
               <p className="text-brand-green font-mono text-sm tracking-[0.3em] uppercase mb-4">// Company Story</p>
               <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight leading-tight mb-8">One Foundation.<br/>Global Scale.</h2>
               <div className="space-y-6 text-gray-600 leading-relaxed text-lg">
                 <p>
-                  Founded by a group of passionate technologists, <strong className="text-gray-900">iTech Network Africa</strong> began with a clear mission: to provide high-quality engineering and bridge the digital divide in Africa.
+                  Founded by a group of passionate technologists led by <strong>Wilmot Kerkulah</strong>, <strong className="text-gray-900">iTech Network Africa</strong> began with a clear mission: to provide high-quality engineering and bridge the digital divide in Africa.
                 </p>
                 <p>
                   As our solutions grew in complexity and demand, we realized our technology had the power to compete on a global scale. This led to the birth of <strong className="text-gray-900">Gotecx</strong> — our flagship global technology ecosystem.
@@ -62,25 +64,23 @@ export default function About() {
                 <p>
                   Today, iTech Network Africa serves as the foundational parent company, while Gotecx represents our suite of scalable platforms, AI solutions, smart POS systems, and enterprise software designed for the global market.
                 </p>
+                <div className="bg-gray-50 border-l-4 border-brand-green p-6 rounded-r-2xl my-8">
+                  <p className="font-bold text-gray-900 text-xl italic">
+                    "We don't just build software. We engineer the foundational infrastructure that allows businesses to scale without friction."
+                  </p>
+                  <span className="block mt-4 text-sm font-bold uppercase tracking-widest text-brand-green">— Wilmot Kerkulah, Founder & CEO</span>
+                </div>
               </div>
             </div>
-            <div className="relative">
-              <div className="absolute inset-0 bg-brand-green/20 blur-3xl rounded-full transform rotate-45"></div>
-              <div className="bg-gray-950 p-10 rounded-[3rem] relative z-10 border border-white/10 shadow-2xl text-white">
-                <div className="space-y-8">
-                  <div className="border-b border-white/10 pb-8">
-                    <span className="text-brand-green font-bold text-sm tracking-widest uppercase mb-2 block">The Parent</span>
-                    <h3 className="text-3xl font-black mb-2">iTech Network Africa</h3>
-                    <p className="text-gray-400">The founding organization. Focused on regional infrastructure, education, and foundational engineering.</p>
-                  </div>
-                  <div className="pt-2">
-                    <span className="text-brand-green font-bold text-sm tracking-widest uppercase mb-2 block">The Ecosystem</span>
-                    <h3 className="text-3xl font-black mb-2 flex items-center gap-3">
-                      GOTEC<span className="text-brand-green">X</span>
-                    </h3>
-                    <p className="text-gray-400">The global brand. Providing scalable enterprise software, AI, POS, and connected digital solutions to businesses worldwide.</p>
-                  </div>
-                </div>
+            
+            <div className="lg:col-span-5 relative">
+              <div className="absolute inset-0 bg-brand-green/20 blur-3xl rounded-full transform rotate-12"></div>
+              <div className="relative rounded-[2rem] overflow-hidden border-8 border-white shadow-2xl">
+                 <img src="/images/assets/founder-photo.png" alt="Wilmot Kerkulah - Founder" className="w-full h-auto object-cover object-top" />
+                 <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent p-8 pt-20">
+                    <h3 className="text-2xl font-black text-white uppercase tracking-tight">Wilmot Kerkulah</h3>
+                    <p className="text-brand-green font-bold text-sm uppercase tracking-widest">Founder & Executive Director</p>
+                 </div>
               </div>
             </div>
           </div>

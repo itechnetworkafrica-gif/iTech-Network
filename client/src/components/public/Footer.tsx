@@ -230,7 +230,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <div className="flex flex-wrap items-center gap-6">
               <img src="/images/gotecx-logo.png" alt="Gotecx Logo" className="h-12 w-auto bg-white p-2 rounded-xl shadow-lg" />
-              <img src="/images/itech-logo.png" alt="iTech Network Africa Logo" className="h-12 w-auto bg-white p-1.5 rounded-xl shadow-lg" />
+              <img src="/images/assets/itech-logo.png" alt="iTech Network Africa Logo" className="h-12 w-auto bg-white p-1.5 rounded-xl shadow-lg" />
             </div>
             <div>
               <span className="text-xs font-bold text-brand-green tracking-[0.2em] uppercase block mb-1">Powered by iTech Network Africa</span>
