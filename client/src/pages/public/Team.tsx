@@ -7,13 +7,13 @@ import { Link } from "wouter";
 export default function Team() {
   const teamMembers = [
     { name: "Wilmot Kerkulah", role: "Founder & CEO", desc: "Visionary leader driving Gotecx's global expansion strategy and product ecosystem.", img: "/images/assets/founder-photo.png", fallback: "WK", linkedin: "#" },
-    { name: "Foday Kabah", role: "Chief Technology Officer", desc: "Former AWS engineer leading the development of scalable enterprise architectures.", img: "https://api.dicebear.com/7.x/bottts/svg?seed=Foday&backgroundColor=111827&primaryColor=37B626", fallback: "FK", linkedin: "#" },
-    { name: "Alvina Dahn", role: "Finance Officer", desc: "Directing the Gotecx | iTech Network Africa finances.", img: "https://api.dicebear.com/7.x/bottts/svg?seed=Alvina&backgroundColor=111827&primaryColor=37B626", fallback: "AD", linkedin: "#" },
-    { name: "David Kamara", role: "Head of Enterprise Sales", desc: "Connecting global organizations with transformative technology solutions.", img: "https://api.dicebear.com/7.x/bottts/svg?seed=David&backgroundColor=111827&primaryColor=37B626", fallback: "DK", linkedin: "#" },
-    { name: "James Kerkula", role: "Chief Marketing Officer", desc: "Building the Gotecx brand presence across international markets.", img: "https://api.dicebear.com/7.x/bottts/svg?seed=James&backgroundColor=111827&primaryColor=37B626", fallback: "JK", linkedin: "#" },
-    { name: "Emmanuel Mensah", role: "Director of Cybersecurity", desc: "Ensuring zero-trust protocols and enterprise-grade data protection.", img: "https://api.dicebear.com/7.x/bottts/svg?seed=Emmanuel&backgroundColor=111827&primaryColor=37B626", fallback: "EM", linkedin: "#" },
-    { name: "Fatima Diallo", role: "Head of AI Research", desc: "Leading the innovation lab focused on machine learning and predictive analytics.", img: "https://api.dicebear.com/7.x/bottts/svg?seed=Fatima&backgroundColor=111827&primaryColor=37B626", fallback: "FD", linkedin: "#" },
-    { name: "Samuel Doe", role: "Lead Systems Architect", desc: "Designing high-availability cloud deployments for our largest clients.", img: "https://api.dicebear.com/7.x/bottts/svg?seed=Samuel&backgroundColor=111827&primaryColor=37B626", fallback: "SD", linkedin: "#" }
+    { name: "Foday Kabah", role: "Chief Technology Officer", desc: "Former AWS engineer leading the development of scalable enterprise architectures.", img: "https://api.dicebear.com/7.x/notionists/svg?seed=Foday&backgroundColor=111827", fallback: "FK", linkedin: "#" },
+    { name: "Alvina Dahn", role: "Finance Officer", desc: "Directing the Gotecx | iTech Network Africa finances.", img: "https://api.dicebear.com/7.x/notionists/svg?seed=Alvina&backgroundColor=111827", fallback: "AD", linkedin: "#" },
+    { name: "David Kamara", role: "Head of Enterprise Sales", desc: "Connecting global organizations with transformative technology solutions.", img: "https://api.dicebear.com/7.x/notionists/svg?seed=David&backgroundColor=111827", fallback: "DK", linkedin: "#" },
+    { name: "James Kerkula", role: "Chief Marketing Officer", desc: "Building the Gotecx brand presence across international markets.", img: "https://api.dicebear.com/7.x/notionists/svg?seed=James&backgroundColor=111827", fallback: "JK", linkedin: "#" },
+    { name: "Emmanuel Mensah", role: "Director of Cybersecurity", desc: "Ensuring zero-trust protocols and enterprise-grade data protection.", img: "https://api.dicebear.com/7.x/notionists/svg?seed=Emmanuel&backgroundColor=111827", fallback: "EM", linkedin: "#" },
+    { name: "Fatima Diallo", role: "Head of AI Research", desc: "Leading the innovation lab focused on machine learning and predictive analytics.", img: "https://api.dicebear.com/7.x/notionists/svg?seed=Fatima&backgroundColor=111827", fallback: "FD", linkedin: "#" },
+    { name: "Samuel Doe", role: "Lead Systems Architect", desc: "Designing high-availability cloud deployments for our largest clients.", img: "https://api.dicebear.com/7.x/notionists/svg?seed=Samuel&backgroundColor=111827", fallback: "SD", linkedin: "#" }
   ];
 
   return (

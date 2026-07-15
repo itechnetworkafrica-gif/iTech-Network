@@ -43,6 +43,10 @@ import PrivacyPolicy from "@/pages/public/PrivacyPolicy";
 import Terms from "@/pages/public/Terms";
 import CookiePolicy from "@/pages/public/CookiePolicy";
 import DynamicPage from "@/pages/public/DynamicPage";
+import ProductsDynamic from "@/pages/public/ProductsDynamic";
+import ServicesDynamic from "@/pages/public/ServicesDynamic";
+import IndustriesDynamic from "@/pages/public/IndustriesDynamic";
+import SupportDynamic from "@/pages/public/SupportDynamic";
 
 import FloatingActions from "@/components/public/FloatingActions";
 import Chatbot from "@/components/public/Chatbot";
@@ -86,10 +90,10 @@ function Router() {
 
         {/* Dynamic Pages for the huge navigation tree */}
         <Route path="/solutions/:slug" component={DynamicPage} />
-        <Route path="/products/:slug" component={DynamicPage} />
-        <Route path="/services/:slug" component={DynamicPage} />
-        <Route path="/industries/:slug" component={DynamicPage} />
-        <Route path="/support/:slug" component={DynamicPage} />
+        <Route path="/products/:slug" component={ProductsDynamic} />
+        <Route path="/services/:slug" component={ServicesDynamic} />
+        <Route path="/industries/:slug" component={IndustriesDynamic} />
+        <Route path="/support/:slug" component={SupportDynamic} />
         <Route path="/:slug" component={DynamicPage} />
 
         {/* Dashboard Routes - Flattened for reliability */}
